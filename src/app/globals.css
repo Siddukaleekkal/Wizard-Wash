@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+    --color-base-main: #f0f9ff;
+    /* Sky 50 - watery bright background */
+    --color-base-secondary: #e0f2fe;
+    /* Sky 100 */
+    --color-accent-purple: #8b5cf6;
+    /* Violet 500 - wizard purple */
+    --color-accent-purple-dark: #6d28d9;
+    --color-accent-green: #22c55e;
+    /* Green 500 - wizard stars */
+    --color-water-blue: #0ea5e9;
+    /* Sky 500 - water */
+    --color-text-main: #0f172a;
+    /* Slate 900 */
+    --color-text-muted: #475569;
+    /* Slate 600 */
+
+    --font-heading: "Barlow", sans-serif;
+    --font-body: "Barlow", sans-serif;
+}
+
+@layer base {
+    body {
+        background-color: var(--color-base-main);
+        color: var(--color-text-main);
+        font-family: var(--font-body);
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        background-image: radial-gradient(circle at 50% 0%, #ffffff 0%, transparent 70%);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: var(--font-heading);
+        color: var(--color-text-main);
+        letter-spacing: -0.02em;
+    }
+}
+
+.glassy-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 4px solid white;
+    box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.2), 0 4px 6px -4px rgba(139, 92, 246, 0.1);
+    border-radius: 1.5rem;
+}
+
+/* Simple minimalistic button */
+.btn-magic {
+    background-color: var(--color-water-blue);
+    color: white;
+    border-radius: 9999px;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+.btn-magic:hover {
+    background-color: #0284c7;
+    /* darker sky blue */
+}
+
+.title-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--color-accent-purple), var(--color-water-blue));
+}
