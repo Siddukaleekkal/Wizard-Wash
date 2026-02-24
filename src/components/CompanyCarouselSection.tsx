@@ -3,12 +3,13 @@
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 const COMPANIES = [
-    { name: "VIGIL", logo: "/images/vigil-transparent.png", className: "scale-125 md:scale-150" },
+    { name: "Virginia Scooper", logo: "/images/Virginia%20Scooper%20Transparent.png", className: "scale-[0.9]" },
     { name: "Chick-fil-A", logo: "/images/Chick-fil-A-logo.png" },
     { name: "ACAC", logo: "/images/acac-transparent.png" },
     { name: "The Trump Organization", logo: "/images/The_Trump_Organization-Logo.wine.svg" },
     { name: "Narwhals", logo: "/images/NarWhalsLogo.webp" },
-    { name: "Lakeside BBQ", logo: "/images/LakeSide BBQ.png" },
+    { name: "Gold's Gym", logo: "/images/Golds%20Gym%20Transparent.png", className: "scale-[1.15]" },
+    { name: "Starbucks", logo: "/images/Starbucks%20Logo.png" },
 ];
 
 export default function CompanyCarouselSection() {
