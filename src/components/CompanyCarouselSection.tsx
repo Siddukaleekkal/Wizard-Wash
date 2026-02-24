@@ -3,7 +3,6 @@
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 const COMPANIES = [
-    { name: "Virginia Scooper", logo: "/images/Virginia%20Scooper%20Transparent.png", className: "scale-[0.9]" },
     { name: "Chick-fil-A", logo: "/images/Chick-fil-A-logo.png" },
     { name: "ACAC", logo: "/images/acac-transparent.png" },
     { name: "The Trump Organization", logo: "/images/The_Trump_Organization-Logo.wine.svg" },
