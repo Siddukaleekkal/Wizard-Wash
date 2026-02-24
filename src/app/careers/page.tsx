@@ -23,7 +23,7 @@ export default function CareersPage() {
     };
 
     return (
-        <main className="min-h-screen bg-white overflow-x-hidden flex flex-col">
+        <main className="min-h-screen bg-white  flex flex-col">
             <SimpleHeader />
 
             {/* Hero Section */}
@@ -38,7 +38,7 @@ export default function CareersPage() {
                             Join Our Team
                         </h1>
                         <p className="text-slate-500 font-heading font-bold uppercase tracking-[2px] text-lg max-w-2xl mx-auto">
-                            Build a rewarding career with Virginia's premier exterior restoration specialists. We are always looking for driven, detail-oriented professionals.
+                            Build a rewarding career with Virginia's premier exterior restoration specialists. We are always looking for driven, detail oriented professionals.
                         </p>
                     </motion.div>
                 </div>
@@ -147,6 +147,6 @@ export default function CareersPage() {
             </section>
 
             <Footer />
-        </main>
+        </main >
     );
 }

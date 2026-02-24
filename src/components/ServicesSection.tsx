@@ -8,32 +8,26 @@ export default function ServicesSection() {
         {
             title: "House Soft Washing",
             description: "Our low-pressure soft wash system safely removes mold, algae, and grime from your home's exterior without damaging siding or paint.",
-            image: "/images/House SoftWash.webp",
         },
         {
             title: "Concrete & Driveway",
             description: "We use professional-grade surface cleaners to strip away YEARS of oil stains, tire marks, and dirt from your driveway and sidewalks.",
-            image: "/images/Concrete Driveway.jpg",
         },
         {
             title: "Roof Cleaning",
             description: "Safely eliminate those ugly black streaks on your roof using our manufacturer-approved soft wash treatment.",
-            image: "/images/roof cleaning.jpg",
         },
         {
             title: "Holiday Lights Installation",
             description: "Professional, custom-fit holiday lighting for your home. We handle the design, install, teardown, and storage so you can enjoy the season.",
-            image: "/images/holiday lights.jpg",
         },
         {
             title: "Commercial Washing",
             description: "High-pressure and soft wash solutions for storefronts, parking garages, and building exteriors to keep your business inviting.",
-            image: "/images/Christian Mara Lago.jpg",
         },
         {
             title: "Fleet Washing",
-            description: "Keep your company vehicles spotless on the road. We provide eco-friendly mobile fleet washing for trucks and heavy equipment.",
-            image: "/images/fleet washing.avif",
+            description: "Keep your company vehicles spotless on the road. We provide eco friendly mobile fleet washing for trucks and heavy equipment.",
         },
     ];
 
@@ -54,14 +48,7 @@ export default function ServicesSection() {
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         {services.map((service, index) => (
-                            <div key={index} className="flex flex-col gap-4 group">
-                                <div className="overflow-hidden rounded-2xl aspect-[4/3] shadow-xl border border-slate-100">
-                                    <img
-                                        src={service.image}
-                                        alt={service.title}
-                                        className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
-                                    />
-                                </div>
+                            <div key={index} className="flex flex-col gap-4 group p-6 rounded-2xl shadow-xl border border-slate-100 bg-white">
                                 <div className="flex flex-col gap-3">
                                     <h3 className="text-2xl font-heading font-black uppercase tracking-tight text-[#1e1e3f] group-hover:text-[#9138df] transition-colors">
                                         {service.title}

@@ -9,7 +9,7 @@ import { Calendar, ShieldCheck, Sparkles } from 'lucide-react';
 
 export default function QuotePage() {
     return (
-        <main className="min-h-screen bg-[var(--color-base-main)] overflow-x-hidden flex flex-col">
+        <main className="min-h-screen bg-[var(--color-base-main)]  flex flex-col">
             <SimpleHeader />
 
             {/* Hero Section for Quote Page */}

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function TermsPage() {
     return (
-        <main className="min-h-screen bg-white overflow-x-hidden flex flex-col">
+        <main className="min-h-screen bg-white  flex flex-col">
             <SimpleHeader />
 
             <section className="pt-32 pb-24 lg:pt-48 lg:pb-32 px-6 bg-white border-b border-white">
@@ -63,7 +63,7 @@ export default function TermsPage() {
                                 4. Liability and Property Access
                             </h2>
                             <p>
-                                Customers must ensure safe access to the property and that all necessary utilities (such as water) are available. While Wizard Wash uses professional-grade equipment and techniques designed for surface safety, we are not liable for pre-existing damage or issues arising from property structural defects.
+                                Customers must ensure safe access to the property and that all necessary utilities (such as water) are available. While Wizard Wash uses professional grade equipment and techniques designed for surface safety, we are not liable for pre existing damage or issues arising from property structural defects.
                             </p>
                         </div>
 

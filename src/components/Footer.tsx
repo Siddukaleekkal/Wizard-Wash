@@ -20,7 +20,7 @@ export default function Footer() {
                         />
                     </a>
                     <p className="text-slate-400 font-body text-lg leading-relaxed max-w-sm">
-                        Premier exterior maintenance and precision cleaning for high-value residential and commercial properties.
+                        Premier exterior maintenance and precision cleaning for high value residential and commercial properties.
                     </p>
                     <div className="flex space-x-4">
                         <a href="https://www.instagram.com/wizardwashva/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#9138df] hover:border-[#9138df] transition-all duration-300 group">
@@ -83,15 +83,15 @@ export default function Footer() {
                             Contact Us
                         </h4>
                         <div className="space-y-6">
-                            <div className="flex items-center gap-4 text-white">
-                                <div className="w-10 h-10 rounded-xl bg-[#9138df]/10 flex items-center justify-center text-[#9138df]">
+                            <a href="tel:8046902465" className="flex items-center gap-4 text-white hover:text-[#9138df] transition-colors cursor-pointer group">
+                                <div className="w-10 h-10 rounded-xl bg-[#9138df]/10 flex items-center justify-center text-[#9138df] group-hover:bg-[#9138df]/20 transition-colors">
                                     <Phone size={20} fill="currentColor" className="fill-[#9138df]/20" />
                                 </div>
                                 <span className="text-2xl font-black font-heading tracking-tight">804-690-2465</span>
-                            </div>
+                            </a>
                             <p className="text-slate-400 font-body text-[15px] leading-relaxed">
                                 Available Mon - Sat: 8:00 AM - 6:00 PM<br />
-                                <span className="text-[#9138df]">wizardwashrva@gmail.com</span>
+                                <a href="mailto:wizardwashrva@gmail.com" className="text-[#9138df] hover:text-[#7a2ac1] transition-colors">wizardwashrva@gmail.com</a>
                             </p>
                         </div>
                     </div>

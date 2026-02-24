@@ -9,7 +9,7 @@ import { Shield, Users, Zap, Star, Target, Award, Sparkles, ArrowRight } from 'l
 
 export default function AboutPage() {
     return (
-        <main className="min-h-screen overflow-x-hidden flex flex-col bg-white">
+        <main className="min-h-screen  flex flex-col bg-white">
             <SimpleHeader />
 
             <div className="relative">
@@ -47,10 +47,10 @@ export default function AboutPage() {
                                 <h2 className="text-[#1e1e3f] text-4xl md:text-6xl font-heading font-black uppercase tracking-tight">Our Story</h2>
                                 <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-body">
                                     <p>
-                                        Wizard Wash wasn't born from a desire to just 'clean houses.' It was founded on the principle that property maintenance should be treated with the same precision as high-end engineering.
+                                        Wizard Wash wasn't born from a desire to just 'clean houses.' It was founded on the principle that property maintenance should be treated with the same precision as high end engineering.
                                     </p>
                                     <p>
-                                        We saw an industry filled with 'splash and dash' operators who used aggressive pressure to compensate for a lack of expertise. We knew there was a better way—a scientific approach that combined advanced chemistry with state-of-the-art equipment.
+                                        We saw an industry filled with 'splash and dash' operators who used aggressive pressure to compensate for a lack of expertise. We knew there was a better way—a scientific approach that combined advanced chemistry with state of the art equipment.
                                     </p>
                                     <p>
                                         Today, Wizard Wash is Virginia's premier exterior restoration specialist, serving both luxury residential estates and massive commercial landmarks with a standard of excellence that feels like magic.

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export default function PrivacyPolicyPage() {
     return (
-        <main className="min-h-screen bg-white overflow-x-hidden flex flex-col">
+        <main className="min-h-screen bg-white  flex flex-col">
             <SimpleHeader />
 
             <section className="pt-32 pb-24 lg:pt-48 lg:pb-32 px-6 bg-white border-b border-white">
@@ -65,7 +65,7 @@ export default function PrivacyPolicyPage() {
                             <ul className="list-disc pl-8 space-y-4">
                                 <li>To provide professional exterior cleaning and maintenance services.</li>
                                 <li>To provide accurate service estimates and quotes.</li>
-                                <li>To communicate with you regarding appointments, service updates, and follow-ups.</li>
+                                <li>To communicate with you regarding appointments, service updates, and follow ups.</li>
                                 <li>To improve our website functionality and user experience.</li>
                                 <li>To send promotional material or newsletters (if you have opted in).</li>
                                 <li>To comply with legal and regulatory obligations.</li>
@@ -77,7 +77,7 @@ export default function PrivacyPolicyPage() {
                                 4. Data Retention and Security
                             </h2>
                             <p>
-                                We implement industry-standard security measures to protect your personal data from unauthorized access, disclosure, or destruction. We only retain your information for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.
+                                We implement industry standard security measures to protect your personal data from unauthorized access, disclosure, or destruction. We only retain your information for as long as necessary to fulfill the purposes for which it was collected, including for the purposes of satisfying any legal, accounting, or reporting requirements.
                             </p>
                         </div>
 

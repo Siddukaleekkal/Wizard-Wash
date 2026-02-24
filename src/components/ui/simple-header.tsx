@@ -5,7 +5,7 @@ import { Phone, ChevronDown, ChevronRight } from 'lucide-react';
 import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { MenuToggle } from '@/components/ui/menu-toggle';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion';
 
 interface NavLink {
     label: string;
@@ -24,6 +24,17 @@ export function SimpleHeader() {
     const [open, setOpen] = React.useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+    const [hidden, setHidden] = useState(false);
+    const { scrollY } = useScroll();
+
+    useMotionValueEvent(scrollY, "change", (latest) => {
+        const previous = scrollY.getPrevious() ?? 0;
+        if (latest > previous && latest > 150) {
+            setHidden(true);
+        } else {
+            setHidden(false);
+        }
+    });
 
     const links: NavLink[] = [
         {
@@ -72,7 +83,15 @@ export function SimpleHeader() {
     ];
 
     return (
-        <header className="bg-white/95 supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 w-full border-b-[4px] border-[#9138df] backdrop-blur-lg shadow-sm">
+        <motion.header
+            variants={{
+                visible: { y: 0 },
+                hidden: { y: "-100%" }
+            }}
+            animate={hidden ? "hidden" : "visible"}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="bg-white/95 supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 w-full border-b-[4px] border-[#9138df] backdrop-blur-lg shadow-sm"
+        >
             <nav className="flex h-24 lg:h-32 w-full items-center justify-between pr-6 pl-4 lg:pr-12 lg:pl-10 max-w-[1920px] mx-auto">
                 {/* Left Side: Logo + Links */}
                 <div className="flex items-center h-full gap-8 lg:gap-16">
@@ -160,10 +179,10 @@ export function SimpleHeader() {
                 <div className="flex items-center gap-6 lg:gap-10">
                     <div className="hidden md:flex flex-col items-end gap-0.5 font-heading">
                         <span className="text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
-                        <div className="flex items-center gap-2 text-[#1e1e3f]">
+                        <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[#9138df] transition-colors cursor-pointer">
                             <Phone size={20} className="text-[#9138df] fill-[#9138df]/10" />
                             <span className="text-xl lg:text-2xl font-black tabular-nums">804-690-2465</span>
-                        </div>
+                        </a>
                     </div>
 
                     <div className="hidden sm:block">
@@ -272,10 +291,10 @@ export function SimpleHeader() {
                             <SheetFooter className="mt-8 border-t border-slate-100 bg-white p-8 flex-col gap-6">
                                 <div className="flex flex-col items-center gap-1 font-heading">
                                     <span className="text-xs text-slate-400 uppercase tracking-widest">Available Now</span>
-                                    <div className="flex items-center gap-3 text-[#1e1e3f] text-2xl font-black">
-                                        <Phone size={24} className="text-[#9138df]" />
+                                    <a href="tel:8046902465" className="flex items-center gap-3 text-[#1e1e3f] hover:text-[#9138df] transition-colors text-2xl font-black cursor-pointer group">
+                                        <Phone size={24} className="text-[#9138df] group-hover:scale-110 transition-transform" />
                                         <span>804-690-2465</span>
-                                    </div>
+                                    </a>
                                 </div>
                                 <a href="/quote" className="w-full">
                                     <Button className="w-full text-xl font-heading font-black uppercase py-8 shadow-xl">
@@ -287,6 +306,6 @@ export function SimpleHeader() {
                     </Sheet>
                 </div>
             </nav>
-        </header>
+        </motion.header>
     );
 }
