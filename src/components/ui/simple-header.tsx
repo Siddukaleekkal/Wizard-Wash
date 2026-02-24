@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, ChevronDown, ChevronRight } from 'lucide-react';
+import { Phone, ChevronDown, ChevronRight, Star } from 'lucide-react';
 import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { MenuToggle } from '@/components/ui/menu-toggle';
@@ -185,9 +185,18 @@ export function SimpleHeader() {
                         </a>
                     </div>
 
+                    <div className="hidden min-[1600px]:block">
+                        <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" target="_blank" rel="noopener noreferrer">
+                            <Button variant="outline" className="font-heading font-black uppercase tracking-widest px-6 py-7 text-[15px] border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-all duration-300 rounded-xl group">
+                                <Star className="w-5 h-5 mr-2 fill-current group-hover:scale-110 transition-transform" />
+                                Leave a Review
+                            </Button>
+                        </a>
+                    </div>
+
                     <div className="hidden sm:block">
                         <a href="/quote">
-                            <Button className="font-heading font-black uppercase tracking-widest px-8 py-7 text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300">
+                            <Button className="font-heading font-black uppercase tracking-widest px-8 py-7 text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
                                 Request A Quote
                             </Button>
                         </a>
@@ -296,11 +305,19 @@ export function SimpleHeader() {
                                         <span>804-690-2465</span>
                                     </a>
                                 </div>
-                                <a href="/quote" className="w-full">
-                                    <Button className="w-full text-xl font-heading font-black uppercase py-8 shadow-xl">
-                                        Request A Quote
-                                    </Button>
-                                </a>
+                                <div className="w-full space-y-3">
+                                    <a href="/quote" className="block w-full">
+                                        <Button className="w-full text-xl font-heading font-black uppercase py-8 shadow-xl rounded-xl bg-[#9138df] hover:bg-[#7a2ac1]">
+                                            Request A Quote
+                                        </Button>
+                                    </a>
+                                    <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" className="block w-full" target="_blank" rel="noopener noreferrer">
+                                        <Button variant="outline" className="w-full text-lg font-heading font-black uppercase py-7 border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-colors duration-300 rounded-xl group">
+                                            <Star className="w-5 h-5 mr-2 fill-current" />
+                                            Leave a Review
+                                        </Button>
+                                    </a>
+                                </div>
                             </SheetFooter>
                         </SheetContent>
                     </Sheet>
