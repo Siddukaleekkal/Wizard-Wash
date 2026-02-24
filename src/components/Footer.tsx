@@ -104,14 +104,21 @@ export default function Footer() {
                 </div>
             </div>
 
-            <div className="max-w-[1920px] mx-auto px-6 lg:px-16 mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
-                <p className="text-slate-500 font-heading font-bold uppercase tracking-widest text-[11px]">
-                    &copy; {new Date().getFullYear()} Wizard Wash Power Washing. All rights reserved.
-                </p>
-                <div className="flex gap-8 text-slate-500 font-heading font-bold uppercase tracking-widest text-[11px]">
-                    <a href="/terms" className="hover:text-white transition-colors">Terms</a>
-                    <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-                    <a href="/" className="hover:text-white transition-colors">Sitemap</a>
+            <div className="max-w-[1920px] mx-auto px-6 lg:px-16 mt-20 pt-8 border-t border-white/5 flex flex-col gap-6">
+                <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+                    <p className="text-slate-500 font-heading font-bold uppercase tracking-widest text-[11px] text-center md:text-left">
+                        &copy; {new Date().getFullYear()} Wizard Wash Power Washing. All rights reserved.
+                    </p>
+                    <div className="flex gap-8 text-slate-500 font-heading font-bold uppercase tracking-widest text-[11px]">
+                        <a href="/terms" className="hover:text-white transition-colors">Terms</a>
+                        <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+                        <a href="/" className="hover:text-white transition-colors">Sitemap</a>
+                    </div>
+                </div>
+                <div className="flex justify-center border-t border-white/5 pt-6">
+                    <p className="text-slate-500 font-heading font-semibold uppercase tracking-[3px] text-[10px]">
+                        Designed and Maintained by <span className="text-[#9138df] font-black tracking-widest">Viracis Technology Solutions</span>
+                    </p>
                 </div>
             </div>
         </footer>
