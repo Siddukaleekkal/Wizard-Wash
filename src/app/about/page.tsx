@@ -50,7 +50,7 @@ export default function AboutPage() {
                                         Wizard Wash wasn't born from a desire to just 'clean houses.' It was founded on the principle that property maintenance should be treated with the same precision as high end engineering.
                                     </p>
                                     <p>
-                                        We saw an industry filled with 'splash and dash' operators who used aggressive pressure to compensate for a lack of expertise. We knew there was a better way—a scientific approach that combined advanced chemistry with state of the art equipment.
+                                        We saw an industry filled with 'splash and dash' operators who used aggressive pressure to compensate for a lack of expertise. We knew there was a better way a scientific approach that combined advanced chemistry with state of the art equipment.
                                     </p>
                                     <p>
                                         Today, Wizard Wash is Virginia's premier exterior restoration specialist, serving both luxury residential estates and massive commercial landmarks with a standard of excellence that feels like magic.
@@ -64,11 +64,14 @@ export default function AboutPage() {
                                 className="relative"
                             >
                                 <div className="absolute -inset-4 bg-[#9138df]/5 rounded-[2rem] -z-10 rotate-3" />
-                                <div className="aspect-square rounded-[2rem] overflow-hidden shadow-2xl">
-                                    <img
-                                        src="/images/powerwashwall.webp"
-                                        alt="Modern Power Washing Technology"
+                                <div className="aspect-[9/16] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-black relative">
+                                    <video
+                                        src="/images/Mara%20Lago%20Video.mov"
                                         className="w-full h-full object-cover"
+                                        autoPlay
+                                        muted
+                                        loop
+                                        playsInline
                                     />
                                 </div>
                             </motion.div>
@@ -90,6 +93,48 @@ export default function AboutPage() {
                                     <p className="text-slate-400 font-heading font-bold uppercase tracking-[2px] text-xs md:text-sm">{stat.label}</p>
                                 </div>
                             ))}
+                        </div>
+                    </section>
+
+                    {/* Meet The Team Section */}
+                    <section className="py-24 px-6 bg-slate-50 border-t border-slate-200/60">
+                        <div className="max-w-7xl mx-auto">
+                            <div className="text-center mb-20 space-y-6">
+                                <h2 className="text-[#1e1e3f] text-4xl md:text-6xl font-heading font-black uppercase tracking-tight">Meet The Team</h2>
+                                <p className="text-slate-600 text-lg max-w-2xl mx-auto font-body">
+                                    Our team of dedicated professionals combines industry expertise with a passion for excellence. We treat every property with the utmost care, ensuring magical results every time.
+                                </p>
+                            </div>
+
+                            <div className="flex flex-wrap justify-center gap-16 gap-y-20 mb-24">
+                                {/* Team Members */}
+                                {[
+                                    { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care." },
+                                    { name: "Christian Hancock", role: "Operations Manager - FL", img: "/images/Christian%20Hancock%20Florida%20Operations%20Manager.jpeg", desc: "Ensures flawless execution and operational excellence across our Florida service areas." },
+                                    { name: "Carlos Rincon", role: "Team Lead - VA Beach", img: "/images/Carlos%20Rincon%20Team%20Lead%20Virginia%20Beach.PNG", desc: "Directs high-impact cleaning projects in Virginia Beach with extreme precision." },
+                                    { name: "Jose Rivas", role: "Crew Member", img: "/images/Jose%20Rivas%20Crew%20Member.PNG", desc: "A meticulous technician who consistently delivers spotless, transformative results." },
+                                    { name: "Alex Hancock", role: "Crew Member - VA Branch", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
+                                ].map((member, idx) => (
+                                    <motion.div
+                                        key={idx}
+                                        initial={{ opacity: 0, y: 20 }}
+                                        whileInView={{ opacity: 1, y: 0 }}
+                                        viewport={{ once: true }}
+                                        className="group space-y-6 flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2.67rem)] max-w-[300px]"
+                                    >
+                                        <div className="w-56 h-56 rounded-full overflow-hidden shadow-xl border-[6px] border-white group-hover:border-[#9138df] transition-all duration-500 ease-out">
+                                            <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                        </div>
+                                        <div>
+                                            <h3 className="text-2xl font-black font-heading uppercase tracking-tight text-[#1e1e3f]">{member.name}</h3>
+                                            <p className="text-[#9138df] font-bold tracking-widest text-xs uppercase mt-1 mb-3">{member.role}</p>
+                                            <p className="text-slate-500 text-sm font-body max-w-[280px] mx-auto">{member.desc}</p>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </div>
+
+
                         </div>
                     </section>
 
