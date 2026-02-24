@@ -13,7 +13,7 @@ const COMPANIES = [
 
 export default function CompanyCarouselSection() {
     return (
-        <section className="bg-slate-50 py-16 border-y border-slate-100 overflow-hidden">
+        <section className="bg-slate-100 py-16 border-y border-slate-200 overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 lg:px-8">
                 <p className="text-center text-[#9138df] font-heading font-extrabold uppercase tracking-[4px] text-[12px] md:text-[13px] mb-12">
                     Trusted By

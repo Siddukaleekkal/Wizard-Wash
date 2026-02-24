@@ -1,4 +1,4 @@
-import { Instagram, Facebook, Phone } from 'lucide-react';
+import { Instagram, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Footer() {
@@ -23,11 +23,8 @@ export default function Footer() {
                         Premier exterior maintenance and precision cleaning for high-value residential and commercial properties.
                     </p>
                     <div className="flex space-x-4">
-                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#9138df] hover:border-[#9138df] transition-all duration-300 group">
+                        <a href="https://www.instagram.com/wizardwashva/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#9138df] hover:border-[#9138df] transition-all duration-300 group">
                             <Instagram size={20} className="text-slate-300 group-hover:text-white" />
-                        </a>
-                        <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-[#9138df] hover:border-[#9138df] transition-all duration-300 group">
-                            <Facebook size={20} className="text-slate-300 group-hover:text-white" />
                         </a>
                     </div>
                 </div>
@@ -38,10 +35,17 @@ export default function Footer() {
                         Our Services
                     </h4>
                     <ul className="space-y-4">
-                        {['House Soft Washing', 'Concrete & Driveway', 'Roof Cleaning', 'Holiday Lights', 'Commercial Wash', 'Fleet Washing'].map((service) => (
-                            <li key={service}>
-                                <a href="#services" className="text-slate-400 font-heading font-semibold uppercase tracking-wider text-sm hover:text-[#9138df] transition-colors duration-300 flex items-center gap-2 group">
-                                    {service}
+                        {[
+                            { name: 'House Soft Washing', slug: 'house-wash' },
+                            { name: 'Concrete & Driveway', slug: 'concrete-wash-seal' },
+                            { name: 'Roof Cleaning', slug: 'softwash-services' },
+                            { name: 'Holiday Lights', slug: 'christmas-lights' },
+                            { name: 'Commercial Wash', slug: 'offices' },
+                            { name: 'Fleet Washing', slug: 'fleet-washing' }
+                        ].map((service) => (
+                            <li key={service.slug}>
+                                <a href={`/services/${service.slug}`} className="text-slate-400 font-heading font-semibold uppercase tracking-wider text-sm hover:text-[#9138df] transition-colors duration-300 flex items-center gap-2 group">
+                                    {service.name}
                                 </a>
                             </li>
                         ))}
@@ -54,13 +58,21 @@ export default function Footer() {
                         Quick Links
                     </h4>
                     <ul className="space-y-4">
-                        {['About Us', 'Commercial Showcase', 'Process', 'Reviews', 'Privacy Policy'].map((link) => (
-                            <li key={link}>
-                                <a href={`#${link.toLowerCase().replace(' ', '-')}`} className="text-slate-400 font-heading font-semibold uppercase tracking-wider text-sm hover:text-[#9138df] transition-colors duration-300">
-                                    {link}
-                                </a>
-                            </li>
-                        ))}
+                        <li>
+                            <a href="/about" className="text-slate-400 font-heading font-semibold uppercase tracking-wider text-sm hover:text-[#9138df] transition-colors duration-300">
+                                About Us
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/privacy" className="text-slate-400 font-heading font-semibold uppercase tracking-wider text-sm hover:text-[#9138df] transition-colors duration-300">
+                                Privacy Policy
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/terms" className="text-slate-400 font-heading font-semibold uppercase tracking-wider text-sm hover:text-[#9138df] transition-colors duration-300">
+                                Terms of Service
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
@@ -84,9 +96,11 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <Button className="font-heading font-black uppercase tracking-widest py-8 text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 transition-all duration-300 w-full rounded-[6px]">
-                        Get an Estimate
-                    </Button>
+                    <a href="/quote" className="w-full">
+                        <Button className="font-heading font-black uppercase tracking-widest py-8 text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 transition-all duration-300 w-full rounded-[6px]">
+                            Get an Estimate
+                        </Button>
+                    </a>
                 </div>
             </div>
 
@@ -95,9 +109,9 @@ export default function Footer() {
                     &copy; {new Date().getFullYear()} Wizard Wash Power Washing. All rights reserved.
                 </p>
                 <div className="flex gap-8 text-slate-500 font-heading font-bold uppercase tracking-widest text-[11px]">
-                    <a href="#" className="hover:text-white transition-colors">Terms</a>
-                    <a href="#" className="hover:text-white transition-colors">Privacy</a>
-                    <a href="#" className="hover:text-white transition-colors">Sitemap</a>
+                    <a href="/terms" className="hover:text-white transition-colors">Terms</a>
+                    <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
+                    <a href="/" className="hover:text-white transition-colors">Sitemap</a>
                 </div>
             </div>
         </footer>

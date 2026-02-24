@@ -65,8 +65,8 @@ export default function VideoSection() {
                     </div>
 
                     {/* Right Column: Cinematic Video Reel (Span 5) */}
-                    <div className="lg:col-span-5 relative group">
-                        <div className="relative w-full h-[600px] lg:h-full rounded-3xl overflow-hidden shadow-2xl border border-white group-hover:shadow-[#9138df]/20 transition-all duration-700">
+                    <div className="lg:col-span-5 flex flex-col gap-6">
+                        <div className="relative w-full h-[600px] lg:flex-1 min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white group group-hover:shadow-[#9138df]/20 transition-all duration-700">
                             <video
                                 autoPlay
                                 loop
@@ -79,6 +79,15 @@ export default function VideoSection() {
                             </video>
                             <div className="absolute inset-0 border-[1px] border-white/20 rounded-3xl pointer-events-none" />
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 transition-opacity duration-500" />
+                        </div>
+
+                        <div className="flex flex-col">
+                            <a
+                                href="/quote"
+                                className="inline-flex items-center justify-center bg-[#9138df] text-white font-heading font-black text-lg px-8 py-6 rounded-2xl hover:bg-[#7a2ac1] transition-all shadow-[0_10px_30px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 uppercase tracking-widest border border-white/10 text-center"
+                            >
+                                Book Your Cleaning Today
+                            </a>
                         </div>
                     </div>
 

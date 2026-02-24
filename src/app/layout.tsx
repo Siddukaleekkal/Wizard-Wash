@@ -21,7 +21,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`${barlow.variable} ${playfair.variable} scroll-smooth`}>
-            <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-sans antialiased selection:bg-[var(--color-accent-purple)] selection:text-white">
+            <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white">
                 {children}
             </body>
         </html>

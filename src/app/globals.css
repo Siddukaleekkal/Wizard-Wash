@@ -17,8 +17,8 @@
     --color-text-muted: #475569;
     /* Slate 600 */
 
-    --font-heading: "Barlow", sans-serif;
-    --font-body: "Barlow", sans-serif;
+    --font-heading: var(--font-barlow), sans-serif;
+    --font-body: var(--font-barlow), sans-serif;
 }
 
 @layer base {

@@ -73,7 +73,7 @@ export default function Hero() {
                     </p>
 
                     <div className="mt-10 flex flex-wrap gap-4">
-                        <a href="#quote" className="inline-block bg-[#9138df] text-white font-heading font-black text-lg px-10 py-5 rounded hover:bg-[#7a2ac1] transition-all shadow-[0_10px_30px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 uppercase tracking-widest border border-white/10">
+                        <a href="/quote" className="inline-block bg-[#9138df] text-white font-heading font-black text-lg px-10 py-5 rounded hover:bg-[#7a2ac1] transition-all shadow-[0_10px_30px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 uppercase tracking-widest border border-white/10">
                             Request A Quote
                         </a>
                         <a href="#services" className="inline-block bg-white/10 backdrop-blur-md text-white font-heading font-black text-lg px-10 py-5 rounded hover:bg-white/20 transition-all border border-white/20 uppercase tracking-widest">
