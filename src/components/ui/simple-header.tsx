@@ -102,7 +102,7 @@ export function SimpleHeader() {
                             className="h-full w-auto object-contain drop-shadow-md scale-[1.1] md:scale-[1.24] origin-left"
                         />
                     </a>
-                    <div className="hidden min-[1550px]:flex items-center gap-2">
+                    <div className="hidden md:flex items-center gap-2">
                         {links.map((link) => (
                             <div
                                 key={link.label}
@@ -185,7 +185,7 @@ export function SimpleHeader() {
                         </a>
                     </div>
 
-                    <div className="hidden min-[1600px]:block">
+                    <div className="hidden xl:block">
                         <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" target="_blank" rel="noopener noreferrer">
                             <Button variant="outline" className="font-heading font-black uppercase tracking-widest px-6 py-7 text-[15px] border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-all duration-300 rounded-xl group">
                                 <Star className="w-5 h-5 mr-2 fill-current group-hover:scale-110 transition-transform" />
@@ -203,7 +203,7 @@ export function SimpleHeader() {
                     </div>
 
                     <Sheet open={open} onOpenChange={setOpen}>
-                        <Button size="icon" variant="ghost" className="min-[1550px]:hidden hover:bg-slate-100 rounded-full h-12 w-12">
+                        <Button size="icon" variant="ghost" className="md:hidden hover:bg-slate-100 rounded-full h-12 w-12">
                             <MenuToggle
                                 strokeWidth={2.5}
                                 open={open}

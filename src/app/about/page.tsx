@@ -48,7 +48,7 @@ export default function AboutPage() {
                     <section className="py-24 px-6 bg-slate-50 border-b border-slate-200/60">
                         <div className="max-w-7xl mx-auto">
                             <div className="text-center mb-20 space-y-6">
-                                <h2 className="text-[#1e1e3f] text-4xl md:text-6xl font-heading font-black uppercase tracking-tight">Meet The Team</h2>
+                                <h2 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black uppercase tracking-tight">Meet The Team</h2>
                                 <p className="text-slate-600 text-lg max-w-2xl mx-auto font-body">
                                     Our team of dedicated professionals combines industry expertise with a passion for excellence. We treat every property with the utmost care, ensuring magical results every time.
                                 </p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
                     {/* Our Story Section */}
                     <section className="py-32 px-6">
-                        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+                        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
                             <motion.div
                                 initial={{ opacity: 0, x: -30 }}
                                 whileInView={{ opacity: 1, x: 0 }}
@@ -95,7 +95,7 @@ export default function AboutPage() {
                                 className="space-y-8"
                             >
                                 <div className="h-1 w-20 bg-[#9138df]" />
-                                <h2 className="text-[#1e1e3f] text-4xl md:text-6xl font-heading font-black uppercase tracking-tight">Our Story</h2>
+                                <h2 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black uppercase tracking-tight">Our Story</h2>
                                 <div className="space-y-6 text-slate-600 text-lg leading-relaxed font-body">
                                     <p>
                                         Wizard Wash wasn't born from a desire to just 'clean houses.' It was founded on the principle that property maintenance should be treated with the same precision as high end engineering.
@@ -132,7 +132,7 @@ export default function AboutPage() {
 
                     {/* Stats Section */}
                     <section className="pb-32 px-6 bg-white">
-                        <div className="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-12">
+                        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
                             {[
                                 { val: "5k+", label: "Properties Transformed" },
                                 { val: "100%", label: "Fully Insured" },
@@ -156,7 +156,7 @@ export default function AboutPage() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 className="space-y-12 relative z-10"
                             >
-                                <h2 className="text-5xl md:text-8xl font-heading font-black uppercase tracking-tighter leading-none">
+                                <h2 className="text-4xl md:text-8xl font-heading font-black uppercase tracking-tighter leading-none">
                                     Experience the<br />Magic Today
                                 </h2>
                                 <div className="flex flex-col sm:flex-row gap-6 justify-center">

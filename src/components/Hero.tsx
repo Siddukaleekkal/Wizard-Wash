@@ -52,7 +52,7 @@ export default function Hero() {
 
             <div className="relative z-20 max-w-[1920px] mx-auto px-6 lg:px-20 h-full flex flex-col justify-center text-left">
                 <div className="max-w-4xl flex flex-col gap-2">
-                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight uppercase tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
+                    <h1 className="text-3xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight uppercase tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
                         <span className="block">The Standard in</span>
                         <span className="relative block h-[1.1em] text-[#9138df] overflow-hidden">
                             {titles.map((title, index) => (

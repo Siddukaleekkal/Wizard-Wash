@@ -21,15 +21,15 @@ export default function ServiceMapSection() {
             <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#9138df]/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
 
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
 
                     {/* Left: Content & Regional Reach */}
-                    <div className="lg:col-span-6 space-y-10">
+                    <div className="md:col-span-6 space-y-10">
                         <div className="space-y-4">
                             <h2 className="text-[#9138df] font-heading font-extrabold text-[13px] uppercase tracking-[4px]">
                                 Regional Reach
                             </h2>
-                            <h1 className="text-[#1e1e3f] text-4xl md:text-6xl font-heading font-black tracking-tight leading-[1.1] uppercase">
+                            <h1 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black tracking-tight leading-[1.1] uppercase">
                                 Mid-Atlantic &<br />Southeast Coverage
                             </h1>
                             <p className="text-slate-600 text-lg md:text-xl font-body leading-relaxed max-w-xl">
@@ -71,7 +71,7 @@ export default function ServiceMapSection() {
                     </div>
 
                     {/* Right: The "Stunning" Stylized Map */}
-                    <div className="lg:col-span-6 relative">
+                    <div className="md:col-span-6 relative">
                         <div className="aspect-square relative flex items-center justify-center">
 
                             {/* Central Hub Pulsing Glow */}

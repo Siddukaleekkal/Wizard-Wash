@@ -27,16 +27,16 @@ export default function VideoSection() {
         <section className="py-24 bg-slate-50 relative overflow-hidden" id="commercial">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
 
-                <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:items-stretch">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:items-stretch">
 
                     {/* Left Column: Commercial Portfolio & Text (Span 7) */}
-                    <div className="lg:col-span-7 flex flex-col gap-10">
+                    <div className="md:col-span-7 flex flex-col gap-10">
                         <div className="space-y-6">
                             <div className="space-y-3">
                                 <h2 className="text-[#9138df] font-heading font-extrabold text-[13px] uppercase tracking-[3px]">
                                     Portfolio & Solutions
                                 </h2>
-                                <h1 className="text-[#1e1e3f] text-3xl md:text-5xl font-heading font-black tracking-tight leading-[1.1] uppercase">
+                                <h1 className="text-[#1e1e3f] text-2xl md:text-5xl font-heading font-black tracking-tight leading-[1.1] uppercase">
                                     Strategic Asset<br />Maintenance
                                 </h1>
                             </div>
@@ -75,8 +75,8 @@ export default function VideoSection() {
                     </div>
 
                     {/* Right Column: Cinematic Video Reel (Span 5) */}
-                    <div className="lg:col-span-5 flex flex-col gap-6">
-                        <div className="relative w-full h-[600px] lg:flex-1 min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white group group-hover:shadow-[#9138df]/20 transition-all duration-700">
+                    <div className="md:col-span-5 flex flex-col gap-6">
+                        <div className="relative w-full h-[600px] md:flex-1 min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white group group-hover:shadow-[#9138df]/20 transition-all duration-700">
                             <video
                                 ref={videoRef}
                                 autoPlay

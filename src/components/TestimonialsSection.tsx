@@ -130,7 +130,7 @@ export default function TestimonialsSection() {
                     <h2 className="text-[#9138df] font-heading font-black text-[12px] uppercase tracking-[3px] mb-2">
                         Success Stories
                     </h2>
-                    <h1 className="text-white text-2xl md:text-3xl font-heading font-black tracking-tight leading-tight">
+                    <h1 className="text-white text-xl md:text-3xl font-heading font-black tracking-tight leading-tight">
                         Client Feedback
                     </h1>
                 </div>
