@@ -3,7 +3,7 @@
 import React from 'react';
 import { SimpleHeader } from '@/components/ui/simple-header';
 import Footer from '@/components/Footer';
-import { EstimateForm } from '@/components/EstimateForm';
+import Script from 'next/script';
 import { motion } from 'framer-motion';
 import { Calendar, ShieldCheck, Sparkles } from 'lucide-react';
 
@@ -13,18 +13,18 @@ export default function QuotePage() {
             <SimpleHeader />
 
             {/* Hero Section for Quote Page */}
-            <section className="relative pt-32 pb-20 px-6 overflow-hidden">
+            <section className="relative pt-24 md:pt-32 pb-20 px-4 md:px-6 overflow-hidden">
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#9138df]/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-blue-400/5 rounded-full blur-[100px] -z-10 -translate-x-1/2" />
 
-                <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="max-w-[1400px] mx-auto flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
 
                     {/* Left Side: Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
-                        className="space-y-8"
+                        className="w-full lg:w-5/12 space-y-8"
                     >
                         <div className="space-y-4">
                             <h2 className="text-[#9138df] font-heading font-extrabold text-sm uppercase tracking-[4px]">
@@ -46,8 +46,32 @@ export default function QuotePage() {
                         initial={{ opacity: 0, y: 50 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
+                        className="w-full lg:w-7/12"
                     >
-                        <EstimateForm />
+                        <div className="w-full bg-white rounded-[20px] shadow-2xl overflow-hidden">
+                            <iframe
+                                src="https://api.leadconnectorhq.com/widget/form/hGYkMfTqWZZxkQxPZgsG"
+                                style={{ width: '100%', height: '870px', border: 'none' }}
+                                id="inline-hGYkMfTqWZZxkQxPZgsG"
+                                scrolling="no"
+                                data-layout="{'id':'INLINE'}"
+                                data-trigger-type="alwaysShow"
+                                data-trigger-value=""
+                                data-activation-type="alwaysActivated"
+                                data-activation-value=""
+                                data-deactivation-type="neverDeactivate"
+                                data-deactivation-value=""
+                                data-form-name="wizardwashva"
+                                data-height="870"
+                                data-layout-iframe-id="inline-hGYkMfTqWZZxkQxPZgsG"
+                                data-form-id="hGYkMfTqWZZxkQxPZgsG"
+                                title="wizardwashva"
+                            ></iframe>
+                        </div>
+                        <Script
+                            src="https://link.msgsndr.com/js/form_embed.js"
+                            strategy="afterInteractive"
+                        />
                     </motion.div>
 
                 </div>

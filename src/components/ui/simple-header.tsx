@@ -110,18 +110,28 @@ export function SimpleHeader() {
                                     <a
                                         className={buttonVariants({
                                             variant: 'ghost',
-                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] xl:text-[14px] xl:text-[15px] px-2 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
+                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[11px] xl:text-[14px] px-1 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
                                         })}
                                         href={link.href}
                                     >
-                                        {link.label}
+                                        <span className="hidden xl:inline">{link.label}</span>
+                                        <span className="xl:hidden">
+                                            {link.label === 'Residential Power Washing' ? 'Residential' :
+                                                link.label === 'Commercial Power Washing' ? 'Commercial' :
+                                                    link.label === 'About Us' ? 'About' : link.label}
+                                        </span>
                                         {link.subLinks && <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
                                     </a>
                                 ) : (
                                     <div
-                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] xl:text-[14px] xl:text-[15px] px-2 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
+                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[11px] xl:text-[14px] px-1 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
                                     >
-                                        {link.label}
+                                        <span className="hidden xl:inline">{link.label}</span>
+                                        <span className="xl:hidden">
+                                            {link.label === 'Residential Power Washing' ? 'Residential' :
+                                                link.label === 'Commercial Power Washing' ? 'Commercial' :
+                                                    link.label === 'About Us' ? 'About' : link.label}
+                                        </span>
                                         {link.subLinks && <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
                                     </div>
                                 )}
@@ -172,8 +182,8 @@ export function SimpleHeader() {
                 </div>
 
                 {/* Right Side: Phone + CTA + Mobile Toggle */}
-                <div className="flex items-center gap-2 xl:gap-8">
-                    <div className="hidden lg:flex flex-col items-end gap-0.5 font-heading">
+                <div className="flex items-center gap-1 xl:gap-8">
+                    <div className="hidden xl:flex flex-col items-end gap-0.5 font-heading">
                         <span className="text-[9px] xl:text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
                         <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[#9138df] transition-colors cursor-pointer">
                             <Phone size={16} className="text-[#9138df] fill-[#9138df]/10 xl:w-[20px] xl:h-[20px]" />
@@ -192,8 +202,9 @@ export function SimpleHeader() {
 
                     <div className="hidden md:block">
                         <a href="/quote">
-                            <Button className="font-heading font-black uppercase tracking-widest px-4 xl:px-8 py-6 xl:py-7 text-[14px] xl:text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
-                                Request<span className="hidden xl:inline"> A Quote</span>
+                            <Button className="font-heading font-black uppercase tracking-widest px-3 xl:px-8 py-5 xl:py-7 text-[12px] xl:text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
+                                <span className="xl:inline">Request A Quote</span>
+                                <span className="xl:hidden">Quote</span>
                             </Button>
                         </a>
                     </div>
