@@ -76,10 +76,6 @@ export function SimpleHeader() {
                 { label: 'Government and Municipal Buildings', href: '/services/government' },
             ]
         },
-        {
-            label: 'Careers',
-            href: '/careers',
-        },
     ];
 
     return (
@@ -92,7 +88,7 @@ export function SimpleHeader() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="bg-white/95 supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 w-full border-b-[4px] border-[#9138df] backdrop-blur-lg shadow-sm"
         >
-            <nav className="flex h-24 lg:h-32 w-full items-center justify-between pr-6 pl-4 lg:pr-12 lg:pl-10 max-w-[1920px] mx-auto">
+            <nav className="flex h-24 lg:h-32 w-full items-center justify-between px-4 lg:px-8 xl:px-12 max-w-[2000px] mx-auto">
                 {/* Left Side: Logo + Links */}
                 <div className="flex items-center h-full gap-8 lg:gap-16">
                     <a href="/" className="flex items-center shrink-0 h-full py-4 transition-transform hover:scale-105 duration-300">
@@ -176,27 +172,27 @@ export function SimpleHeader() {
                 </div>
 
                 {/* Right Side: Phone + CTA + Mobile Toggle */}
-                <div className="flex items-center gap-3 lg:gap-6 xl:gap-10">
+                <div className="flex items-center gap-2 xl:gap-8">
                     <div className="hidden lg:flex flex-col items-end gap-0.5 font-heading">
                         <span className="text-[9px] xl:text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
                         <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[#9138df] transition-colors cursor-pointer">
-                            <Phone size={18} className="text-[#9138df] fill-[#9138df]/10 xl:w-[20px] xl:h-[20px]" />
+                            <Phone size={16} className="text-[#9138df] fill-[#9138df]/10 xl:w-[20px] xl:h-[20px]" />
                             <span className="text-lg xl:text-2xl font-black tabular-nums">804-690-2465</span>
                         </a>
                     </div>
 
-                    <div className="hidden 2xl:block">
+                    <div className="hidden xl:block">
                         <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" target="_blank" rel="noopener noreferrer">
-                            <Button variant="outline" className="font-heading font-black uppercase tracking-widest px-6 py-7 text-[15px] border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-all duration-300 rounded-xl group">
+                            <Button variant="outline" className="font-heading font-black uppercase tracking-widest px-4 xl:px-6 py-6 xl:py-7 text-[13px] xl:text-[15px] border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-all duration-300 rounded-xl group">
                                 <Star className="w-5 h-5 mr-2 fill-current group-hover:scale-110 transition-transform" />
-                                Leave a Review
+                                Review
                             </Button>
                         </a>
                     </div>
 
-                    <div className="hidden lg:block">
+                    <div className="hidden md:block">
                         <a href="/quote">
-                            <Button className="font-heading font-black uppercase tracking-widest px-4 xl:px-8 py-6 xl:py-7 text-sm xl:text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
+                            <Button className="font-heading font-black uppercase tracking-widest px-4 xl:px-8 py-6 xl:py-7 text-[14px] xl:text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
                                 Request<span className="hidden xl:inline"> A Quote</span>
                             </Button>
                         </a>
