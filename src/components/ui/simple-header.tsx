@@ -38,11 +38,11 @@ export function SimpleHeader() {
 
     const links: NavLink[] = [
         {
-            label: 'About Us',
+            label: 'About',
             href: '/about',
         },
         {
-            label: 'Residential Power Washing',
+            label: 'Residential',
             subLinks: [
                 { label: 'House Wash', href: '/services/house-wash' },
                 { label: 'Concrete Wash and Seal', href: '/services/concrete-wash-seal' },
@@ -64,7 +64,7 @@ export function SimpleHeader() {
             ]
         },
         {
-            label: 'Commercial Power Washing',
+            label: 'Commercial',
             subLinks: [
                 { label: 'Fleet Washing', href: '/services/fleet-washing' },
                 { label: 'Offices', href: '/services/offices' },
@@ -110,28 +110,18 @@ export function SimpleHeader() {
                                     <a
                                         className={buttonVariants({
                                             variant: 'ghost',
-                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[11px] xl:text-[14px] px-1 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
+                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] lg:text-[14px] px-2 lg:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 lg:gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
                                         })}
                                         href={link.href}
                                     >
-                                        <span className="hidden xl:inline">{link.label}</span>
-                                        <span className="xl:hidden">
-                                            {link.label === 'Residential Power Washing' ? 'Residential' :
-                                                link.label === 'Commercial Power Washing' ? 'Commercial' :
-                                                    link.label === 'About Us' ? 'About' : link.label}
-                                        </span>
+                                        {link.label}
                                         {link.subLinks && <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
                                     </a>
                                 ) : (
                                     <div
-                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[11px] xl:text-[14px] px-1 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
+                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] lg:text-[14px] px-2 lg:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 lg:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
                                     >
-                                        <span className="hidden xl:inline">{link.label}</span>
-                                        <span className="xl:hidden">
-                                            {link.label === 'Residential Power Washing' ? 'Residential' :
-                                                link.label === 'Commercial Power Washing' ? 'Commercial' :
-                                                    link.label === 'About Us' ? 'About' : link.label}
-                                        </span>
+                                        {link.label}
                                         {link.subLinks && <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
                                     </div>
                                 )}
