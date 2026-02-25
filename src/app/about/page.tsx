@@ -24,17 +24,17 @@ export default function AboutPage() {
 
             <div className="relative">
                 {/* Hero Section - Pinned Frame */}
-                <section className="sticky top-0 h-[60vh] lg:h-[80vh] w-full flex items-center justify-center px-6 lg:px-12 z-0">
-                    <div className="max-w-[1600px] w-full pt-12">
+                <section className="sticky top-0 h-auto sm:h-[60vh] lg:h-[80vh] w-full flex items-center justify-center px-4 sm:px-6 lg:px-12 z-0 pt-20 sm:pt-12">
+                    <div className="max-w-[1600px] w-full">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="relative h-[300px] sm:h-[400px] lg:h-[700px] w-full rounded-[2.5rem] overflow-hidden shadow-[0_30px_100px_-20px_rgba(0,0,0,0.3)] bg-slate-50"
+                            className="relative aspect-[4/3] sm:aspect-video sm:h-auto lg:h-[700px] w-full rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden shadow-[0_30px_100px_-20px_rgba(0,0,0,0.3)] bg-slate-50"
                         >
                             <img
                                 src="/images/Hero Page.png"
                                 alt="Wizard Wash"
-                                className="w-full h-full object-cover object-center"
+                                className="w-full h-full object-cover object-[center_20%]"
                             />
                             <div className="absolute inset-0 bg-black/5" />
                         </motion.div>

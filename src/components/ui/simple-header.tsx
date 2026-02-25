@@ -99,10 +99,10 @@ export function SimpleHeader() {
                         <img
                             src="/images/Wizard Wash Logo _Transparent.png"
                             alt="Wizard Wash Logo"
-                            className="h-full w-auto object-contain drop-shadow-md scale-[1.1] md:scale-[1.24] origin-left"
+                            className="h-full w-auto object-contain drop-shadow-md scale-[1.0] md:scale-[1.1] xl:scale-[1.24] origin-left"
                         />
                     </a>
-                    <div className="hidden md:flex items-center gap-2">
+                    <div className="hidden md:flex items-center gap-1 xl:gap-2">
                         {links.map((link) => (
                             <div
                                 key={link.label}
@@ -114,7 +114,7 @@ export function SimpleHeader() {
                                     <a
                                         className={buttonVariants({
                                             variant: 'ghost',
-                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[14px] lg:text-[15px] px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
+                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] xl:text-[14px] xl:text-[15px] px-2 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
                                         })}
                                         href={link.href}
                                     >
@@ -123,7 +123,7 @@ export function SimpleHeader() {
                                     </a>
                                 ) : (
                                     <div
-                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[14px] lg:text-[15px] px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
+                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] xl:text-[14px] xl:text-[15px] px-2 xl:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 xl:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
                                     >
                                         {link.label}
                                         {link.subLinks && <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
@@ -176,16 +176,16 @@ export function SimpleHeader() {
                 </div>
 
                 {/* Right Side: Phone + CTA + Mobile Toggle */}
-                <div className="flex items-center gap-6 lg:gap-10">
-                    <div className="hidden md:flex flex-col items-end gap-0.5 font-heading">
-                        <span className="text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
+                <div className="flex items-center gap-3 lg:gap-6 xl:gap-10">
+                    <div className="hidden lg:flex flex-col items-end gap-0.5 font-heading">
+                        <span className="text-[9px] xl:text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
                         <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[#9138df] transition-colors cursor-pointer">
-                            <Phone size={20} className="text-[#9138df] fill-[#9138df]/10" />
-                            <span className="text-xl lg:text-2xl font-black tabular-nums">804-690-2465</span>
+                            <Phone size={18} className="text-[#9138df] fill-[#9138df]/10 xl:w-[20px] xl:h-[20px]" />
+                            <span className="text-lg xl:text-2xl font-black tabular-nums">804-690-2465</span>
                         </a>
                     </div>
 
-                    <div className="hidden xl:block">
+                    <div className="hidden 2xl:block">
                         <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" target="_blank" rel="noopener noreferrer">
                             <Button variant="outline" className="font-heading font-black uppercase tracking-widest px-6 py-7 text-[15px] border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-all duration-300 rounded-xl group">
                                 <Star className="w-5 h-5 mr-2 fill-current group-hover:scale-110 transition-transform" />
@@ -194,10 +194,10 @@ export function SimpleHeader() {
                         </a>
                     </div>
 
-                    <div className="hidden sm:block">
+                    <div className="hidden lg:block">
                         <a href="/quote">
-                            <Button className="font-heading font-black uppercase tracking-widest px-8 py-7 text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
-                                Request A Quote
+                            <Button className="font-heading font-black uppercase tracking-widest px-4 xl:px-8 py-6 xl:py-7 text-sm xl:text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
+                                Request<span className="hidden xl:inline"> A Quote</span>
                             </Button>
                         </a>
                     </div>

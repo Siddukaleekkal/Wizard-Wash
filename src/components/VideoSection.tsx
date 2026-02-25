@@ -65,7 +65,7 @@ export default function VideoSection() {
                         </div>
 
                         {/* Portfolio Showcase Tile */}
-                        <div className="relative w-full aspect-[4/3] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl border border-white group">
+                        <div className="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl border border-white group">
                             <img
                                 src="/images/New%20Portfolio%20picture.jpeg"
                                 alt="Portfolio & Solutions - Team Showcase"
