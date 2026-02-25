@@ -4,10 +4,18 @@ import nodemailer from 'nodemailer';
 export async function POST(req: Request) {
     try {
         const body = await req.json();
-        const { name, email, phone, service, address, date, details } = body;
+        const { name, email, phone, service, address, date, details, honeypot, mathAnswer, mathChallenge } = body;
 
-        // Note: You will need to add these environment variables to your .env.local file
-        // for this to actually send emails.
+        // 1. Honeypot check (Silent fail for bots)
+        if (honeypot) {
+            console.log('Bot detected via honeypot field.');
+            return NextResponse.json({ message: 'Success' }, { status: 200 });
+        }
+
+        // 2. Math Challenge check
+        if (!mathAnswer || !mathChallenge || Number(mathAnswer) !== (mathChallenge.num1 + mathChallenge.num2)) {
+            return NextResponse.json({ error: 'Math verification failed. Please try again.' }, { status: 400 });
+        }
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {

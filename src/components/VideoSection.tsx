@@ -64,11 +64,11 @@ export default function VideoSection() {
                             </div>
                         </div>
 
-                        {/* Mara Lago Showcase Tile */}
-                        <div className="relative w-full aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl border border-white group">
+                        {/* Portfolio Showcase Tile */}
+                        <div className="relative w-full aspect-[4/3] md:aspect-[21/9] rounded-3xl overflow-hidden shadow-2xl border border-white group">
                             <img
-                                src="/images/Mara Lago.jpg"
-                                alt="Commercial Showcase - Mara Lago"
+                                src="/images/New%20Portfolio%20picture.jpeg"
+                                alt="Portfolio & Solutions - Team Showcase"
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
                         </div>

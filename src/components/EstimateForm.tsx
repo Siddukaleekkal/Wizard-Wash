@@ -20,8 +20,19 @@ export function EstimateForm() {
         service: "",
         address: "",
         date: "",
-        details: ""
+        details: "",
+        honeypot: "", // Bot trap
+        mathAnswer: "" // Human check
     });
+
+    const [mathChallenge, setMathChallenge] = useState({ num1: 0, num2: 0 });
+
+    React.useEffect(() => {
+        setMathChallenge({
+            num1: Math.floor(Math.random() * 10) + 1,
+            num2: Math.floor(Math.random() * 10) + 1
+        });
+    }, []);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         setFormData(prev => ({ ...prev, [e.target.id]: e.target.value }));
@@ -36,13 +47,17 @@ export function EstimateForm() {
             const response = await fetch('/api/quote', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    ...formData,
+                    mathChallenge // Send the question details for verification
+                }),
             });
 
             if (response.ok) {
                 setSubmitted(true);
             } else {
-                setError("Something went wrong. Please try again or call us directly.");
+                const data = await response.json();
+                setError(data.error || "Something went wrong. Please try again or call us directly.");
             }
         } catch (err) {
             setError("Network error. Please try again later.");
@@ -75,7 +90,14 @@ export function EstimateForm() {
                             service: "",
                             address: "",
                             date: "",
-                            details: ""
+                            details: "",
+                            honeypot: "",
+                            mathAnswer: ""
+                        });
+                        // Refresh math challenge
+                        setMathChallenge({
+                            num1: Math.floor(Math.random() * 10) + 1,
+                            num2: Math.floor(Math.random() * 10) + 1
                         });
                     }}
                     variant="outline"
@@ -146,6 +168,35 @@ export function EstimateForm() {
                     value={formData.details}
                     onChange={handleChange}
                 />
+            </div>
+
+            {/* Security Layer */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-end">
+                {/* Honeypot - Hidden from humans */}
+                <div className="hidden" aria-hidden="true">
+                    <Label htmlFor="honeypot">Leave this empty</Label>
+                    <Input id="honeypot" value={formData.honeypot} onChange={handleChange} tabIndex={-1} autoComplete="off" />
+                </div>
+
+                {/* Math Challenge */}
+                <div className="space-y-2">
+                    <Label htmlFor="mathAnswer" className="text-xs uppercase tracking-widest font-black text-[#1e1e3f]/70">
+                        Human Check: What is {mathChallenge.num1} + {mathChallenge.num2}?
+                    </Label>
+                    <Input
+                        id="mathAnswer"
+                        type="text"
+                        placeholder="Your answer"
+                        required
+                        className="h-12 border-[#9138df]/30 focus:border-[#9138df]"
+                        value={formData.mathAnswer}
+                        onChange={handleChange}
+                    />
+                </div>
+
+                <div className="text-[10px] text-slate-400 font-body leading-tight">
+                    This simple check helps us prevent spam and ensures we can respond to your request quickly.
+                </div>
             </div>
 
             <Button

@@ -29,12 +29,12 @@ export default function AboutPage() {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.98 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="relative h-[400px] lg:h-[700px] w-full rounded-[2.5rem] overflow-hidden shadow-[0_30px_100px_-20px_rgba(0,0,0,0.3)] bg-slate-50"
+                            className="relative h-[300px] sm:h-[400px] lg:h-[700px] w-full rounded-[2.5rem] overflow-hidden shadow-[0_30px_100px_-20px_rgba(0,0,0,0.3)] bg-slate-50"
                         >
                             <img
                                 src="/images/Hero Page.png"
                                 alt="Wizard Wash"
-                                className="w-full h-full object-cover"
+                                className="w-full h-full object-cover object-center"
                             />
                             <div className="absolute inset-0 bg-black/5" />
                         </motion.div>
@@ -59,10 +59,10 @@ export default function AboutPage() {
                                 {[
                                     { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care." },
                                     { name: "Christian Hancock", role: "Operations Manager - FL", img: "/images/Christian%20Hancock%20Florida%20Operations%20Manager.jpeg", desc: "Ensures flawless execution and operational excellence across our Florida service areas." },
-                                    { name: "Ellie Von Herbulis", role: "Sales Manager", img: "/images/Ellie%20Von%20Herbulis%20Sales%20Manager.PNG", desc: "Drives business growth and builds lasting relationships with our residential and commercial clients." },
-                                    { name: "Carlos Rincon", role: "Team Lead - VA Beach", img: "/images/Carlos%20Rincon%20Team%20Lead%20Virginia%20Beach.PNG", desc: "Directs high-impact cleaning projects in Virginia Beach with extreme precision." },
+                                    { name: "Savannah Calloway", role: "Sales Manager", img: "/images/Ellie%20Von%20Herbulis%20Sales%20Manager.PNG", desc: "Drives business growth and builds lasting relationships with our residential and commercial clients." },
+                                    { name: "Carlos Rincon", role: "Team Lead - VA Branch", img: "/images/Carlos%20Rincon%20Team%20Lead%20Virginia%20Beach.PNG", desc: "Directs high-impact cleaning projects in VA Branch with extreme precision." },
                                     { name: "Jose Rivas", role: "Crew Member", img: "/images/Jose%20Rivas%20Crew%20Member.PNG", desc: "A meticulous technician who consistently delivers spotless, transformative results." },
-                                    { name: "Alex Hancock", role: "Crew Member - VA Branch", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
+                                    { name: "Alex Hancock", role: "Crew Member", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
                                 ].map((member, idx) => (
                                     <motion.div
                                         key={idx}

@@ -16,21 +16,27 @@ export default function Navbar() {
                 </a>
 
                 {/* Desktop Right Side Content */}
-                <div className="hidden md:flex flex-col justify-between items-end ml-8 flex-grow">
+                <div className="hidden md:flex flex-col justify-between items-end lg:ml-8 flex-grow py-1">
                     {/* Top Row: Call Now */}
-                    <div className="flex flex-col items-end mb-1 md:mb-2">
-                        <span className="text-xs font-heading tracking-widest text-[#1e1e3f]/70 uppercase font-bold mb-0.5">Call Now For Your Free Quote</span>
-                        <div className="flex items-center gap-1.5 text-2xl font-heading font-bold text-[#1e1e3f]">
-                            <Phone size={20} className="text-[var(--color-accent-purple)]" />
+                    <div className="flex flex-col items-end mb-1">
+                        <span className="text-[10px] lg:text-xs font-heading tracking-widest text-[#1e1e3f]/70 uppercase font-bold mb-0.5">Call Now For Your Free Quote</span>
+                        <div className="flex items-center gap-1.5 text-xl lg:text-2xl font-heading font-bold text-[#1e1e3f]">
+                            <Phone size={18} className="text-[var(--color-accent-purple)] lg:w-[20px] lg:h-[20px]" />
                             <span>1-800-WIZARD</span>
                         </div>
                     </div>
 
-                    <div className="flex space-x-6 lg:space-x-8 items-center font-heading font-medium text-[13px] lg:text-[14px] uppercase tracking-wider">
-                        <a href="/residential" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Residential Power Washing</a>
-                        <a href="/commercial" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Commercial Power Washing</a>
+                    <div className="flex space-x-4 lg:space-x-8 items-center font-heading font-medium text-[12px] lg:text-[14px] uppercase tracking-wider">
+                        <a href="/residential" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)] group">
+                            <span className="hidden xl:inline">Residential Power Washing</span>
+                            <span className="xl:hidden">Residential</span>
+                        </a>
+                        <a href="/commercial" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)] group">
+                            <span className="hidden xl:inline">Commercial Power Washing</span>
+                            <span className="xl:hidden">Commercial</span>
+                        </a>
                         <a href="/about" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">About</a>
-                        <a href="/quote" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-accent-purple)] text-white px-5 py-2 rounded hover:bg-[var(--color-accent-purple-dark)] transition-colors font-bold shadow-md">
+                        <a href="/quote" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-accent-purple)] text-white px-4 lg:px-5 py-2 rounded hover:bg-[var(--color-accent-purple-dark)] transition-colors font-bold shadow-md whitespace-nowrap">
                             Request A Quote
                         </a>
                     </div>
