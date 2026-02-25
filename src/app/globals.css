@@ -73,3 +73,19 @@
     -webkit-text-fill-color: transparent;
     background-image: linear-gradient(to right, var(--color-accent-purple), var(--color-water-blue));
 }
+
+/* Force hiding standard iOS/mobile play buttons on video elements */
+video::-webkit-media-controls {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+    -webkit-appearance: none !important;
+    opacity: 0 !important;
+}
+
+video {
+    pointer-events: none; /* Prevent tapping the video, acting like a background element */
+}
