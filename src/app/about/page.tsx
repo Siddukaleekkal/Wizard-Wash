@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { SimpleHeader } from '@/components/ui/simple-header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
@@ -8,6 +8,16 @@ import { motion } from 'framer-motion';
 import { Shield, Users, Zap, Star, Target, Award, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function AboutPage() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.defaultMuted = true;
+            videoRef.current.muted = true;
+            videoRef.current.play().catch(console.error);
+        }
+    }, []);
+
     return (
         <main className="min-h-screen  flex flex-col bg-white">
             <SimpleHeader />
@@ -107,6 +117,7 @@ export default function AboutPage() {
                                 <div className="absolute -inset-4 bg-[#9138df]/5 rounded-[2rem] -z-10 rotate-3" />
                                 <div className="aspect-[9/16] sm:aspect-[4/5] md:aspect-[3/4] lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-black relative">
                                     <video
+                                        ref={videoRef}
                                         src="/images/Mara%20Lago%20Video.mov"
                                         className="w-full h-full object-cover"
                                         autoPlay

@@ -1,11 +1,21 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { MoveRight, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function Hero() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.defaultMuted = true;
+            videoRef.current.muted = true;
+            videoRef.current.play().catch(console.error);
+        }
+    }, []);
+
     const [titleNumber, setTitleNumber] = useState(0);
     const titles = useMemo(
         () => ["Spotless", "Sparkling", "Perfect", "Restored", "Immaculate"],
@@ -26,6 +36,7 @@ export default function Hero() {
     return (
         <section className="relative w-full h-[70vh] min-h-[600px] lg:h-[80vh] overflow-hidden bg-black border-b-4 border-[#9138df]">
             <video
+                ref={videoRef}
                 autoPlay
                 loop
                 muted

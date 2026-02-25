@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
 const SERVICES = [
@@ -13,6 +13,16 @@ const SERVICES = [
 ];
 
 export default function VideoSection() {
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.defaultMuted = true;
+            videoRef.current.muted = true;
+            videoRef.current.play().catch(console.error);
+        }
+    }, []);
+
     return (
         <section className="py-24 bg-slate-50 relative overflow-hidden" id="commercial">
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
@@ -68,6 +78,7 @@ export default function VideoSection() {
                     <div className="lg:col-span-5 flex flex-col gap-6">
                         <div className="relative w-full h-[600px] lg:flex-1 min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white group group-hover:shadow-[#9138df]/20 transition-all duration-700">
                             <video
+                                ref={videoRef}
                                 autoPlay
                                 loop
                                 muted
