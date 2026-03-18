@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 import { SimpleHeader } from '@/components/ui/simple-header';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { Shield, Users, Zap, Star, Target, Award, Sparkles, ArrowRight } from 'lucide-react';

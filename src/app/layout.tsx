@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Barlow, Playfair_Display } from 'next/font/google';
 import './globals.css';
-import { VideoAutoplayLogic } from '@/components/shared/VideoAutoplayLogic';
+import { VideoAutoplayLogic } from '@/components/VideoAutoplayLogic';
 const barlow = Barlow({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-barlow', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
 

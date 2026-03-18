@@ -3,7 +3,7 @@
 import React from 'react';
 import { notFound } from 'next/navigation';
 import { SimpleHeader } from '@/components/ui/simple-header';
-import Footer from '@/components/layout/Footer';
+import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Zap, Shield, Star } from 'lucide-react';

@@ -1,10 +1,10 @@
 import { SimpleHeader } from '@/components/ui/simple-header';
-import Hero from '@/components/sections/Hero';
-import CompanyCarouselSection from '@/components/sections/CompanyCarouselSection';
-import VideoSection from '@/components/sections/VideoSection';
-import ServiceMapSection from '@/components/sections/ServiceMapSection';
-import TestimonialsSection from '@/components/sections/TestimonialsSection';
-import Footer from '@/components/layout/Footer';
+import Hero from '@/components/Hero';
+import CompanyCarouselSection from '@/components/CompanyCarouselSection';
+import VideoSection from '@/components/VideoSection';
+import ServiceMapSection from '@/components/ServiceMapSection';
+import TestimonialsSection from '@/components/TestimonialsSection';
+import Footer from '@/components/Footer';
 
 export default function Home() {
     return (
