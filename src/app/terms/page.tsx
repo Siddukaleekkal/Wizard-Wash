@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { SimpleHeader } from '@/components/ui/simple-header';
-import Footer from '@/components/Footer';
+import Footer from '@/components/layout/Footer';
 import { motion } from 'framer-motion';
 
 export default function TermsPage() {

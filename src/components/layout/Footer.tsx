@@ -117,7 +117,7 @@ export default function Footer() {
                 </div>
                 <div className="flex justify-center border-t border-white/5 pt-6">
                     <p className="text-slate-500 font-heading font-semibold uppercase tracking-[3px] text-[10px]">
-                        Designed and Maintained by <span className="text-[#9138df] font-black tracking-widest">Viracis Technology Solutions</span>
+                        Designed and Maintained by <a href="https://viracis.com" target="_blank" rel="noopener noreferrer" className="text-[#9138df] hover:text-[#7a2ac1] font-black tracking-widest transition-colors">Viracis Technology Solutions</a>
                     </p>
                 </div>
             </div>
