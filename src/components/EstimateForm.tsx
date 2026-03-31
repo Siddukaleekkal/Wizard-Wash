@@ -142,6 +142,7 @@ export function EstimateForm() {
                         <option value="">Select a service</option>
                         <option value="Residential Power Washing">Residential Power Washing</option>
                         <option value="Commercial Power Washing">Commercial Power Washing</option>
+                        <option value="Asphalt Sealcoating">Asphalt Sealcoating</option>
                         <option value="Roof Cleaning">Roof Cleaning</option>
                         <option value="Holiday Lighting">Holiday Lighting</option>
                         <option value="Fleet Maintenance">Fleet Maintenance</option>

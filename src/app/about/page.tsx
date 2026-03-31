@@ -5,7 +5,7 @@ import { SimpleHeader } from '@/components/ui/simple-header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Shield, Users, Zap, Star, Target, Award, Sparkles, ArrowRight } from 'lucide-react';
+import { Shield, Users, Zap, Star, Target, Award, Sparkles, ArrowRight, Mail } from 'lucide-react';
 
 export default function AboutPage() {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -57,13 +57,14 @@ export default function AboutPage() {
                             <div className="flex flex-wrap justify-center gap-16 gap-y-20 mb-24">
                                 {/* Team Members */}
                                 {[
-                                    { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care." },
-                                    { name: "Christian Hancock", role: "Operations Manager - FL", img: "/images/Christian%20Hancock%20Florida%20Operations%20Manager.jpeg", desc: "Ensures flawless execution and operational excellence across our Florida service areas." },
+                                    { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care.", email: "omar@wizardwashva.com" },
+                                    { name: "Siddu Kaleekkal", role: "CTO", img: "/images/Siddu%20Kaleekkal%20CTO.jpg", desc: "Drives technological innovation and digital strategy at Wizard Wash.", imgClass: "object-top", email: "siddu@wizardwashva.com" },
+                                    { name: "Christian Hancock", role: "COO", img: "/images/Christian%20Hancock%20Florida%20Operations%20Manager.jpeg", desc: "Ensures flawless execution and operational excellence across our Florida service areas.", email: "christian@wizardwashva.com" },
                                     { name: "Savannah Calloway", role: "Sales Manager", img: "/images/Ellie%20Von%20Herbulis%20Sales%20Manager.PNG", desc: "Drives business growth and builds lasting relationships with our residential and commercial clients." },
                                     { name: "Carlos Rincon", role: "Team Lead - VA Branch", img: "/images/Carlos%20Rincon%20Team%20Lead%20Virginia%20Beach.PNG", desc: "Directs high-impact cleaning projects in VA Branch with extreme precision." },
                                     { name: "Jose Rivas", role: "Crew Member", img: "/images/Jose%20Rivas%20Crew%20Member.PNG", desc: "A meticulous technician who consistently delivers spotless, transformative results." },
                                     { name: "Alex Hancock", role: "Crew Member", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
-                                ].map((member, idx) => (
+                                ].map((member: any, idx) => (
                                     <motion.div
                                         key={idx}
                                         initial={{ opacity: 0, y: 20 }}
@@ -72,11 +73,19 @@ export default function AboutPage() {
                                         className="group space-y-6 flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2.67rem)] max-w-[300px]"
                                     >
                                         <div className="w-56 h-56 rounded-full overflow-hidden shadow-xl border-[6px] border-white group-hover:border-[#9138df] transition-all duration-500 ease-out">
-                                            <img src={member.img} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                                            <img src={member.img} alt={member.name} className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${member.imgClass || ''}`} />
                                         </div>
                                         <div>
                                             <h3 className="text-2xl font-black font-heading uppercase tracking-tight text-[#1e1e3f]">{member.name}</h3>
                                             <p className="text-[#9138df] font-bold tracking-widest text-xs uppercase mt-1 mb-3">{member.role}</p>
+                                            {member.email && (
+                                                <div className="mb-4">
+                                                    <a href={`mailto:${member.email}`} className="inline-flex items-center justify-center space-x-2 text-xs font-bold text-white bg-[#9138df] hover:bg-[#1e1e3f] transition-all duration-300 px-4 py-2 rounded-full shadow-md hover:shadow-lg">
+                                                        <Mail className="w-3.5 h-3.5" />
+                                                        <span>Email {member.name.split(' ')[0]}</span>
+                                                    </a>
+                                                </div>
+                                            )}
                                             <p className="text-slate-500 text-sm font-body max-w-[280px] mx-auto">{member.desc}</p>
                                         </div>
                                     </motion.div>

@@ -59,6 +59,12 @@ const SERVICES_DATA = {
         description: "Your outdoor living spaces are the heart of your home during the warmer months. We provide a deep, restorative clean for all walkable surfaces, including wood decks, composite decking, stone patios, and concrete sidewalks. Our process removes deeply embedded dirt, seasonal moss, and slippery algae that can make surfaces dangerous. We use surface specific techniques—gentle softwashing for wood and high performance surface cleaners for concrete—to ensure a uniform, streak free finish that revitalizes your entire outdoor entertaining area.",
         features: ["Surface specific cleaning", "Algae & slips prevention", "Uniform streak free finish", "Restored outdoor beauty"]
     },
+    "asphalt-sealcoating": {
+        title: "Asphalt Sealcoating",
+        category: "Residential",
+        description: "Protect and extend the life of your asphalt driveway with our premium sealcoating service. Unsealed asphalt is highly susceptible to UV oxidation, water penetration, and chemical spills which cause cracking and potholes over time. Our commercial-grade emulsion sealer replenishes the vital oils deep within the pavement, providing a durable, jet-black protective barrier that restores your driveway's original appearance while halting structural decay.",
+        features: ["Commercial-grade sealer", "Crack filling treatment", "UV & water protection", "Deep jet-black finish"]
+    },
     "christmas-lights": {
         title: "Christmas Lights Installation",
         category: "Holiday",

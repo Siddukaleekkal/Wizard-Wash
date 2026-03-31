@@ -52,6 +52,7 @@ export function SimpleHeader() {
                 { label: 'Wood Power wash', href: '/services/wood-wash' },
                 { label: 'Gutter Cleaning Services', href: '/services/gutter-cleaning' },
                 { label: 'Sidewalk + Deck & Patio Wash', href: '/services/sidewalk-deck-patio' },
+                { label: 'Asphalt Sealcoating', href: '/services/asphalt-sealcoating' },
                 {
                     label: 'Holiday Lights Installation',
                     href: '/services/christmas-lights',

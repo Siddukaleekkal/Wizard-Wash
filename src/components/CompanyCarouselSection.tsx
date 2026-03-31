@@ -3,12 +3,12 @@
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 const COMPANIES = [
-    { name: "Chick-fil-A", logo: "/images/Chick-fil-A-logo.png", className: "h-[85px] md:h-[110px]" },
-    { name: "ACAC", logo: "/images/acac-transparent.png", className: "h-[65px] md:h-[85px]" },
-    { name: "Narwhals", logo: "/images/NarWhalsLogo.webp", className: "h-[80px] md:h-[110px]" },
-    { name: "Gold's Gym", logo: "/images/Golds%20Gym%20Transparent.png", className: "h-[85px] md:h-[115px]" },
-    { name: "Mar-a-Lago", logo: "/images/mara_lago_transparent.png", className: "h-[105px] md:h-[140px]" },
-    { name: "Starbucks", logo: "/images/Starbucks%20Logo.png", className: "h-[75px] md:h-[100px]" },
+    { name: "Chick-fil-A", logo: "/images/Chick-fil-A-logo.png", className: "h-[100px] md:h-[135px]" },
+    { name: "ACAC", logo: "/images/acac-transparent.png", className: "h-[100px] md:h-[135px]" },
+    { name: "Panera Bread", logo: "/images/New%20Panera%20Bread%20Transparent.png", className: "h-[100px] md:h-[135px]" },
+    { name: "Gold's Gym", logo: "/images/New%20Golds%20Gym%20Logo.png", className: "h-[100px] md:h-[135px]" },
+    { name: "Mar-a-Lago", logo: "/images/mara_lago_transparent.png", className: "h-[100px] md:h-[135px]" },
+    { name: "Starbucks", logo: "/images/Starbucks%20Logo.png", className: "h-[100px] md:h-[135px]" },
 ];
 
 export default function CompanyCarouselSection() {
