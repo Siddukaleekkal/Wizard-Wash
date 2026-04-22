@@ -143,8 +143,13 @@ export default function QuotePage() {
                         transition={{ duration: 0.8, delay: 0.2 }}
                         className="w-full lg:w-7/12"
                     >
-                        <div className="w-full bg-white rounded-[20px] shadow-2xl overflow-hidden min-h-[500px] p-4 flex justify-center">
+                        <div className="w-full bg-white rounded-[20px] shadow-2xl overflow-hidden min-h-[500px] p-4 flex flex-col items-center">
                             <div id="zf_div_JKnd2lv_4XpoFIS21rxUojbH3SWFcFEE_oEvAG_7KJ4" className="w-full py-4 max-w-full overflow-hidden flex justify-center"></div>
+                            
+                            {/* TCR Compliance Text */}
+                            <div className="mt-4 px-6 pb-6 text-[11px] text-slate-500 leading-relaxed text-center max-w-lg">
+                                By submitting this form, you are agreeing to receive sms customer care-related or one-on-one communication messages from Wizard Wash. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply Help for help. <a href="/privacy" className="underline hover:text-[#9138df]">Privacy Policy</a> <a href="/terms" className="underline hover:text-[#9138df]">Terms</a>.
+                            </div>
                         </div>
                     </motion.div>
 

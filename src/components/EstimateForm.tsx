@@ -200,13 +200,20 @@ export function EstimateForm() {
                 </div>
             </div>
 
-            <Button
-                type="submit"
-                disabled={loading}
-                className="w-full h-16 bg-[#9138df] hover:bg-[#7a2ac1] text-white font-heading font-black uppercase tracking-[3px] text-lg rounded-xl shadow-[0_15px_30px_-10px_rgba(145,56,223,0.5)] transition-all hover:-translate-y-1 group disabled:opacity-70 disabled:hover:translate-y-0"
-            >
-                {loading ? "Sending..." : "Submit Request"} <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-            </Button>
+            <div className="space-y-4">
+                <Button
+                    type="submit"
+                    disabled={loading}
+                    className="w-full h-16 bg-[#9138df] hover:bg-[#7a2ac1] text-white font-heading font-black uppercase tracking-[3px] text-lg rounded-xl shadow-[0_15px_30px_-10px_rgba(145,56,223,0.5)] transition-all hover:-translate-y-1 group disabled:opacity-70 disabled:hover:translate-y-0"
+                >
+                    {loading ? "Sending..." : "Submit Request"} <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                </Button>
+
+                {/* TCR Compliance Text */}
+                <p className="text-[10px] text-slate-400 leading-relaxed text-center px-4">
+                    By submitting this form, you are agreeing to receive sms customer care-related or one-on-one communication messages from Wizard Wash. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply Help for help. <a href="/privacy" className="underline hover:text-[#9138df]">Privacy Policy</a> <a href="/terms" className="underline hover:text-[#9138df]">Terms</a>.
+                </p>
+            </div>
 
             <p className="text-center text-[11px] text-slate-400 font-heading font-bold uppercase tracking-widest">
                 Safe. Professional. Insured.

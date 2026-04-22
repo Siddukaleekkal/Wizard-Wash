@@ -88,6 +88,12 @@ export default function PrivacyPolicyPage() {
                             <p>
                                 Wizard Wash does not sell, rent, or trade your personal information to third parties. We may share your data with trusted service providers (such as hosting partners or scheduling software) who assist us in operating our business and providing services to you, provided they agree to keep your information confidential.
                             </p>
+                            <p>
+                                We will not share your opt-in to an SMS campaign with any third party for purposes unrelated to providing you with the services of that campaign. We may share your Personal Data, including your SMS opt-in or consent status, with third parties that help us provide our messaging services, including but not limited to platform providers, phone companies, and any other vendors who assist us in the delivery of text messages.
+                            </p>
+                            <p>
+                                All the above categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.
+                            </p>
                         </div>
 
                         <div className="space-y-6">
