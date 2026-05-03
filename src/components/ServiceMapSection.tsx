@@ -11,7 +11,6 @@ const STATES = [
     { name: "North Carolina", type: "Service District" },
     { name: "South Carolina", type: "Service District" },
     { name: "Georgia", type: "Service District" },
-    { name: "Florida", type: "Service District" },
 ];
 
 export default function ServiceMapSection() {
@@ -87,7 +86,6 @@ export default function ServiceMapSection() {
                                     <path d="M200,200 L250,120" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
                                     <path d="M200,200 L300,350" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
                                     <path d="M200,200 L120,480" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
-                                    <path d="M200,200 L200,550" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
                                 </g>
 
                                 {/* Richmond HQ Marker */}
@@ -117,9 +115,6 @@ export default function ServiceMapSection() {
 
                                     <circle cx="120" cy="480" r="4" fill="#9138df" />
                                     <text x="110" y="485" textAnchor="end">Georgia</text>
-
-                                    <circle cx="200" cy="550" r="4" fill="#9138df" />
-                                    <text x="210" y="555">Florida</text>
                                 </g>
 
                                 {/* Stylized Coastline (Abstract representation) */}
@@ -143,7 +138,7 @@ export default function ServiceMapSection() {
                             {/* Stats/Badge */}
                             <div className="absolute bottom-10 right-0 bg-white/90 backdrop-blur-xl border border-slate-100 p-6 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-20">
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-[#1e1e3f] font-heading font-black text-2xl tracking-tighter">8 STATES</span>
+                                    <span className="text-[#1e1e3f] font-heading font-black text-2xl tracking-tighter">7 STATES</span>
                                     <span className="text-[#9138df] font-heading font-bold text-[10px] uppercase tracking-widest">Continuous Support</span>
                                 </div>
                             </div>
