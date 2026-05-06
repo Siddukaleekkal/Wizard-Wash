@@ -200,6 +200,19 @@ export function EstimateForm() {
                 </div>
             </div>
 
+            {/* TCR Compliance Text */}
+            <div className="mt-4 px-4 flex items-start gap-3">
+                <input 
+                    type="checkbox" 
+                    id="sms-consent-estimate" 
+                    className="mt-1 w-4 h-4 text-[#9138df] bg-gray-100 border-gray-300 rounded focus:ring-[#9138df] flex-shrink-0 cursor-pointer"
+                    required
+                />
+                <label htmlFor="sms-consent-estimate" className="text-[10px] text-slate-400 leading-relaxed text-left cursor-pointer">
+                    By submitting this form, you are agreeing to receive sms customer care-related or one-on-one communication messages from Wizard Wash. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply Help for help. <a href="/privacy" className="underline hover:text-[#9138df]">Privacy Policy</a> <a href="/terms" className="underline hover:text-[#9138df]">Terms</a>.
+                </label>
+            </div>
+
             <div className="space-y-4">
                 <Button
                     type="submit"
@@ -208,11 +221,6 @@ export function EstimateForm() {
                 >
                     {loading ? "Sending..." : "Submit Request"} <Send className="ml-2 w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                 </Button>
-
-                {/* TCR Compliance Text */}
-                <p className="text-[10px] text-slate-400 leading-relaxed text-center px-4">
-                    By submitting this form, you are agreeing to receive sms customer care-related or one-on-one communication messages from Wizard Wash. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply Help for help. <a href="/privacy" className="underline hover:text-[#9138df]">Privacy Policy</a> <a href="/terms" className="underline hover:text-[#9138df]">Terms</a>.
-                </p>
             </div>
 
             <p className="text-center text-[11px] text-slate-400 font-heading font-bold uppercase tracking-widest">

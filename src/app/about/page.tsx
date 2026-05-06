@@ -48,7 +48,7 @@ export default function AboutPage() {
                     <section className="py-24 px-6 bg-slate-50 border-b border-slate-200/60">
                         <div className="max-w-7xl mx-auto">
                             <div className="text-center mb-20 space-y-6">
-                                <h2 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black uppercase tracking-tight">Meet The Team</h2>
+                                <h2 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black uppercase tracking-tight">Our Team</h2>
                                 <p className="text-slate-600 text-lg max-w-2xl mx-auto font-body">
                                     Our team of dedicated professionals combines industry expertise with a passion for excellence. We treat every property with the utmost care, ensuring magical results every time.
                                 </p>
