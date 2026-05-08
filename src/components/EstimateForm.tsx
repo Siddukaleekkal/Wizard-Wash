@@ -209,7 +209,7 @@ export function EstimateForm() {
                     required
                 />
                 <label htmlFor="sms-consent-estimate" className="text-[10px] text-slate-400 leading-relaxed text-left cursor-pointer">
-                    By submitting this form, you are agreeing to receive sms customer care-related or one-on-one communication messages from Wizard Wash. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply Help for help. <a href="/privacy" className="underline hover:text-[#9138df]">Privacy Policy</a> <a href="/terms" className="underline hover:text-[#9138df]">Terms</a>.
+                    By submitting this form, you are agreeing to receive sms marketing, customer care-related or one-on-one communication messages from Wizard Wash. Message frequency may vary. Standard Message and Data Rates may apply. Reply STOP to opt out. Reply Help for help. <a href="/privacy" className="underline hover:text-[#9138df]">Privacy Policy</a> <a href="/terms" className="underline hover:text-[#9138df]">Terms</a>.
                 </label>
             </div>
 

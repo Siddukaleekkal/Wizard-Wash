@@ -67,7 +67,7 @@ export default function PrivacyPolicyPage() {
                                 <li>To provide accurate service estimates and quotes.</li>
                                 <li>To communicate with you regarding appointments, service updates, and follow ups.</li>
                                 <li>To improve our website functionality and user experience.</li>
-                                <li>To send promotional material or newsletters (if you have opted in).</li>
+                                <li>To send promotional material, marketing messages via SMS, or newsletters (if you have opted in).</li>
                                 <li>To comply with legal and regulatory obligations.</li>
                             </ul>
                         </div>
