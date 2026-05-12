@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Barlow, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { VideoAutoplayLogic } from '@/components/VideoAutoplayLogic';
+import { Analytics } from "@vercel/analytics/next";
 const barlow = Barlow({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-barlow', display: 'swap' });
 const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
 
@@ -75,6 +76,7 @@ export default function RootLayout({
             <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white overflow-x-hidden w-full relative">
                 <VideoAutoplayLogic />
                 {children}
+                <Analytics />
             </body>
         </html>
     );
