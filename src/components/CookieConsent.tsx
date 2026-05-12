@@ -29,67 +29,44 @@ export default function CookieConsent() {
     };
 
     return (
-        <>
-            <AnimatePresence>
-                {isVisible && (
-                    <motion.div
-                        initial={{ y: 100, opacity: 0 }}
-                        animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: 100, opacity: 0 }}
-                        transition={{ type: "spring", damping: 25, stiffness: 200 }}
-                        className="fixed bottom-0 left-0 w-full z-[150] bg-white border-t border-slate-200 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] px-6 py-4 md:py-3"
-                    >
-                        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
-
-                            {/* Text Content */}
-                            <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
-                                <p className="text-slate-500 text-xs md:text-sm font-body leading-tight max-w-3xl">
-                                    We use cookies to enhance your experience, analyze site traffic, and serve targeted advertisements.
-                                    By using our site, you consent to our use of cookies. <a href="/privacy" className="text-[var(--color-accent-purple)] font-bold hover:underline ml-1">Privacy Policy</a>
-                                </p>
-                            </div>
-
-                            {/* Buttons */}
-                            <div className="flex items-center gap-3 w-full md:w-auto">
-                                <button
-                                    onClick={declineCookies}
-                                    className="flex-1 md:flex-none px-6 h-10 bg-slate-50 text-slate-400 font-heading font-black text-[10px] uppercase tracking-[2px] rounded-lg hover:bg-slate-100 transition-all"
-                                >
-                                    Decline
-                                </button>
-                                <button
-                                    onClick={acceptCookies}
-                                    className="flex-1 md:flex-none px-10 h-10 bg-[#1e1e3f] text-white font-heading font-black text-[10px] uppercase tracking-[2px] rounded-lg hover:bg-[var(--color-accent-purple)] transition-all shadow-lg shadow-[#1e1e3f]/10"
-                                >
-                                    Accept All
-                                </button>
-                            </div>
-
-                        </div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-
-            {/* Persistent Cookie Button */}
-            {!isVisible && (
-                <button
-                    onClick={() => setIsVisible(true)}
-                    className="fixed bottom-6 left-6 z-[140] bg-white/80 backdrop-blur-md border border-slate-200 p-3 rounded-full shadow-lg hover:bg-white hover:scale-110 transition-all group"
-                    aria-label="Cookie Settings"
+        <AnimatePresence>
+            {isVisible && (
+                <motion.div
+                    initial={{ y: 100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    exit={{ y: 100, opacity: 0 }}
+                    transition={{ type: "spring", damping: 25, stiffness: 200 }}
+                    className="fixed bottom-0 left-0 w-full z-[150] bg-white border-t border-slate-200 shadow-[0_-10px_40px_rgba(0,0,0,0.1)] px-6 py-4 md:py-3"
                 >
-                    <svg 
-                        className="w-5 h-5 text-slate-600 group-hover:text-[var(--color-accent-purple)] transition-colors" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke="currentColor"
-                    >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                    </svg>
-                    <span className="absolute left-full ml-3 px-2 py-1 bg-slate-900 text-white text-[10px] font-bold uppercase tracking-widest rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
-                        Cookie Settings
-                    </span>
-                </button>
+                    <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 md:gap-12">
+
+                        {/* Text Content */}
+                        <div className="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+                            <p className="text-slate-500 text-xs md:text-sm font-body leading-tight max-w-3xl">
+                                We use cookies to enhance your experience, analyze site traffic, and serve targeted advertisements.
+                                By using our site, you consent to our use of cookies. <a href="/privacy" className="text-[var(--color-accent-purple)] font-bold hover:underline ml-1">Privacy Policy</a>
+                            </p>
+                        </div>
+
+                        {/* Buttons */}
+                        <div className="flex items-center gap-3 w-full md:w-auto">
+                            <button
+                                onClick={declineCookies}
+                                className="flex-1 md:flex-none px-6 h-10 bg-slate-50 text-slate-400 font-heading font-black text-[10px] uppercase tracking-[2px] rounded-lg hover:bg-slate-100 transition-all"
+                            >
+                                Decline
+                            </button>
+                            <button
+                                onClick={acceptCookies}
+                                className="flex-1 md:flex-none px-10 h-10 bg-[#1e1e3f] text-white font-heading font-black text-[10px] uppercase tracking-[2px] rounded-lg hover:bg-[var(--color-accent-purple)] transition-all shadow-lg shadow-[#1e1e3f]/10"
+                            >
+                                Accept All
+                            </button>
+                        </div>
+
+                    </div>
+                </motion.div>
             )}
-        </>
+        </AnimatePresence>
     );
 }

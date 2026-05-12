@@ -66,8 +66,6 @@ export const metadata: Metadata = {
     },
 };
 
-import FloridaPopup from '@/components/FloridaPopup';
-import FloridaModal from '@/components/FloridaModal';
 import PageTransition from '@/components/PageTransition';
 import CookieConsent from '@/components/CookieConsent';
 
@@ -80,8 +78,6 @@ export default function RootLayout({
         <html lang="en" className={`${barlow.variable} ${playfair.variable} scroll-smooth overflow-x-hidden w-full`}>
             <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white overflow-x-hidden w-full relative">
                 <VideoAutoplayLogic />
-                <FloridaPopup />
-                <FloridaModal />
                 <CookieConsent />
                 <PageTransition>
                     {children}

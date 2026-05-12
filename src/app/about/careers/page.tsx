@@ -107,7 +107,7 @@ export default function CareersPage() {
                                     <p className="text-white/40 font-body text-sm max-w-xl">{job.desc}</p>
                                 </div>
                                 <a 
-                                    href={`mailto:careers@wizardwashva.com?subject=Application for ${job.title}`}
+                                    href={`mailto:info@wizardwashva.com?subject=Application for ${job.title}`}
                                     className="h-14 px-8 border border-white/20 text-white font-heading font-black text-[10px] uppercase tracking-[2px] rounded-xl group-hover:bg-white group-hover:text-[#1e1e3f] transition-all flex items-center justify-center gap-3"
                                 >
                                     View Specification <MoveRight size={14} />

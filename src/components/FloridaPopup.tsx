@@ -28,7 +28,7 @@ export default function FloridaPopup() {
                     animate={{ height: 'auto', opacity: 1 }}
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.5, ease: [0.23, 1, 0.32, 1] }}
-                    className="relative z-[60] bg-white text-[#1e1e3f] overflow-hidden border-b-2 border-[var(--color-accent-purple)]"
+                    className="relative bg-white text-[#1e1e3f] overflow-hidden border-b border-slate-100"
                 >
                     {/* Subtle Background Pattern */}
                     <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[radial-gradient(circle_at_20%_50%,var(--color-accent-purple)_0%,transparent_50%)]" />
