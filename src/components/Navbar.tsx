@@ -37,8 +37,7 @@ export default function Navbar() {
                         </a>
                         <a href="/about" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">About</a>
                         <a href="/service-areas" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Service Areas</a>
-                        <a href="/#commercial" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Portfolio & Solutions</a>
-                        <a href="/#services" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Professional Services</a>
+
                         <a href="/quote" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-accent-purple)] text-white px-4 lg:px-5 py-2 rounded hover:bg-[var(--color-accent-purple-dark)] transition-colors font-bold shadow-md whitespace-nowrap">
                             Request A Quote
                         </a>

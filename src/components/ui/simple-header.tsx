@@ -74,16 +74,7 @@ export function SimpleHeader() {
                 { label: 'Government and Municipal Buildings', href: '/services/government' },
             ]
         },
-        {
-            label: 'Portfolio & Solutions',
-            href: '/#commercial',
-            hideOnMobile: true
-        },
-        {
-            label: 'Professional Services',
-            href: '/#services',
-            hideOnMobile: true
-        },
+
     ];
 
     return (
