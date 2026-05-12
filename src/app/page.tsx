@@ -5,15 +5,16 @@ import VideoSection from '@/components/VideoSection';
 import ServiceMapSection from '@/components/ServiceMapSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import Footer from '@/components/Footer';
+import ServicesSection from '@/components/ServicesSection';
 
 export default function Home() {
     return (
         <main className="min-h-screen bg-[var(--color-base-main)] ">
             <SimpleHeader />
             <Hero />
-
             <CompanyCarouselSection />
             <VideoSection />
+            <ServicesSection />
             <TestimonialsSection />
             <ServiceMapSection />
 

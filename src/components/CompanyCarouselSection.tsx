@@ -3,26 +3,29 @@
 import { InfiniteSlider } from '@/components/ui/infinite-slider';
 
 const COMPANIES = [
-    { name: "Chick-fil-A", logo: "/images/Chick-fil-A-logo.png", className: "h-[100px] md:h-[135px]" },
-    { name: "ACAC", logo: "/images/acac-transparent.png", className: "h-[100px] md:h-[135px]" },
-    { name: "Panera Bread", logo: "/images/New%20Panera%20Bread%20Transparent.png", className: "h-[100px] md:h-[135px]" },
-    { name: "Gold's Gym", logo: "/images/New%20Golds%20Gym%20Logo.png", className: "h-[100px] md:h-[135px]" },
-    { name: "Mar-a-Lago", logo: "/images/mara_lago_transparent.png", className: "h-[100px] md:h-[135px]" },
-    { name: "Starbucks", logo: "/images/Starbucks%20Logo.png", className: "h-[100px] md:h-[135px]" },
+    { name: "Chick-fil-A", logo: "/images/Chick-fil-A-logo.png" },
+    { name: "ACAC", logo: "/images/acac-transparent.png" },
+    { name: "Panera Bread", logo: "/images/New%20Panera%20Bread%20Transparent.png" },
+    { name: "Gold's Gym", logo: "/images/New%20Golds%20Gym%20Logo.png" },
+    { name: "Starbucks", logo: "/images/Starbucks%20Logo.png" },
 ];
 
 export default function CompanyCarouselSection() {
     return (
-        <section className="bg-slate-100 py-16 border-y border-slate-200 overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6 lg:px-8">
-                <p className="text-center text-[#9138df] font-heading font-extrabold uppercase tracking-[4px] text-[12px] md:text-[13px] mb-12">
-                    Trusted By
+        <section className="bg-slate-50 py-8 border-y border-slate-100 overflow-hidden">
+            <div className="max-w-7xl mx-auto px-6">
+                <p className="text-center text-slate-400 font-heading font-black uppercase tracking-[3px] text-[10px] mb-6">
+                    Professional Partners
                 </p>
 
-                <InfiniteSlider gap={60} duration={30}>
+                <InfiniteSlider gap={32} duration={40}>
                     {COMPANIES.map((company, index) => (
-                        <div className="w-[200px] md:w-[280px] h-28 md:h-40 flex items-center justify-center transition-all duration-300 pointer-events-none flex-shrink-0" key={index}>
-                            <img src={company.logo} alt={company.name} className={`max-w-[85%] object-contain ${company.className || ''}`} />
+                        <div className="w-[100px] md:w-[200px] h-12 flex items-center justify-center transition-all duration-500" key={index}>
+                            <img 
+                                src={company.logo} 
+                                alt={company.name} 
+                                className="max-h-[32px] md:max-h-[44px] w-auto max-w-[80%] object-contain" 
+                            />
                         </div>
                     ))}
                 </InfiniteSlider>

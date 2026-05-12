@@ -29,12 +29,12 @@ export default function Testimonials() {
 
                     <div className="w-full md:w-1/3">
                         <h2 className="text-4xl md:text-5xl font-heading font-bold mb-6 leading-tight text-[var(--color-text-main)]">
-                            Words from our <br /><span className="title-gradient">Happy Villagers</span>
+                            Words from our <br /><span className="title-gradient">Happy Neighbors</span>
                         </h2>
                         <p className="text-[var(--color-text-muted)] font-body text-xl mb-8">
-                            Don't just take our word for it. See what your neighbors are saying about our magical results!
+                            Don't just take our word for it. See what your neighbors are saying about our transformative results!
                         </p>
-                        <button className="btn-magic px-8 py-3 w-full sm:w-auto text-lg flex items-center justify-center gap-2">
+                        <button className="btn-primary px-8 py-3 w-full sm:w-auto text-lg flex items-center justify-center gap-2">
                             See More Reviews <ChevronRight size={20} />
                         </button>
                     </div>

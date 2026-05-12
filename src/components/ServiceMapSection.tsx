@@ -17,7 +17,7 @@ export default function ServiceMapSection() {
     return (
         <section className="py-20 bg-white relative overflow-hidden" id="coverage">
             {/* Soft background decorative blur */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#9138df]/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-accent-purple)]/5 rounded-full blur-[120px] -z-10 translate-x-1/2 -translate-y-1/2" />
 
             <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
@@ -25,14 +25,14 @@ export default function ServiceMapSection() {
                     {/* Left: Content & Regional Reach */}
                     <div className="md:col-span-6 space-y-10">
                         <div className="space-y-4">
-                            <h2 className="text-[#9138df] font-heading font-extrabold text-[13px] uppercase tracking-[4px]">
+                            <h2 className="text-[var(--color-accent-purple)] font-heading font-extrabold text-[13px] uppercase tracking-[4px]">
                                 Regional Reach
                             </h2>
-                            <h1 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black tracking-tight leading-[1.1] uppercase">
+                            <h2 className="text-[var(--color-text-main)] text-3xl md:text-6xl font-heading font-black tracking-tight leading-[1.1] uppercase">
                                 Mid-Atlantic &<br />Southeast Coverage
-                            </h1>
+                            </h2>
                             <p className="text-slate-600 text-lg md:text-xl font-body leading-relaxed max-w-xl">
-                                Strategically based out of <span className="text-[#1e1e3f] font-bold">Richmond, Virginia</span>, Wizard Wash operates as a regional force in exterior asset maintenance.
+                                Strategically based out of <span className="text-[var(--color-text-main)] font-bold">Richmond, Virginia</span>, Wizard Wash operates as a regional force in exterior asset maintenance.
                             </p>
                         </div>
 
@@ -42,23 +42,23 @@ export default function ServiceMapSection() {
                                 <div
                                     key={state.name}
                                     className={`group relative p-6 rounded-2xl border transition-all duration-300 ${state.isHub
-                                        ? 'bg-[#9138df]/5 border-[#9138df]/20 shadow-[0_15px_40px_-15px_rgba(145,56,223,0.15)]'
-                                        : 'bg-slate-50 border-slate-100 hover:border-[#9138df]/20 hover:bg-white hover:shadow-xl'
+                                        ? 'bg-[var(--color-accent-purple)]/5 border-[var(--color-accent-purple)]/20 shadow-[0_15px_40px_-15px_rgba(145,56,223,0.15)]'
+                                        : 'bg-slate-50 border-slate-100 hover:border-[var(--color-accent-purple)]/20 hover:bg-white hover:shadow-xl'
                                         }`}
                                 >
                                     <div className="flex items-center justify-between">
                                         <div className="space-y-1">
-                                            <h3 className={`font-heading font-black uppercase text-sm tracking-widest ${state.isHub ? 'text-[#1e1e3f]' : 'text-slate-700'}`}>
+                                            <h3 className={`font-heading font-black uppercase text-sm tracking-widest ${state.isHub ? 'text-[var(--color-text-main)]' : 'text-slate-700'}`}>
                                                 {state.name}
                                             </h3>
-                                            <p className="text-[#9138df]/70 font-heading font-bold text-[9px] uppercase tracking-[1px]">
+                                            <p className="text-[var(--color-accent-purple)]/70 font-heading font-bold text-[9px] uppercase tracking-[1px]">
                                                 {state.type}
                                             </p>
                                         </div>
                                         {state.isHub && (
                                             <div className="relative">
-                                                <div className="absolute inset-0 bg-[#9138df]/20 rounded-full blur-md animate-pulse" />
-                                                <MapPin className="text-[#9138df] relative z-10" size={20} />
+                                                <div className="absolute inset-0 bg-[var(--color-accent-purple)]/20 rounded-full blur-md animate-pulse" />
+                                                <MapPin className="text-[var(--color-accent-purple)] relative z-10" size={20} />
                                             </div>
                                         )}
                                     </div>
@@ -75,45 +75,45 @@ export default function ServiceMapSection() {
 
                             {/* Central Hub Pulsing Glow */}
                             <div className="absolute inset-0 flex items-center justify-center">
-                                <div className="w-96 h-96 bg-[#9138df]/10 rounded-full blur-[100px] animate-pulse" />
+                                <div className="w-96 h-96 bg-[var(--color-accent-purple)]/10 rounded-full blur-[100px] animate-pulse" />
                             </div>
 
                             {/* Stylized SVG Map Overlay */}
                             <svg viewBox="0 0 400 600" className="w-full h-full relative z-10 drop-shadow-[0_20px_50px_rgba(0,0,0,0.05)]">
                                 {/* Decorative connectivity lines */}
                                 <g className="opacity-30">
-                                    <path d="M200,200 L180,50" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
-                                    <path d="M200,200 L250,120" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
-                                    <path d="M200,200 L300,350" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
-                                    <path d="M200,200 L120,480" stroke="#9138df" strokeWidth="1" strokeDasharray="4 4" fill="none" />
+                                    <path d="M200,200 L180,50" stroke="var(--color-accent-purple)" strokeWidth="1" strokeDasharray="4 4" fill="none" />
+                                    <path d="M200,200 L250,120" stroke="var(--color-accent-purple)" strokeWidth="1" strokeDasharray="4 4" fill="none" />
+                                    <path d="M200,200 L300,350" stroke="var(--color-accent-purple)" strokeWidth="1" strokeDasharray="4 4" fill="none" />
+                                    <path d="M200,200 L120,480" stroke="var(--color-accent-purple)" strokeWidth="1" strokeDasharray="4 4" fill="none" />
                                 </g>
 
                                 {/* Richmond HQ Marker */}
-                                <circle cx="200" cy="200" r="8" fill="#9138df" />
-                                <circle cx="200" cy="200" r="16" stroke="#9138df" strokeWidth="2" fill="none" className="animate-ping" style={{ animationDuration: '3s' }} />
-                                <circle cx="200" cy="200" r="30" stroke="#9138df" strokeWidth="1" strokeDasharray="2 2" fill="none" className="animate-spin-slow" />
+                                <circle cx="200" cy="200" r="8" fill="var(--color-accent-purple)" />
+                                <circle cx="200" cy="200" r="16" stroke="var(--color-accent-purple)" strokeWidth="2" fill="none" className="animate-ping" style={{ animationDuration: '3s' }} />
+                                <circle cx="200" cy="200" r="30" stroke="var(--color-accent-purple)" strokeWidth="1" strokeDasharray="2 2" fill="none" className="animate-spin-slow" />
 
-                                <text x="215" y="205" className="fill-[#1e1e3f] font-heading font-black uppercase text-[12px] tracking-widest">Richmond, VA</text>
+                                <text x="215" y="205" className="fill-[var(--color-text-main)] font-heading font-black uppercase text-[12px] tracking-widest">Richmond, VA</text>
 
 
                                 {/* State Nodes */}
-                                <g className="fill-[#1e1e3f]/80 font-heading font-black uppercase text-[10px] tracking-widest">
-                                    <circle cx="180" cy="50" r="4" fill="#9138df" />
+                                <g className="fill-[var(--color-text-main)]/80 font-heading font-black uppercase text-[10px] tracking-widest">
+                                    <circle cx="180" cy="50" r="4" fill="var(--color-accent-purple)" />
                                     <text x="135" y="45" textAnchor="end">Delaware</text>
 
-                                    <circle cx="250" cy="120" r="4" fill="#9138df" />
+                                    <circle cx="250" cy="120" r="4" fill="var(--color-accent-purple)" />
                                     <text x="260" y="125">Maryland</text>
 
-                                    <circle cx="210" cy="150" r="3" fill="#9138df" />
+                                    <circle cx="210" cy="150" r="3" fill="var(--color-accent-purple)" />
                                     <text x="220" y="155" className="text-[8px]">D.C.</text>
 
-                                    <circle cx="300" cy="350" r="4" fill="#9138df" />
+                                    <circle cx="300" cy="350" r="4" fill="var(--color-accent-purple)" />
                                     <text x="310" y="355">N. Carolina</text>
 
-                                    <circle cx="280" cy="420" r="4" fill="#9138df" />
+                                    <circle cx="280" cy="420" r="4" fill="var(--color-accent-purple)" />
                                     <text x="185" y="425" textAnchor="end">S. Carolina</text>
 
-                                    <circle cx="120" cy="480" r="4" fill="#9138df" />
+                                    <circle cx="120" cy="480" r="4" fill="var(--color-accent-purple)" />
                                     <text x="110" y="485" textAnchor="end">Georgia</text>
                                 </g>
 
@@ -128,9 +128,9 @@ export default function ServiceMapSection() {
 
                                 <defs>
                                     <linearGradient id="mapGradient" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stopColor="#9138df" />
-                                        <stop offset="50%" stopColor="#1e1e3f" />
-                                        <stop offset="100%" stopColor="#9138df" />
+                                        <stop offset="0%" stopColor="var(--color-accent-purple)" />
+                                        <stop offset="50%" stopColor="var(--color-text-main)" />
+                                        <stop offset="100%" stopColor="var(--color-accent-purple)" />
                                     </linearGradient>
                                 </defs>
                             </svg>
@@ -138,8 +138,8 @@ export default function ServiceMapSection() {
                             {/* Stats/Badge */}
                             <div className="absolute bottom-10 right-0 bg-white/90 backdrop-blur-xl border border-slate-100 p-6 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.1)] z-20">
                                 <div className="flex flex-col gap-1">
-                                    <span className="text-[#1e1e3f] font-heading font-black text-2xl tracking-tighter">7 STATES</span>
-                                    <span className="text-[#9138df] font-heading font-bold text-[10px] uppercase tracking-widest">Continuous Support</span>
+                                    <span className="text-[var(--color-text-main)] font-heading font-black text-2xl tracking-tighter">7 STATES</span>
+                                    <span className="text-[var(--color-accent-purple)] font-heading font-bold text-[10px] uppercase tracking-widest">Continuous Support</span>
                                 </div>
                             </div>
                         </div>

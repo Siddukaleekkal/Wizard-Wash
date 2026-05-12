@@ -12,7 +12,7 @@ export default function Navbar() {
             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-2 md:py-3 flex justify-between items-end md:items-stretch">
                 {/* Logo Area */}
                 <a href="/" className="flex items-center shrink-0">
-                    <img src="/images/Wizard Wash Logo _Transparent.png" alt="Wizard Wash Logo" className="h-16 md:h-24 w-auto object-contain drop-shadow-md" />
+                    <img src="/images/Updated Logo .png" alt="Wizard Wash Logo" className="h-16 md:h-24 w-auto object-contain drop-shadow-md" />
                 </a>
 
                 {/* Desktop Right Side Content */}
@@ -36,6 +36,9 @@ export default function Navbar() {
                             <span className="xl:hidden">Commercial</span>
                         </a>
                         <a href="/about" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">About</a>
+                        <a href="/service-areas" target="_blank" rel="noopener noreferrer" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Service Areas</a>
+                        <a href="/#commercial" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Portfolio & Solutions</a>
+                        <a href="/#services" className="transition-colors text-[#1e1e3f] hover:text-[var(--color-accent-purple)]">Professional Services</a>
                         <a href="/quote" target="_blank" rel="noopener noreferrer" className="bg-[var(--color-accent-purple)] text-white px-4 lg:px-5 py-2 rounded hover:bg-[var(--color-accent-purple-dark)] transition-colors font-bold shadow-md whitespace-nowrap">
                             Request A Quote
                         </a>
@@ -62,6 +65,7 @@ export default function Navbar() {
                     <a href="/residential" target="_blank" rel="noopener noreferrer" className="text-lg font-heading text-[#1e1e3f] font-medium">Residential</a>
                     <a href="/commercial" target="_blank" rel="noopener noreferrer" className="text-lg font-heading text-[#1e1e3f] font-medium">Commercial</a>
                     <a href="/about" target="_blank" rel="noopener noreferrer" className="text-lg font-heading text-[#1e1e3f] font-medium">About</a>
+                    <a href="/service-areas" target="_blank" rel="noopener noreferrer" className="text-lg font-heading text-[#1e1e3f] font-medium">Service Areas</a>
                     <a href="/quote" target="_blank" rel="noopener noreferrer" className="text-lg font-heading text-[var(--color-accent-purple)] font-bold">Request A Quote</a>
                 </motion.div>
             )}

@@ -202,9 +202,9 @@ export function EstimateForm() {
 
             {/* TCR Compliance Text */}
             <div className="mt-4 px-4 flex items-start gap-3">
-                <input 
-                    type="checkbox" 
-                    id="sms-consent-estimate" 
+                <input
+                    type="checkbox"
+                    id="sms-consent-estimate"
                     className="mt-1 w-4 h-4 text-[#9138df] bg-gray-100 border-gray-300 rounded focus:ring-[#9138df] flex-shrink-0 cursor-pointer"
                     required
                 />

@@ -122,17 +122,17 @@ export default function TestimonialsSection() {
     }, [emblaApi]);
 
     return (
-        <section className="relative py-16 bg-slate-950 overflow-hidden" id="reviews">
+        <section className="relative py-16 bg-slate-900 overflow-hidden" id="reviews">
             <div className="relative z-10 max-w-[1400px] mx-auto">
 
                 {/* Simplified Header */}
                 <div className="text-center mb-12 px-6">
-                    <h2 className="text-[#9138df] font-heading font-black text-[12px] uppercase tracking-[3px] mb-2">
+                    <h2 className="text-[var(--color-accent-green)] font-heading font-black text-[12px] uppercase tracking-[3px] mb-2">
                         Success Stories
                     </h2>
-                    <h1 className="text-white text-xl md:text-3xl font-heading font-black tracking-tight leading-tight">
+                    <h2 className="text-white text-xl md:text-3xl font-heading font-black tracking-tight leading-tight">
                         Client Feedback
-                    </h1>
+                    </h2>
                 </div>
 
                 <div className="relative">

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Phone, ChevronDown, ChevronRight, Star } from 'lucide-react';
+import { Phone, ChevronDown, ChevronRight, Star, Home, Layers, Droplets, Calendar, Building, TreePine, Wrench, LayoutGrid, Milestone, Truck, Building2, UtensilsCrossed, Store, Hotel, Users, Landmark } from 'lucide-react';
 import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { MenuToggle } from '@/components/ui/menu-toggle';
@@ -18,28 +18,24 @@ interface NavLink {
             href: string;
         }[];
     }[];
+    hideOnMobile?: boolean;
 }
 
 export function SimpleHeader() {
     const [open, setOpen] = React.useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-    const [hidden, setHidden] = useState(false);
-    const { scrollY } = useScroll();
 
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        const previous = scrollY.getPrevious() ?? 0;
-        if (latest > previous && latest > 150) {
-            setHidden(true);
-        } else {
-            setHidden(false);
-        }
-    });
 
     const links: NavLink[] = [
         {
             label: 'About',
-            href: '/about',
+            subLinks: [
+                { label: 'Our Team', href: '/about/dream-team' },
+                { label: 'Why Wizard Wash', href: '/about/why-wizard-wash' },
+                { label: 'Careers', href: '/about/careers' },
+                { label: 'Blog', href: '/blog' },
+            ]
         },
         {
             label: 'Residential',
@@ -77,24 +73,28 @@ export function SimpleHeader() {
                 { label: 'Government and Municipal Buildings', href: '/services/government' },
             ]
         },
+        {
+            label: 'Portfolio & Solutions',
+            href: '/#commercial',
+            hideOnMobile: true
+        },
+        {
+            label: 'Professional Services',
+            href: '/#services',
+            hideOnMobile: true
+        },
     ];
 
     return (
         <motion.header
-            variants={{
-                visible: { y: 0 },
-                hidden: { y: "-100%" }
-            }}
-            animate={hidden ? "hidden" : "visible"}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            className="bg-white/95 supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 w-full border-b-[4px] border-[#9138df] backdrop-blur-lg shadow-sm"
+            className="bg-white/95 supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 w-full border-b-[4px] border-[var(--color-accent-purple)] backdrop-blur-lg shadow-sm"
         >
             <nav className="flex h-24 lg:h-32 w-full items-center justify-between px-4 lg:px-8 xl:px-12 max-w-[2000px] mx-auto">
                 {/* Left Side: Logo + Links */}
                 <div className="flex items-center h-full gap-8 lg:gap-16">
                     <a href="/" className="flex items-center shrink-0 h-full py-4 transition-transform hover:scale-105 duration-300">
                         <img
-                            src="/images/Wizard Wash Logo _Transparent.png"
+                            src="/images/Updated Logo .png"
                             alt="Wizard Wash Logo"
                             className="h-full w-auto object-contain drop-shadow-md scale-[1.0] md:scale-[1.1] xl:scale-[1.24] origin-left"
                         />
@@ -111,7 +111,7 @@ export function SimpleHeader() {
                                     <a
                                         className={buttonVariants({
                                             variant: 'ghost',
-                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] lg:text-[14px] px-2 lg:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 lg:gap-1 h-12 ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`
+                                            className: `uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] lg:text-[14px] px-2 lg:px-4 whitespace-nowrap transition-all duration-300 hover:text-[var(--color-accent-purple)] flex items-center gap-0.5 lg:gap-1 h-12 ${activeDropdown === link.label ? 'text-[var(--color-accent-purple)]' : ''}`
                                         })}
                                         href={link.href}
                                     >
@@ -120,7 +120,7 @@ export function SimpleHeader() {
                                     </a>
                                 ) : (
                                     <div
-                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] lg:text-[14px] px-2 lg:px-4 whitespace-nowrap transition-all duration-300 hover:text-[#9138df] flex items-center gap-0.5 lg:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[#9138df]' : ''}`}
+                                        className={`uppercase tracking-[1px] font-heading font-semibold text-black text-[12px] lg:text-[14px] px-2 lg:px-4 whitespace-nowrap transition-all duration-300 hover:text-[var(--color-accent-purple)] flex items-center gap-0.5 lg:gap-1 h-12 cursor-default ${activeDropdown === link.label ? 'text-[var(--color-accent-purple)]' : ''}`}
                                     >
                                         {link.label}
                                         {link.subLinks && <ChevronDown size={14} className={`transition-transform duration-300 ${activeDropdown === link.label ? 'rotate-180' : ''}`} />}
@@ -141,7 +141,7 @@ export function SimpleHeader() {
                                                     <div key={sub.label} className="relative group/sub">
                                                         <a
                                                             href={sub.href}
-                                                            className="flex items-center justify-between px-4 py-3 text-[13px] font-heading font-semibold uppercase tracking-wider text-[#1e1e3f] hover:bg-[#9138df]/5 hover:text-[#9138df] rounded-lg transition-all"
+                                                            className="flex items-center justify-between px-4 py-3 text-[13px] font-heading font-semibold uppercase tracking-wider text-[#1e1e3f] hover:bg-[var(--color-accent-purple)]/5 hover:text-[var(--color-accent-purple)] rounded-lg transition-all"
                                                         >
                                                             {sub.label}
                                                             {sub.nestedLinks && <ChevronRight size={14} />}
@@ -154,7 +154,7 @@ export function SimpleHeader() {
                                                                     <a
                                                                         key={nested.label}
                                                                         href={nested.href}
-                                                                        className="block px-4 py-3 text-[12px] font-heading font-semibold uppercase tracking-wider text-slate-600 hover:bg-[#9138df]/5 hover:text-[#9138df] rounded-lg transition-all"
+                                                                        className="block px-4 py-3 text-[12px] font-heading font-semibold uppercase tracking-wider text-slate-600 hover:bg-[var(--color-accent-purple)]/5 hover:text-[var(--color-accent-purple)] rounded-lg transition-all"
                                                                     >
                                                                         {nested.label}
                                                                     </a>
@@ -176,26 +176,17 @@ export function SimpleHeader() {
                 <div className="flex items-center gap-1 xl:gap-8">
                     <div className="hidden xl:flex flex-col items-end gap-0.5 font-heading">
                         <span className="text-[9px] xl:text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
-                        <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[#9138df] transition-colors cursor-pointer">
-                            <Phone size={16} className="text-[#9138df] fill-[#9138df]/10 xl:w-[20px] xl:h-[20px]" />
+                        <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[var(--color-accent-purple)] transition-colors cursor-pointer">
                             <span className="text-lg xl:text-2xl font-black tabular-nums">804-690-2465</span>
                         </a>
                     </div>
 
-                    <div className="hidden xl:block">
-                        <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" target="_blank" rel="noopener noreferrer">
-                            <Button variant="outline" className="font-heading font-black uppercase tracking-widest px-4 xl:px-6 py-6 xl:py-7 text-[13px] xl:text-[15px] border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-all duration-300 rounded-xl group">
-                                <Star className="w-5 h-5 mr-2 fill-current group-hover:scale-110 transition-transform" />
-                                Review
-                            </Button>
-                        </a>
-                    </div>
+
 
                     <div className="hidden md:block">
                         <a href="/quote">
-                            <Button className="font-heading font-black uppercase tracking-widest px-3 xl:px-8 py-5 xl:py-7 text-[12px] xl:text-lg bg-[#9138df] hover:bg-[#7a2ac1] shadow-[0_10px_20px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
-                                <span className="xl:inline">Request A Quote</span>
-                                <span className="xl:hidden">Quote</span>
+                            <Button className="font-heading font-black uppercase tracking-widest px-3 xl:px-8 py-5 xl:py-7 text-[12px] xl:text-lg bg-[var(--color-accent-purple)] hover:bg-[var(--color-accent-purple-dark)] shadow-[0_10px_20px_-10px_rgba(55, 120, 179,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(55, 120, 179,0.6)] hover:-translate-y-0.5 transition-all duration-300 rounded-xl">
+                                <span className="inline">Request A Quote</span>
                             </Button>
                         </a>
                     </div>
@@ -215,7 +206,7 @@ export function SimpleHeader() {
                             side="left"
                         >
                             <div className="p-6 flex justify-between items-center border-b border-slate-100 pb-8 sticky top-0 bg-white z-10">
-                                <img src="/images/Wizard Wash Logo _Transparent.png" alt="Wizard Wash Logo" className="h-12 w-auto object-contain" />
+                                <img src="/images/Updated Logo .png" alt="Wizard Wash Logo" className="h-12 w-auto object-contain" />
                                 <MenuToggle
                                     strokeWidth={3}
                                     open={open}
@@ -224,14 +215,14 @@ export function SimpleHeader() {
                                 />
                             </div>
                             <div className="grid gap-y-2 px-6 pt-10 pb-5">
-                                {links.map((link) => (
+                                {links.filter(link => !link.hideOnMobile).map((link) => (
                                     <div key={link.label} className="border-b border-slate-50 last:border-0">
                                         <div className="flex items-center justify-between">
                                             {link.href ? (
                                                 <a
                                                     className={buttonVariants({
                                                         variant: 'ghost',
-                                                        className: 'justify-start text-xl font-heading text-black py-8 pr-2 pl-0 hover:bg-transparent hover:text-[#9138df] flex-1 font-medium',
+                                                        className: 'justify-start text-xl font-heading text-black py-8 pr-2 pl-0 hover:bg-transparent hover:text-[var(--color-accent-purple)] flex-1 font-medium',
                                                     })}
                                                     href={link.href}
                                                     onClick={() => !link.subLinks && setOpen(false)}
@@ -249,7 +240,7 @@ export function SimpleHeader() {
                                             {link.subLinks && (
                                                 <button
                                                     onClick={() => setMobileExpanded(mobileExpanded === link.label ? null : link.label)}
-                                                    className="p-4 text-[#9138df]"
+                                                    className="p-4 text-[var(--color-accent-purple)]"
                                                 >
                                                     <ChevronDown className={`transition-transform duration-300 ${mobileExpanded === link.label ? 'rotate-180' : ''}`} />
                                                 </button>
@@ -268,7 +259,7 @@ export function SimpleHeader() {
                                                         <div key={sub.label}>
                                                             <a
                                                                 href={sub.href}
-                                                                className="block px-6 py-4 text-sm font-heading font-semibold uppercase tracking-widest text-[#1e1e3f] hover:text-[#9138df]"
+                                                                className="block px-6 py-4 text-sm font-heading font-semibold uppercase tracking-widest text-[#1e1e3f] hover:text-[var(--color-accent-purple)]"
                                                                 onClick={() => !sub.nestedLinks && setOpen(false)}
                                                             >
                                                                 {sub.label}
@@ -279,7 +270,7 @@ export function SimpleHeader() {
                                                                         <a
                                                                             key={nested.label}
                                                                             href={nested.href}
-                                                                            className="block text-[12px] font-heading font-semibold uppercase tracking-wider text-slate-500 hover:text-[#9138df]"
+                                                                            className="block text-[12px] font-heading font-semibold uppercase tracking-wider text-slate-500 hover:text-[var(--color-accent-purple)]"
                                                                             onClick={() => setOpen(false)}
                                                                         >
                                                                             {nested.label}
@@ -298,23 +289,17 @@ export function SimpleHeader() {
                             <SheetFooter className="mt-8 border-t border-slate-100 bg-white p-8 flex-col gap-6">
                                 <div className="flex flex-col items-center gap-1 font-heading">
                                     <span className="text-xs text-slate-400 uppercase tracking-widest">Available Now</span>
-                                    <a href="tel:8046902465" className="flex items-center gap-3 text-[#1e1e3f] hover:text-[#9138df] transition-colors text-2xl font-black cursor-pointer group">
-                                        <Phone size={24} className="text-[#9138df] group-hover:scale-110 transition-transform" />
+                                    <a href="tel:8046902465" className="flex items-center gap-3 text-[#1e1e3f] hover:text-[var(--color-accent-purple)] transition-colors text-2xl font-black cursor-pointer group">
                                         <span>804-690-2465</span>
                                     </a>
                                 </div>
                                 <div className="w-full space-y-3">
                                     <a href="/quote" className="block w-full">
-                                        <Button className="w-full text-xl font-heading font-black uppercase py-8 shadow-xl rounded-xl bg-[#9138df] hover:bg-[#7a2ac1]">
+                                        <Button className="w-full text-xl font-heading font-black uppercase py-8 shadow-xl rounded-xl bg-[var(--color-accent-purple)] hover:bg-[var(--color-accent-purple-dark)]">
                                             Request A Quote
                                         </Button>
                                     </a>
-                                    <a href="https://www.google.com/search?sca_esv=dbb6f4e1ffc1e896&sxsrf=ANbL-n7rRm4GNWyJNrUglvcmVBOYg2vBZg:1771949709046&si=AL3DRZEsmMGCryMMFSHJ3StBhOdZ2-6yYkXd_doETEE1OR-qOahQjTJLDpqnqzO0lmYkDot0TaZn3ZHTvLZ5NH4RlZunwEeMaPa2c2X3b2aY3MMZYrnEoMbBX0AIO-UQMp2MOtybnQK7E3NId1aN45gntQ9qETrmKiSvgfCh_r8heUCsgEAaWLU%3D&q=Wizard+Wash+Soft+Washing+%26+Gutter+cleaning+Reviews&sa=X&ved=2ahUKEwimot6Hw_KSAxU6FmIAHSJgLLAQ0bkNegQIPxAF&biw=1899&bih=928&dpr=1" className="block w-full" target="_blank" rel="noopener noreferrer">
-                                        <Button variant="outline" className="w-full text-lg font-heading font-black uppercase py-7 border-[#9138df] text-[#9138df] hover:bg-[#9138df] hover:text-white transition-colors duration-300 rounded-xl group">
-                                            <Star className="w-5 h-5 mr-2 fill-current" />
-                                            Leave a Review
-                                        </Button>
-                                    </a>
+
                                 </div>
                             </SheetFooter>
                         </SheetContent>

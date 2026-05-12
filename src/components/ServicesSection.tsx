@@ -37,7 +37,7 @@ export default function ServicesSection() {
                 <div className="flex flex-col gap-12">
                     <div className="flex gap-4 flex-col items-center text-center">
                         <div className="flex gap-4 flex-col max-w-3xl">
-                            <h2 className="text-3xl md:text-5xl tracking-tighter font-heading font-black uppercase text-[#1e1e3f]">
+                            <h2 className="text-3xl md:text-5xl tracking-tighter font-heading font-black uppercase text-[var(--color-text-main)]">
                                 Professional Services
                             </h2>
                             <p className="text-base md:text-lg leading-relaxed tracking-tight text-slate-500 font-body">
@@ -50,7 +50,7 @@ export default function ServicesSection() {
                         {services.map((service, index) => (
                             <div key={index} className="flex flex-col gap-4 group p-6 rounded-2xl shadow-xl border border-slate-100 bg-white">
                                 <div className="flex flex-col gap-3">
-                                    <h3 className="text-2xl font-heading font-black uppercase tracking-tight text-[#1e1e3f] group-hover:text-[#9138df] transition-colors">
+                                    <h3 className="text-2xl font-heading font-black uppercase tracking-tight text-[var(--color-text-main)] group-hover:text-[var(--color-accent-purple)] transition-colors">
                                         {service.title}
                                     </h3>
                                     <p className="text-slate-600 text-[17px] leading-relaxed font-body">

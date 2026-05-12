@@ -1,12 +1,12 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import { SimpleHeader } from '@/components/ui/simple-header';
 import Footer from '@/components/Footer';
-import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Zap, Shield, Star } from 'lucide-react';
+import { CheckCircle2, Shield } from 'lucide-react';
+import BottomCTA from '@/components/BottomCTA';
 
 // Service data mapping
 const SERVICES_DATA = {
@@ -83,6 +83,7 @@ const SERVICES_DATA = {
         description: "Celebrate the eight nights of Hanukkah with a sophisticated blue and white light display. We specialize in elegant architectural outlining that highlights your home's features with crisp, cool toned LED lighting. Our professional team handles the installation with care, providing a joyous and luminous setting for your Hanukkah celebrations. We use durable, outdoor rated components designed to withstand the cold winter elements, ensuring your festive display remains bright and beautiful throughout the entire holiday season.",
         features: ["Blue and white LED themes", "Architectural outlining", "Durable outdoor grade", "Hassle free setup"]
     },
+
     // Commercial
     "fleet-washing": {
         title: "Fleet Washing",
@@ -138,83 +139,106 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
     const resolvedParams = React.use(params);
     const service = SERVICES_DATA[resolvedParams.slug as keyof typeof SERVICES_DATA];
 
+    useEffect(() => {
+        if (!service) return;
+
+        // Zoho form initialization for service page
+        try {
+            const f = document.createElement("iframe");
+            let ifrmSrc = 'https://forms.zohopublic.com/omarwizard1/form/GetAFreeQuoteForm/formperma/JKnd2lv_4XpoFIS21rxUojbH3SWFcFEE_oEvAG_7KJ4?zf_rszfm=1';
+
+            f.src = ifrmSrc;
+            f.style.border = "none";
+            f.style.height = "100%";
+            f.style.width = "100%";
+            f.style.transition = "all 0.5s ease";
+            f.setAttribute("aria-label", 'Get A Free Quote Form');
+
+            const d = document.getElementById("zf_div_service_page");
+            if (d && !d.hasChildNodes()) {
+                d.appendChild(f);
+            }
+        } catch (e) { }
+    }, [service]);
+
     if (!service) {
         notFound();
     }
 
     return (
-        <main className="min-h-screen bg-white  flex flex-col">
+        <main className="min-h-screen flex flex-col bg-white">
             <SimpleHeader />
 
-            {/* Hero Section */}
-            <section className="relative pt-32 pb-24 lg:pt-48 lg:pb-32 px-6">
-                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#9138df]/5 rounded-full blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2" />
-
-                <div className="max-w-6xl mx-auto flex flex-col items-center text-center gap-16">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="space-y-8 flex flex-col items-center"
-                    >
-                        <h1 className="text-[#1e1e3f] text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-heading font-black tracking-tighter leading-[0.95] uppercase">
-                            {service.title}
-                        </h1>
-                        <p className="text-slate-600 text-lg md:text-xl font-body leading-relaxed max-w-3xl">
-                            {service.description}
-                        </p>
-
-                        <div className="flex flex-wrap gap-4 pt-4 justify-center">
-                            <a href="/quote" className="inline-flex items-center h-16 bg-[#9138df] text-white font-heading font-black text-lg px-10 rounded-xl hover:bg-[#7a2ac1] transition-all shadow-[0_20px_40px_-10px_rgba(145,56,223,0.4)] hover:-translate-y-1 uppercase tracking-widest">
-                                Book This Service <ArrowRight className="ml-3" size={20} />
-                            </a>
-                        </div>
-                    </motion.div>
-
-                    {/* Service Standards Merged */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.2 }}
-                        className="grid grid-cols-2 lg:grid-cols-4 gap-8 pt-12 border-t border-slate-100 w-full"
-                    >
-                        {service.features.map((feature, idx) => (
-                            <div key={idx} className="flex flex-col items-center text-center gap-4">
-                                <div className="p-4 bg-purple-50 rounded-full">
-                                    <CheckCircle2 size={24} className="text-[#9138df]" />
-                                </div>
-                                <h3 className="font-heading font-bold text-slate-700 uppercase tracking-wider text-sm md:text-base leading-snug">
-                                    {feature}
-                                </h3>
-                            </div>
-                        ))}
-                    </motion.div>
+            {/* Original Hero Style Section - Resized to match About Pages */}
+            <section className="relative w-full min-h-[60vh] flex items-center overflow-hidden bg-[#1e1e3f]">
+                {/* Background Image Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src="/images/Screenshot 2026-05-12 at 11.48.13 AM.png"
+                        alt={service.title}
+                        className="w-full h-full object-cover opacity-40 lg:opacity-50"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[#1e1e3f]/90 via-transparent to-[#1e1e3f]/90" />
                 </div>
-            </section>
 
-            {/* Action Section */}
-            <section className="py-24 px-6 bg-white">
-                <div className="max-w-[1400px] mx-auto bg-[#1e1e3f] rounded-[2rem] p-12 lg:p-24 relative overflow-hidden shadow-[0_40px_80px_-20px_rgba(0,0,0,0.3)]">
-                    <div className="absolute top-0 right-0 w-1/2 h-full bg-[#9138df]/10 skew-x-12 translate-x-1/2" />
-                    <div className="relative z-10 flex flex-col items-center text-center gap-12">
-                        <div className="space-y-6 max-w-4xl">
-                            <h2 className="text-white text-4xl md:text-7xl font-heading font-black uppercase tracking-tight leading-[0.95]">
-                                Ready to restore your property&apos;s value?
-                            </h2>
-                            <p className="text-white/60 text-lg md:text-xl font-heading font-bold uppercase tracking-[4px]">
-                                Professional Grade • Fully Insured • Reliable Service
+                <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                    {/* Left: Copy */}
+                    <div className="flex-1 text-center lg:text-left space-y-6">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="space-y-4"
+                        >
+                            <span className="inline-block px-3 py-1.5 bg-[var(--color-accent-purple)] text-white text-[9px] font-heading font-black uppercase tracking-[3px] rounded-full shadow-lg">
+                                {service.category} Expertise
+                            </span>
+                            <h1 className="text-white text-4xl md:text-7xl font-heading font-black uppercase tracking-tighter leading-[0.9] drop-shadow-2xl">
+                                {service.title}
+                            </h1>
+                            <p className="text-white/80 text-base md:text-lg font-body leading-relaxed max-w-xl mx-auto lg:mx-0">
+                                {service.description}
                             </p>
-                        </div>
-                        <div className="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
-                            <a href="/quote" className="inline-flex items-center justify-center h-20 bg-[#9138df] text-white font-heading font-black text-xl px-12 rounded-xl hover:bg-[#7a2ac1] transition-all shadow-xl uppercase tracking-widest group">
-                                Get A Quote <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <a href="tel:8046902465" className="inline-flex items-center justify-center h-20 bg-transparent text-white border-2 border-white/20 font-heading font-black text-xl px-12 rounded-xl hover:bg-white hover:text-[#1e1e3f] transition-all uppercase tracking-widest">
-                                Call Us
-                            </a>
-                        </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+                                {service.features.map((feature, idx) => (
+                                    <div key={idx} className="flex items-center gap-3 group justify-center lg:justify-start">
+                                        <div className="shrink-0 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-[var(--color-accent-purple)] border border-white/10">
+                                            <CheckCircle2 size={12} />
+                                        </div>
+                                        <span className="text-white font-heading font-black uppercase tracking-tight text-[11px]">{feature}</span>
+                                    </div>
+                                ))}
+                            </div>
+                        </motion.div>
                     </div>
+
+                    {/* Right: Larger Form Card */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="w-full lg:w-[480px] shrink-0"
+                    >
+                        <div className="bg-white rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)] overflow-hidden p-6 sm:p-8">
+                            <div className="text-center mb-6">
+                                <h3 className="font-heading font-black text-[#1e1e3f] text-xl sm:text-2xl uppercase tracking-wider">Save 10% Now</h3>
+                                <p className="text-slate-500 text-[10px] font-bold uppercase tracking-widest mt-1">Get your precision estimate</p>
+                            </div>
+
+                            <div
+                                id="zf_div_service_page"
+                                className="w-full h-[400px] sm:h-[450px] overflow-y-auto flex justify-center scrollbar-hide"
+                                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                            >
+                                {/* Zoho Form Injected Here */}
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
             </section>
+
+            <BottomCTA />
 
             <Footer />
         </main>

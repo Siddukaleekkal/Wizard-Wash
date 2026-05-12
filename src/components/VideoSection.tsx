@@ -33,17 +33,17 @@ export default function VideoSection() {
                     <div className="md:col-span-7 flex flex-col gap-10">
                         <div className="space-y-6">
                             <div className="space-y-3">
-                                <h2 className="text-[#9138df] font-heading font-extrabold text-[13px] uppercase tracking-[3px]">
+                                <h2 className="text-[var(--color-accent-purple)] font-heading font-extrabold text-[13px] uppercase tracking-[3px]">
                                     Portfolio & Solutions
                                 </h2>
-                                <h1 className="text-[#1e1e3f] text-2xl md:text-5xl font-heading font-black tracking-tight leading-[1.1] uppercase">
-                                    Strategic Asset<br />Maintenance
-                                </h1>
+                                <h2 className="text-[var(--color-text-main)] text-2xl md:text-5xl font-heading font-black tracking-tight leading-[1.1] uppercase">
+                                    Results That Speak<br />For Themselves
+                                </h2>
                             </div>
 
                             <div className="space-y-6 max-w-2xl">
                                 <p className="text-slate-600 text-lg leading-relaxed font-body">
-                                    At Wizard Wash, we specialize in high-performance exterior restoration and maintenance for assets ranging from <span className="text-[#1e1e3f] font-bold">luxury residential properties</span> to <span className="text-[#1e1e3f] font-bold">regional commercial portfolios</span>.
+                                    At Wizard Wash, we specialize in high-performance exterior restoration and maintenance for assets ranging from <span className="text-[var(--color-text-main)] font-bold">luxury residential properties</span> to <span className="text-[var(--color-text-main)] font-bold">regional commercial portfolios</span>.
                                 </p>
 
                                 <p className="text-slate-500 text-[15px] leading-relaxed font-body">
@@ -54,8 +54,8 @@ export default function VideoSection() {
                                 <div className="grid grid-cols-2 gap-y-3 gap-x-8 pt-2">
                                     {SERVICES.map((service) => (
                                         <div key={service} className="flex items-center gap-2 group">
-                                            <CheckCircle2 className="text-[#9138df] w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
-                                            <span className="text-[12px] font-heading font-black uppercase tracking-wider text-[#1e1e3f]/80 group-hover:text-[#9138df] transition-colors">
+                                            <CheckCircle2 className="text-[var(--color-accent-purple)] w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
+                                            <span className="text-[12px] font-heading font-black uppercase tracking-wider text-[var(--color-text-main)]/80 group-hover:text-[var(--color-accent-purple)] transition-colors">
                                                 {service}
                                             </span>
                                         </div>
@@ -76,7 +76,7 @@ export default function VideoSection() {
 
                     {/* Right Column: Cinematic Video Reel (Span 5) */}
                     <div className="md:col-span-5 flex flex-col gap-6">
-                        <div className="relative w-full h-[600px] md:flex-1 min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white group group-hover:shadow-[#9138df]/20 transition-all duration-700">
+                        <div className="relative w-full h-[600px] md:flex-1 min-h-[400px] rounded-3xl overflow-hidden shadow-2xl border border-white group group-hover:shadow-[var(--color-accent-purple)]/20 transition-all duration-700">
                             <video
                                 ref={videoRef}
                                 autoPlay
@@ -95,7 +95,7 @@ export default function VideoSection() {
                         <div className="flex flex-col">
                             <a
                                 href="/quote"
-                                className="inline-flex items-center justify-center bg-[#9138df] text-white font-heading font-black text-lg px-8 py-6 rounded-2xl hover:bg-[#7a2ac1] transition-all shadow-[0_10px_30px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 uppercase tracking-widest border border-white/10 text-center"
+                                className="inline-flex items-center justify-center bg-[var(--color-accent-purple)] text-white font-heading font-black text-lg px-8 py-6 rounded-2xl hover:bg-[var(--color-accent-purple-dark)] transition-all shadow-[0_10px_30px_-10px_rgba(55,120,179,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(55,120,179,0.6)] hover:-translate-y-1 uppercase tracking-widest border border-white/10 text-center"
                             >
                                 Book Your Cleaning Today
                             </a>

@@ -1,9 +1,8 @@
 "use client";
 
-import { useEffect, useMemo, useState, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { motion } from "framer-motion";
-import { MoveRight, PhoneCall } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { PhoneCall, ChevronDown } from "lucide-react";
 
 export default function Hero() {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -14,85 +13,120 @@ export default function Hero() {
             videoRef.current.muted = true;
             videoRef.current.play().catch(console.error);
         }
+
+        // Zoho form initialization for home hero
+        try {
+            const f = document.createElement("iframe");
+            let ifrmSrc = 'https://forms.zohopublic.com/omarwizard1/form/GetAFreeQuoteForm/formperma/JKnd2lv_4XpoFIS21rxUojbH3SWFcFEE_oEvAG_7KJ4?zf_rszfm=1';
+
+            f.src = ifrmSrc;
+            f.style.border = "none";
+            f.style.height = "100%";
+            f.style.width = "100%";
+            f.style.transition = "all 0.5s ease";
+            f.setAttribute("aria-label", 'Get A Free Quote Form');
+
+            const d = document.getElementById("zf_div_home_hero");
+            if (d && !d.hasChildNodes()) {
+                d.appendChild(f);
+            }
+        } catch (e) { }
     }, []);
 
-    const [titleNumber, setTitleNumber] = useState(0);
-    const titles = useMemo(
-        () => ["Spotless", "Sparkling", "Perfect", "Restored", "Immaculate"],
-        []
-    );
-
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            if (titleNumber === titles.length - 1) {
-                setTitleNumber(0);
-            } else {
-                setTitleNumber(titleNumber + 1);
-            }
-        }, 2000);
-        return () => clearTimeout(timeoutId);
-    }, [titleNumber, titles]);
-
     return (
-        <section className="relative w-full h-[70vh] min-h-[600px] lg:h-[80vh] overflow-hidden bg-black border-b-4 border-[#9138df]">
+        <section className="relative w-full min-h-[100svh] lg:h-[100svh] flex items-center overflow-hidden bg-[#1e1e3f]">
+            {/* Background Video */}
             <video
                 ref={videoRef}
                 autoPlay
                 loop
                 muted
                 playsInline
-                className="absolute inset-0 w-full h-full object-cover z-0"
+                className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 lg:opacity-60"
             >
                 <source src="/images/Hero Video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
             </video>
 
-            {/* Visual Design: Left to Right Gradient Overlay (60% black to 0%) */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent z-10"></div>
+            {/* Content Container */}
+            <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-24 lg:py-0 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
-            <div className="relative z-20 max-w-[1920px] mx-auto px-6 lg:px-20 h-full flex flex-col justify-center text-left">
-                <div className="max-w-4xl flex flex-col gap-2">
-                    <h1 className="text-3xl md:text-6xl lg:text-7xl font-heading font-black text-white leading-tight uppercase tracking-tight drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]">
-                        <span className="block">The Standard in</span>
-                        <span className="relative block h-[1.1em] text-[#9138df] overflow-hidden">
-                            {titles.map((title, index) => (
-                                <motion.span
-                                    key={index}
-                                    className="absolute left-0 top-0 bottom-0 flex items-center"
-                                    initial={{ opacity: 0, y: "100%" }}
-                                    transition={{ type: "spring", stiffness: 50, damping: 15 }}
-                                    animate={
-                                        titleNumber === index
-                                            ? {
-                                                y: 0,
-                                                opacity: 1,
-                                            }
-                                            : {
-                                                y: titleNumber > index ? "-100%" : "100%",
-                                                opacity: 0,
-                                            }
-                                    }
-                                >
-                                    {title}
-                                </motion.span>
-                            ))}
-                        </span>
-                        <span className="block">Power Washing</span>
-                    </h1>
-                    <p className="text-lg md:text-xl lg:text-2xl text-white font-body leading-relaxed drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)] font-medium max-w-2xl opacity-95">
-                        Licensed, insured, and dedicated to spotless results for residential and commercial clients.
-                    </p>
+                {/* Left Side: Copy */}
+                <div className="flex-1 text-center lg:text-left space-y-6 sm:space-y-8 pt-8 lg:pt-0">
+                    <motion.div
+                        initial={{ opacity: 0, x: -30 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                    >
+                        <h1 className="text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-heading font-black tracking-tighter leading-[0.95] uppercase drop-shadow-2xl">
+                            The Standard of <br />
+                            <span className="text-white">Excellence in</span> <br />
+                            <span className="text-[var(--color-accent-purple)]">Power Washing</span>
+                        </h1>
 
-                    <div className="mt-10 flex flex-wrap gap-4">
-                        <a href="/quote" className="inline-block bg-[#9138df] text-white font-heading font-black text-lg px-10 py-5 rounded hover:bg-[#7a2ac1] transition-all shadow-[0_10px_30px_-10px_rgba(145,56,223,0.5)] hover:shadow-[0_15px_40px_-10px_rgba(145,56,223,0.6)] hover:-translate-y-1 uppercase tracking-widest border border-white/10">
-                            Request A Quote
-                        </a>
-                        <a href="tel:8046902465" className="inline-block bg-white/10 backdrop-blur-md text-white font-heading font-black text-lg px-10 py-5 rounded hover:bg-white/20 transition-all border border-white/20 uppercase tracking-widest">
-                            Call Us
-                        </a>
-                    </div>
+                        <p className="mt-6 text-white/90 text-sm sm:text-base md:text-lg font-body leading-relaxed max-w-xl mx-auto lg:mx-0">
+                            Licensed, insured, and dedicated to delivering spotless, high-performance results for residential and commercial properties in Richmond and beyond.
+                        </p>
+
+                        <div className="mt-10 flex flex-col sm:flex-row items-center lg:items-start gap-4">
+                            <a href="tel:8046902465" className="inline-flex items-center justify-center bg-white text-[#1e1e3f] font-heading font-black text-base sm:text-lg px-8 sm:px-10 py-4 rounded-lg hover:bg-[var(--color-accent-purple)] hover:text-white transition-all border border-white/10 uppercase tracking-widest gap-3 w-full sm:w-auto">
+                                <PhoneCall size={20} />
+                                804-690-2465
+                            </a>
+                        </div>
+
+                        {/* Social Proof / Stats */}
+                        <div className="mt-12 flex flex-wrap justify-center lg:justify-start items-center gap-8 border-t border-white/10 pt-8">
+                            <div>
+                                <p className="text-white text-2xl font-black font-heading">5,000+</p>
+                                <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Properties Cleaned</p>
+                            </div>
+                            <div className="w-px h-8 bg-white/10 hidden sm:block" />
+                            <div>
+                                <p className="text-white text-2xl font-black font-heading">100%</p>
+                                <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Fully Insured</p>
+                            </div>
+                            <div className="w-px h-8 bg-white/10 hidden sm:block" />
+                            <div>
+                                <p className="text-white text-2xl font-black font-heading">5/5</p>
+                                <p className="text-white/50 text-[10px] font-bold uppercase tracking-widest">Google Rated</p>
+                            </div>
+                        </div>
+                    </motion.div>
                 </div>
+
+                {/* Right Side: Compact Form */}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    className="w-full lg:w-[450px] shrink-0"
+                >
+                    <div className="bg-white rounded-[2rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden p-6 sm:p-8 flex flex-col items-center">
+                        <div className="text-center mb-6">
+                            <h3 className="font-heading font-black text-[#1e1e3f] text-xl sm:text-2xl uppercase tracking-wider">Save 10% Today</h3>
+                            <p className="text-slate-500 text-xs font-bold uppercase tracking-widest mt-1">Get your free quote in minutes</p>
+                        </div>
+
+                        <div
+                            id="zf_div_home_hero"
+                            className="w-full h-[400px] sm:h-[450px] overflow-y-auto scrollbar-hide flex justify-center"
+                            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+                        >
+                            {/* Zoho Iframe Injected Here */}
+                        </div>
+                    </div>
+                </motion.div>
+
             </div>
+
+            {/* Scroll Indicator */}
+            <motion.div
+                className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 hidden lg:flex flex-col items-center gap-1 text-white/30"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
+            >
+                <ChevronDown size={32} strokeWidth={1} />
+            </motion.div>
         </section>
     );
 }

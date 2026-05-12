@@ -5,7 +5,8 @@ import { SimpleHeader } from '@/components/ui/simple-header';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
-import { Shield, Users, Zap, Star, Target, Award, Sparkles, ArrowRight, Mail } from 'lucide-react';
+import { Shield, Users, Target, Award, ArrowRight } from 'lucide-react';
+import BottomCTA from '@/components/BottomCTA';
 
 export default function AboutPage() {
     const videoRef = useRef<HTMLVideoElement>(null);
@@ -23,76 +24,25 @@ export default function AboutPage() {
             <SimpleHeader />
 
             <div className="relative">
-                {/* Hero Section - Pinned Frame */}
-                <section className="sticky top-0 h-auto sm:h-[60vh] lg:h-[80vh] w-full flex items-center justify-center px-4 sm:px-6 lg:px-12 z-0 pt-20 sm:pt-12">
-                    <div className="max-w-[1600px] w-full">
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.98 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="relative aspect-[4/3] sm:aspect-video sm:h-auto lg:h-[700px] w-full rounded-[1.5rem] sm:rounded-[2.5rem] overflow-hidden shadow-[0_30px_100px_-20px_rgba(0,0,0,0.3)] bg-slate-50"
-                        >
-                            <img
-                                src="/images/Hero Page.png"
-                                alt="Wizard Wash"
-                                className="w-full h-full object-cover object-[center_20%]"
-                            />
-                            <div className="absolute inset-0 bg-black/5" />
-                        </motion.div>
-                    </div>
-                </section>
+            {/* Hero */}
+            <section className="relative pt-32 pb-16 px-6 text-center border-b border-slate-100">
+                <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#9138df]/5 rounded-full blur-[150px] -z-10 translate-x-1/2 -translate-y-1/2" />
+                <div className="max-w-4xl mx-auto space-y-6 flex flex-col items-center">
+                    <span className="text-[10px] font-heading font-black uppercase tracking-[4px] text-slate-400">Institutional / Expertise</span>
+                    <h1 className="text-[#1e1e3f] text-4xl md:text-7xl font-heading font-black uppercase tracking-tighter leading-[0.95]">
+                        The Standard of <br /> <span className="text-[#9138df]">Property Care.</span>
+                    </h1>
+                    <p className="text-slate-600 text-lg md:text-xl font-body leading-relaxed max-w-2xl mx-auto">
+                        We are more than a cleaning service; we are a precision-focused restoration firm dedicated to preserving the structural integrity and market value of your most significant assets.
+                    </p>
+                </div>
+            </section>
 
                 {/* Scrolling Content Wrapper */}
                 <div className="relative z-10 bg-white shadow-[0_-50px_100px_rgba(0,0,0,0.1)]">
 
-                    {/* Meet The Team Section */}
-                    <section className="py-24 px-6 bg-slate-50 border-b border-slate-200/60">
-                        <div className="max-w-7xl mx-auto">
-                            <div className="text-center mb-20 space-y-6">
-                                <h2 className="text-[#1e1e3f] text-3xl md:text-6xl font-heading font-black uppercase tracking-tight">Our Team</h2>
-                                <p className="text-slate-600 text-lg max-w-2xl mx-auto font-body">
-                                    Our team of dedicated professionals combines industry expertise with a passion for excellence. We treat every property with the utmost care, ensuring magical results every time.
-                                </p>
-                            </div>
 
-                            <div className="flex flex-wrap justify-center gap-16 gap-y-20 mb-24">
-                                {/* Team Members */}
-                                {[
-                                    { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care.", email: "omar@wizardwashva.com" },
-                                    { name: "Siddu Kaleekkal", role: "CTO", img: "/images/Siddu%20Kaleekkal%20CTO.jpg", desc: "Drives technological innovation and digital strategy at Wizard Wash.", imgClass: "object-top", email: "siddu@wizardwashva.com" },
-                                    { name: "Christian Hancock", role: "COO", img: "/images/Christian%20Hancock%20Florida%20Operations%20Manager.jpeg", desc: "Ensures flawless execution and operational excellence across our service areas.", email: "christian@wizardwashva.com" },
-                                    { name: "Savannah Calloway", role: "Sales Manager", img: "/images/Ellie%20Von%20Herbulis%20Sales%20Manager.PNG", desc: "Drives business growth and builds lasting relationships with our residential and commercial clients." },
-                                    { name: "Dominic Kulay", role: "Sales Member", img: "/images/Dominic%20Kulay.png", desc: "Passionate about delivering tailored exterior care solutions and building lasting client relationships." },
-                                    { name: "Jose Rivas", role: "Crew Member", img: "/images/Jose%20Rivas%20Crew%20Member.PNG", desc: "A meticulous technician who consistently delivers spotless, transformative results." },
-                                    { name: "Alex Hancock", role: "Crew Member", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
-                                ].map((member: any, idx) => (
-                                    <motion.div
-                                        key={idx}
-                                        initial={{ opacity: 0, y: 20 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        className="group space-y-6 flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2.67rem)] max-w-[300px]"
-                                    >
-                                        <div className="w-56 h-56 rounded-full overflow-hidden shadow-xl border-[6px] border-white group-hover:border-[#9138df] transition-all duration-500 ease-out">
-                                            <img src={member.img} alt={member.name} className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${member.imgClass || ''}`} />
-                                        </div>
-                                        <div>
-                                            <h3 className="text-2xl font-black font-heading uppercase tracking-tight text-[#1e1e3f]">{member.name}</h3>
-                                            <p className="text-[#9138df] font-bold tracking-widest text-xs uppercase mt-1 mb-3">{member.role}</p>
-                                            {member.email && (
-                                                <div className="mb-4">
-                                                    <a href={`mailto:${member.email}`} className="inline-flex items-center justify-center space-x-2 text-xs font-bold text-white bg-[#9138df] hover:bg-[#1e1e3f] transition-all duration-300 px-4 py-2 rounded-full shadow-md hover:shadow-lg">
-                                                        <Mail className="w-3.5 h-3.5" />
-                                                        <span>Email {member.name.split(' ')[0]}</span>
-                                                    </a>
-                                                </div>
-                                            )}
-                                            <p className="text-slate-500 text-sm font-body max-w-[280px] mx-auto">{member.desc}</p>
-                                        </div>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    </section>
+
 
                     {/* Our Story Section */}
                     <section className="py-32 px-6">
@@ -113,7 +63,7 @@ export default function AboutPage() {
                                         We saw an industry filled with 'splash and dash' operators who used aggressive pressure to compensate for a lack of expertise. We knew there was a better way a scientific approach that combined advanced chemistry with state of the art equipment.
                                     </p>
                                     <p>
-                                        Today, Wizard Wash is Virginia's premier exterior restoration specialist, serving both luxury residential estates and massive commercial landmarks with a standard of excellence that feels like magic.
+                                        Today, Wizard Wash is Virginia's premier exterior restoration specialist, serving both luxury residential estates and massive commercial landmarks with a standard of excellence that delivers transformative results.
                                     </p>
                                 </div>
                             </motion.div>
@@ -156,26 +106,7 @@ export default function AboutPage() {
                         </div>
                     </section>
 
-                    {/* CTA Section */}
-                    <section className="pb-32 px-6">
-                        <div className="max-w-[1400px] mx-auto bg-[#9138df] rounded-[3rem] p-12 lg:p-24 relative overflow-hidden shadow-[0_40px_80px_-20px_rgba(145,56,223,0.4)] text-center text-white">
-                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-black/20 to-transparent -z-10" />
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                className="space-y-12 relative z-10"
-                            >
-                                <h2 className="text-4xl md:text-8xl font-heading font-black uppercase tracking-tighter leading-none">
-                                    Experience the<br />Magic Today
-                                </h2>
-                                <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                                    <a href="/quote" className="inline-flex items-center justify-center h-20 bg-white text-[#9138df] font-heading font-black text-xl px-12 rounded-xl hover:bg-[#1e1e3f] hover:text-white transition-all shadow-2xl uppercase tracking-widest group">
-                                        Get A Quote <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" />
-                                    </a>
-                                </div>
-                            </motion.div>
-                        </div>
-                    </section>
+                    <BottomCTA />
                 </div>
             </div>
 

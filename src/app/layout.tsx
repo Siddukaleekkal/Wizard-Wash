@@ -33,7 +33,7 @@ export const metadata: Metadata = {
         description: 'Professional exterior cleaning and strategic property maintenance in the Richmond, VA area.',
         images: [
             {
-                url: '/images/Wizard Wash Logo _Transparent.png',
+                url: '/images/Updated Logo .png',
                 width: 800,
                 height: 600,
                 alt: 'Wizard Wash Logo',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
         card: 'summary_large_image',
         title: 'Wizard Wash | Professional Exterior Cleaning',
         description: 'Professional exterior cleaning and strategic property maintenance in the Richmond, VA area.',
-        images: ['/images/Wizard Wash Logo _Transparent.png'],
+        images: ['/images/Updated Logo .png'],
     },
     robots: {
         index: true,
@@ -58,13 +58,18 @@ export const metadata: Metadata = {
         },
     },
     icons: {
-        icon: '/images/Wizard Wash Logo _Transparent.png',
-        apple: '/images/Wizard Wash Logo _Transparent.png',
+        icon: '/images/Updated Logo .png',
+        apple: '/images/Updated Logo .png',
     },
     alternates: {
         canonical: '/',
     },
 };
+
+import FloridaPopup from '@/components/FloridaPopup';
+import FloridaModal from '@/components/FloridaModal';
+import PageTransition from '@/components/PageTransition';
+import CookieConsent from '@/components/CookieConsent';
 
 export default function RootLayout({
     children,
@@ -75,7 +80,12 @@ export default function RootLayout({
         <html lang="en" className={`${barlow.variable} ${playfair.variable} scroll-smooth overflow-x-hidden w-full`}>
             <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white overflow-x-hidden w-full relative">
                 <VideoAutoplayLogic />
-                {children}
+                <FloridaPopup />
+                <FloridaModal />
+                <CookieConsent />
+                <PageTransition>
+                    {children}
+                </PageTransition>
                 <Analytics />
             </body>
         </html>
