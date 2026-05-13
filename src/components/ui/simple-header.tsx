@@ -35,6 +35,7 @@ export function SimpleHeader() {
                 { label: 'Our Team', href: '/about/dream-team' },
                 { label: 'Why Wizard Wash', href: '/about/why-wizard-wash' },
                 { label: 'Careers', href: '/about/careers' },
+                { label: 'Refer a Friend', href: '/refer-a-friend' },
                 { label: 'Blog', href: '/blog' },
             ]
         },

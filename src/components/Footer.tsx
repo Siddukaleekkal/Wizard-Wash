@@ -21,6 +21,7 @@ export default function Footer() {
                         <a href="/residential" className="hover:text-white transition-colors">Residential</a>
                         <a href="/commercial" className="hover:text-white transition-colors">Commercial</a>
                         <a href="/service-areas" className="hover:text-white transition-colors">Service Areas</a>
+                        <a href="/refer-a-friend" className="hover:text-[var(--color-accent-purple)] transition-colors font-black">Refer a Friend</a>
                         <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
                         <a href="/terms" className="hover:text-white transition-colors">Terms</a>
                     </nav>
