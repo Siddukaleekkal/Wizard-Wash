@@ -57,8 +57,9 @@ export default function ReferAFriendPage() {
                     let rfr = window.location.href;
 
                     try {
-                        rfr = window.self !== window.top ?
-                            window.top.location.href :
+                        const topWindow = window.top;
+                        rfr = (window.self !== topWindow && topWindow) ?
+                            topWindow.location.href :
                             (/^https?:\/\/[\w.-]+\.[a-zA-Z]{2,}/i.test(rfr) ? rfr : "");
                     } catch (e) { }
 
