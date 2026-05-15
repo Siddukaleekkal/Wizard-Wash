@@ -55,9 +55,7 @@ export default function ServicesSection() {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
                         {services.map((service, index) => (
                             <div key={index} className="flex flex-col group rounded-2xl shadow-xl border border-slate-100 bg-white overflow-hidden transition-all hover:shadow-2xl hover:-translate-y-1">
-                                <div className="h-48 md:h-56 w-full relative overflow-hidden bg-slate-100">
-                                    <img src={service.image} alt={service.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" />
-                                </div>
+
                                 <div className="flex flex-col gap-3 p-6">
                                     <h3 className="text-2xl font-heading font-black uppercase tracking-tight text-[var(--color-text-main)] group-hover:text-[var(--color-accent-purple)] transition-colors">
                                         {service.title}

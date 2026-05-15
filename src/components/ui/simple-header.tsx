@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { Phone, ChevronDown, ChevronRight, Star, Home, Layers, Droplets, Calendar, Building, TreePine, Wrench, LayoutGrid, Milestone, Truck, Building2, UtensilsCrossed, Store, Hotel, Users, Landmark } from 'lucide-react';
-import FloridaPopup from '../FloridaPopup';
+
 import { Sheet, SheetContent, SheetFooter } from '@/components/ui/sheet';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { MenuToggle } from '@/components/ui/menu-toggle';
@@ -82,7 +82,7 @@ export function SimpleHeader() {
         <motion.header
             className="bg-white/95 supports-[backdrop-filter]:bg-white/80 sticky top-0 z-50 w-full border-b-[4px] border-[var(--color-accent-purple)] backdrop-blur-lg shadow-sm"
         >
-            <FloridaPopup />
+
             <nav className="flex h-24 lg:h-32 w-full items-center justify-between px-4 lg:px-8 xl:px-12 max-w-[2000px] mx-auto">
                 {/* Left Side: Logo + Links */}
                 <div className="flex items-center h-full gap-8 lg:gap-16">

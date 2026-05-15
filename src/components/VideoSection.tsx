@@ -85,8 +85,8 @@ export default function VideoSection() {
                                 playsInline
                                 className="absolute inset-0 w-full h-full object-cover"
                             >
-                                <source src="/images/Mara%20Lago%20Video.mov" type="video/quicktime" />
-                                <source src="/images/Mara%20Lago%20Video.mov" type="video/mp4" />
+                                <source src="/images/Chick-Fil-A.MOV" type="video/quicktime" />
+                                <source src="/images/Chick-Fil-A.MOV" type="video/mp4" />
                             </video>
                             <div className="absolute inset-0 border-[1px] border-white/20 rounded-3xl pointer-events-none" />
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 transition-opacity duration-500" />

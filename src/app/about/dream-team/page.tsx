@@ -33,7 +33,10 @@ export default function DreamTeamPage() {
                         {[
                             { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care.", imgClass: "scale-110 object-top", email: "omar@wizardwashva.com" },
                             { name: "Christian Hancock", role: "COO", img: "/images/Christian%20Hancock.jpeg", desc: "Ensures flawless execution and operational excellence across our service areas.", imgClass: "scale-110 object-top", email: "christian@wizardwashva.com" },
-                            { name: "Siddu Kaleekkal", role: "CTO", img: "/images/Siddu%20Kaleekkal%20CTO.jpg", desc: "Drives technological innovation and digital strategy at Wizard Wash.", imgClass: "scale-100 object-top", email: "siddu@wizardwashva.com" }
+                            { name: "Siddu Kaleekkal", role: "CTO", img: "/images/Siddu%20Kaleekkal%20CTO.jpg", desc: "Drives technological innovation and digital strategy at Wizard Wash.", imgClass: "scale-100 object-top", email: "siddu@wizardwashva.com" },
+                            { name: "Dominic Kulay", role: "Sales Member", img: "/images/Dominic%20Kulay.png", desc: "Passionate about delivering tailored exterior care solutions and building lasting client relationships." },
+                            { name: "Jose Rivas", role: "Crew Member", img: "/images/Jose%20Rivas%20Crew%20Member.PNG", desc: "A meticulous technician who consistently delivers spotless, transformative results." },
+                            { name: "Alex Hancock", role: "Crew Member", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
                         ].map((member: any, idx) => (
                             <motion.div
                                 key={idx}
@@ -42,8 +45,8 @@ export default function DreamTeamPage() {
                                 viewport={{ once: true }}
                                 className="group space-y-6 flex flex-col items-center text-center w-full sm:w-[calc(50%-2rem)] lg:w-[calc(33.333%-2.67rem)] max-w-[300px]"
                             >
-                                <div className="w-56 h-56 rounded-2xl overflow-hidden shadow-xl border-[6px] border-white">
-                                    <img src={member.img} alt={member.name} className={`w-full h-full object-cover ${member.imgClass || ''}`} />
+                                <div className="w-56 h-56 rounded-full overflow-hidden shadow-xl border-[6px] border-white group-hover:border-[var(--color-accent-purple)] transition-all duration-500 ease-out">
+                                    <img src={member.img} alt={member.name} className={`w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 ${member.imgClass || ''}`} />
                                 </div>
                                 <div>
                                     <h3 className="text-2xl font-black font-heading uppercase tracking-tight text-[#1e1e3f]">{member.name}</h3>
@@ -59,6 +62,30 @@ export default function DreamTeamPage() {
                                     <p className="text-slate-500 text-sm font-body max-w-[280px] mx-auto">{member.desc}</p>
                                 </div>
                             </motion.div>
+                        ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Core Values */}
+            <section className="py-24 px-6 bg-white">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16 space-y-4">
+                        <h2 className="text-[#1e1e3f] text-3xl md:text-5xl font-heading font-black uppercase tracking-tight">Our Core Values</h2>
+                        <p className="text-slate-500 font-body max-w-xl mx-auto italic">The foundation of everything we build.</p>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {[
+                            { icon: <Shield size={32} />, title: "Integrity", text: "We believe in honest work and transparent pricing. No surprises, just results." },
+                            { icon: <Target size={32} />, title: "Innovation", text: "Using state-of-the-art tech and chemistry to deliver results." },
+                            { icon: <Award size={32} />, title: "Excellence", text: "We don't stop until your property looks like it did on day one." },
+                            { icon: <CheckCircle2 size={32} />, title: "Precision", text: "Attention to detail is what separates us from the splash-and-dash guys." }
+                        ].map((value, idx) => (
+                            <div key={idx} className="p-8 bg-slate-50 rounded-2xl border border-slate-100 space-y-4 hover:shadow-lg transition-shadow">
+                                <div className="text-[var(--color-accent-purple)]">{value.icon}</div>
+                                <h3 className="text-xl font-heading font-black uppercase text-[#1e1e3f]">{value.title}</h3>
+                                <p className="text-slate-600 text-sm font-body leading-relaxed">{value.text}</p>
+                            </div>
                         ))}
                     </div>
                 </div>
