@@ -80,13 +80,13 @@ export default function CareersPage() {
             {/* Opportunities Section - Clean Table-like Layout */}
             <section className="py-32 px-6 md:px-12 bg-[#1e1e3f]">
                 <div className="max-w-[1400px] mx-auto">
-                    <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+                    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-20 gap-8">
                         <div className="space-y-4">
                             <span className="text-[10px] font-heading font-black uppercase tracking-[4px] text-white/30">Available Roles</span>
                             <h2 className="text-white text-4xl md:text-6xl font-heading font-black uppercase tracking-tight">Current Openings</h2>
                         </div>
-                        <p className="text-white/40 font-body text-sm max-w-xs text-right hidden md:block">
-                            Select a role to view the full specification and begin the application process.
+                        <p className="text-white/40 font-body text-sm max-w-xs md:text-right hidden md:block">
+                            Select a role to begin the application process.
                         </p>
                     </div>
 
@@ -110,7 +110,7 @@ export default function CareersPage() {
                                     href={`mailto:info@wizardwashva.com?subject=Application for ${job.title}`}
                                     className="h-14 px-8 border border-white/20 text-white font-heading font-black text-[10px] uppercase tracking-[2px] rounded-xl group-hover:bg-white group-hover:text-[#1e1e3f] transition-all flex items-center justify-center gap-3"
                                 >
-                                    View Specification <MoveRight size={14} />
+                                    Apply <MoveRight size={14} />
                                 </a>
                             </motion.div>
                         ))}

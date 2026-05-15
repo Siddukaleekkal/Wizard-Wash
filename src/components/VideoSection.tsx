@@ -34,7 +34,7 @@ export default function VideoSection() {
                         <div className="space-y-6">
                             <div className="space-y-3">
                                 <h2 className="text-[var(--color-accent-purple)] font-heading font-extrabold text-[13px] uppercase tracking-[3px]">
-                                    Portfolio & Solutions
+                                    Solutions
                                 </h2>
                                 <h2 className="text-[var(--color-text-main)] text-2xl md:text-5xl font-heading font-black tracking-tight leading-[1.1] uppercase">
                                     Results That Speak<br />For Themselves
@@ -43,7 +43,7 @@ export default function VideoSection() {
 
                             <div className="space-y-6 max-w-2xl">
                                 <p className="text-slate-600 text-lg leading-relaxed font-body">
-                                    At Wizard Wash, we specialize in high-performance exterior restoration and maintenance for assets ranging from <span className="text-[var(--color-text-main)] font-bold">luxury residential properties</span> to <span className="text-[var(--color-text-main)] font-bold">regional commercial portfolios</span>.
+                                    At Wizard Wash, we specialize in high-performance exterior restoration and maintenance for assets ranging from luxury residential properties to regional commercial portfolios.
                                 </p>
 
                                 <p className="text-slate-500 text-[15px] leading-relaxed font-body">
@@ -67,8 +67,8 @@ export default function VideoSection() {
                         {/* Portfolio Showcase Tile */}
                         <div className="relative w-full aspect-[4/3] md:aspect-video lg:aspect-[16/9] rounded-3xl overflow-hidden shadow-2xl border border-white group">
                             <img
-                                src="/images/New%20Portfolio%20picture.jpeg"
-                                alt="Portfolio & Solutions - Team Showcase"
+                                src="/Gallery/DSC07618.JPG"
+                                alt="Solutions Showcase"
                                 className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
                             />
                         </div>
@@ -85,8 +85,8 @@ export default function VideoSection() {
                                 playsInline
                                 className="absolute inset-0 w-full h-full object-cover"
                             >
-                                <source src="/images/Chick-Fil-A.MOV" type="video/quicktime" />
-                                <source src="/images/Chick-Fil-A.MOV" type="video/mp4" />
+                                <source src="/images/Mara%20Lago%20Video.mov" type="video/quicktime" />
+                                <source src="/images/Mara%20Lago%20Video.mov" type="video/mp4" />
                             </video>
                             <div className="absolute inset-0 border-[1px] border-white/20 rounded-3xl pointer-events-none" />
                             <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-transparent to-black/40 transition-opacity duration-500" />

@@ -9,6 +9,15 @@ import BottomCTA from '@/components/BottomCTA';
 
 const BLOG_POSTS = [
     {
+        id: 0,
+        title: "5 Areas You're Forgetting to Clean Before Summer Guests Arrive",
+        category: "Seasonal",
+        date: "May 15, 2026",
+        excerpt: "Summer entertaining season is here. Before you fire up the grill, make sure these five overlooked exterior areas don't leave a bad impression on your guests.",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+        slug: "areas-to-clean-before-summer"
+    },
+    {
         id: 1,
         title: "How Often Should You Pressure Wash Your House in Virginia?",
         category: "Maintenance",

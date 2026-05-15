@@ -68,6 +68,7 @@ export const metadata: Metadata = {
 
 import PageTransition from '@/components/PageTransition';
 import CookieConsent from '@/components/CookieConsent';
+import MobileCallBanner from '@/components/MobileCallBanner';
 
 export default function RootLayout({
     children,
@@ -76,12 +77,13 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className={`${barlow.variable} ${playfair.variable} scroll-smooth overflow-x-hidden w-full`}>
-            <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white overflow-x-hidden w-full relative">
+            <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white overflow-x-hidden w-full relative pb-14 md:pb-0">
                 <VideoAutoplayLogic />
                 <CookieConsent />
                 <PageTransition>
                     {children}
                 </PageTransition>
+                <MobileCallBanner />
                 <Analytics />
             </body>
         </html>

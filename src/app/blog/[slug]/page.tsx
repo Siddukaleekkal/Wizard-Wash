@@ -9,6 +9,74 @@ import BottomCTA from '@/components/BottomCTA';
 
 
 const BLOG_POSTS = {
+    "areas-to-clean-before-summer": {
+        title: "5 Areas You're Forgetting to Clean Before Summer Guests Arrive",
+        category: "Seasonal",
+        date: "May 15, 2026",
+        author: "Wizard Wash Team",
+        readTime: "6 min read",
+        image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=1200",
+        content: `
+            <p>Memorial Day is right around the corner, and that means one thing: your backyard is about to become the neighborhood gathering spot. You've probably already thought about the lawn, maybe even stained the deck. But there are five critical areas that most Virginia homeowners completely overlook, and they're the first things your guests will notice when they pull into the driveway.</p>
+
+            <p>Here's your pre-summer checklist for a property that looks like it belongs in a magazine.</p>
+
+            <div class="table-of-contents">
+                <h2>What We'll Cover</h2>
+                <ul>
+                    <li><span>1.</span><a href="#driveway">Your Driveway & Walkways</a></li>
+                    <li><span>2.</span><a href="#gutters">Gutter Exteriors (Tiger Stripes)</a></li>
+                    <li><span>3.</span><a href="#patio">The Patio & Pool Deck</a></li>
+                    <li><span>4.</span><a href="#fence">Fencing & Retaining Walls</a></li>
+                    <li><span>5.</span><a href="#north-side">The North Side of Your House</a></li>
+                </ul>
+            </div>
+
+            <h2 id="driveway">1. Your Driveway & Walkways</h2>
+            <p>Your driveway is quite literally the red carpet to your home. After a long Virginia winter of salt applications, oil drips from cold engines, and months of organic debris, your concrete has likely turned from a clean gray to a mottled, dark patchwork. This isn't just cosmetic. Salt residue chemically degrades the surface of unsealed concrete, creating micro-pitting that accelerates cracking during freeze-thaw cycles.</p>
+            <p>A professional <a href="/services/concrete-wash-seal">concrete wash and seal</a> doesn't just restore the look; it actively protects the surface. Our commercial-grade silane-siloxane sealers penetrate the concrete to create an invisible water-repelling barrier that will keep your driveway looking sharp well into next winter. Think of it as sunscreen for your pavement.</p>
+
+            <h2 id="gutters">2. Gutter Exteriors (Tiger Stripes)</h2>
+            <p>Look up at your gutters right now. Do you see dark, vertical streaks running down the face? Those are called "tiger stripes," and they're caused by a chemical reaction between the aluminum, the electrostatic charge of your roofing materials, and moisture. No amount of scrubbing with household cleaners will remove them because the oxidation has bonded to the metal at a molecular level.</p>
+            <p>Our gutter brightening process uses a specialized oxidation-reversing agent that chemically breaks this bond, restoring your gutters to their original white or cream finish. It's one of those details that most people can't pinpoint, but it dramatically sharpens the entire roofline of your home. Guests notice it subconsciously, the house just looks <em>newer</em>.</p>
+
+            <div class="blog-quote">
+                "Tiger stripes on gutters are the #1 detail that ages a home's appearance. Removing them is the single highest-ROI cosmetic cleaning you can do."
+            </div>
+
+            <h2 id="patio">3. The Patio & Pool Deck</h2>
+            <p>This is where your guests will be spending the majority of their time, and it's also where algae loves to hide. That thin green film on your flagstone or stamped concrete isn't just ugly; it's a genuine slip hazard when wet. One barefoot guest stepping out of the pool onto an algae-covered deck is a trip to the emergency room waiting to happen.</p>
+            <p>Our <a href="/services/sidewalk-deck-patio">deck and patio wash</a> process is surface-specific. We use a gentle soft wash for natural stone and wood, and professional-grade surface cleaners for concrete, ensuring a uniform, streak-free finish across the entire entertaining area. The result is a space that looks and <em>feels</em> safe and inviting.</p>
+
+            <h2 id="fence">4. Fencing & Retaining Walls</h2>
+            <p>Your fence line is the frame of your property. Over the past year, it's been accumulating mold, mildew, and, if it's wood, a gray oxidation that makes even a five-year-old fence look twenty years old. Vinyl fences fare slightly better but still develop green algae on the bottom rails where moisture sits longest.</p>
+            <p>A proper fence cleaning is about more than aesthetics. For wood fences, our process opens up the grain and brightens the natural color, making it the perfect prep step if you're planning to stain or seal this summer. For vinyl, we restore the bright white factory finish that made you choose it in the first place.</p>
+
+            <h2 id="north-side">5. The North Side of Your House</h2>
+            <p>Walk around to the side of your house that gets the least sun. In Virginia, that's almost always the north-facing wall. This is where you'll find the heaviest concentration of green algae and dark mold growth because the lack of direct UV light allows moisture to linger for hours longer than the rest of your home.</p>
+            <p>Most homeowners never look at this side because it often faces a neighbor's property or a wooded area. But the biological growth that starts here will eventually spread to your front facade if left unmanaged. Our <a href="/services/house-wash">house soft wash</a> treatment targets this area specifically, eliminating the growth at the root so it stays clean for up to three times longer than a standard rinse.</p>
+
+            <h2>The Bottom Line</h2>
+            <p>Summer in Virginia is short and precious. Don't spend it apologizing for the state of your driveway or worrying about guests slipping on a mossy pool deck. A single professional visit can address all five of these areas in one morning, and you'll be amazed at the transformation.</p>
+            <p>Ready to get your property summer-ready? <a href="/quote">Request your free quote today</a> and mention this article for 10% off your first service.</p>
+
+            <div id="faq" class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>How long does a full exterior cleaning take?</h3>
+                    <p>For a standard 2,000–3,000 sq ft home including the driveway and patio, most jobs are completed in 3 to 5 hours. We schedule early morning arrivals so your property is guest-ready by the afternoon.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Will the cleaning damage my landscaping?</h3>
+                    <p>No. We pre-rinse all plants and landscaping before we begin and use biodegradable, plant-safe solutions. We also post-rinse everything when we're done. Your garden will be just as healthy after we leave.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Can I bundle multiple services for a discount?</h3>
+                    <p>Absolutely. We offer package pricing for homeowners who want to knock out the house wash, driveway, patio, and gutters in a single visit. Contact us for a custom bundle quote.</p>
+                </div>
+            </div>
+        `
+    },
     "how-often-pressure-wash-house-virginia": {
         title: "How Often Should You Pressure Wash Your House in Virginia?",
         category: "Maintenance",

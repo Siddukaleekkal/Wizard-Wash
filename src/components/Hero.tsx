@@ -1,19 +1,11 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { PhoneCall, ChevronDown } from "lucide-react";
 
 export default function Hero() {
-    const videoRef = useRef<HTMLVideoElement>(null);
-
     useEffect(() => {
-        if (videoRef.current) {
-            videoRef.current.defaultMuted = true;
-            videoRef.current.muted = true;
-            videoRef.current.play().catch(console.error);
-        }
-
         // Zoho form initialization for home hero
         try {
             const f = document.createElement("iframe");
@@ -34,21 +26,16 @@ export default function Hero() {
     }, []);
 
     return (
-        <section className="relative w-full min-h-[100svh] lg:h-[100svh] flex items-center overflow-hidden bg-[#1e1e3f]">
-            {/* Background Video */}
-            <video
-                ref={videoRef}
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="absolute inset-0 w-full h-full object-cover z-0 opacity-40 lg:opacity-60"
-            >
-                <source src="/images/Hero Video.mp4" type="video/mp4" />
-            </video>
+        <section className="relative w-full min-h-[35svh] lg:min-h-[80svh] lg:h-[80svh] flex items-center overflow-hidden bg-[#1e1e3f]">
+            {/* Background Image */}
+            <img
+                src="/Gallery/DSC06568.jpeg"
+                alt="Power Washing Hero Background"
+                className="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-center z-0 opacity-30 lg:opacity-40"
+            />
 
             {/* Content Container */}
-            <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-24 lg:py-0 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+            <div className="relative z-20 w-full h-full max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 py-10 lg:py-0 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
 
                 {/* Left Side: Copy */}
                 <div className="flex-1 text-center lg:text-left space-y-6 sm:space-y-8 pt-8 lg:pt-0">
@@ -60,16 +47,19 @@ export default function Hero() {
                         <h1 className="text-white text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-heading font-black tracking-tighter leading-[0.95] uppercase drop-shadow-2xl">
                             The Standard of <br />
                             <span className="text-white">Excellence in</span> <br />
-                            <span className="text-[var(--color-accent-purple)]">Power Washing</span>
+                            <span className="text-white">Power Washing</span>
                         </h1>
 
                         <p className="mt-6 text-white/90 text-sm sm:text-base md:text-lg font-body leading-relaxed max-w-xl mx-auto lg:mx-0">
                             Licensed, insured, and dedicated to delivering spotless, high-performance results for residential and commercial properties in Richmond and beyond.
                         </p>
 
-                        <div className="mt-10 flex flex-col sm:flex-row items-center lg:items-start gap-4">
-                            <a href="tel:8046902465" className="inline-flex items-center justify-center bg-white text-[#1e1e3f] font-heading font-black text-base sm:text-lg px-8 sm:px-10 py-4 rounded-lg hover:bg-[var(--color-accent-purple)] hover:text-white transition-all border border-white/10 uppercase tracking-widest gap-3 w-full sm:w-auto">
-                                <PhoneCall size={20} />
+                        <div className="mt-10 flex flex-row items-center justify-center lg:justify-start gap-2 sm:gap-4 w-full">
+                            <a href="/quote" className="lg:hidden inline-flex items-center justify-center bg-[var(--color-accent-purple)] text-white font-heading font-black text-[12px] sm:text-lg px-3 sm:px-10 py-3 sm:py-4 rounded-lg hover:bg-[var(--color-accent-purple-dark)] transition-all shadow-[0_10px_20px_-10px_rgba(55,120,179,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(55,120,179,0.6)] hover:-translate-y-0.5 uppercase tracking-widest flex-1 sm:flex-none text-center whitespace-nowrap">
+                                Free Quote
+                            </a>
+                            <a href="tel:8046902465" className="inline-flex items-center justify-center bg-white text-[#1e1e3f] font-heading font-black text-[12px] sm:text-lg px-3 sm:px-10 py-3 sm:py-4 rounded-lg hover:bg-slate-100 transition-all border border-white/10 uppercase tracking-widest gap-1.5 sm:gap-3 flex-1 sm:flex-none whitespace-nowrap">
+                                <PhoneCall size={16} className="sm:w-5 sm:h-5" />
                                 804-690-2465
                             </a>
                         </div>
@@ -99,7 +89,7 @@ export default function Hero() {
                     initial={{ opacity: 0, scale: 0.95 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.2 }}
-                    className="w-full lg:w-[450px] shrink-0"
+                    className="hidden lg:block w-full lg:w-[450px] shrink-0"
                 >
                     <div className="bg-white rounded-[2rem] shadow-[0_40px_100px_-20px_rgba(0,0,0,0.5)] overflow-hidden p-6 sm:p-8 flex flex-col items-center">
                         <div className="text-center mb-6">

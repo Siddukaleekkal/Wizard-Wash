@@ -122,12 +122,22 @@ export default function TestimonialsSection() {
     }, [emblaApi]);
 
     return (
-        <section className="relative py-16 bg-slate-900 overflow-hidden" id="reviews">
+        <section className="relative py-24 bg-slate-900 overflow-hidden" id="reviews">
+            {/* Background Image */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/Gallery/DSC06520.jpeg"
+                    alt="Testimonials Background"
+                    className="w-full h-full object-cover opacity-10"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-slate-900" />
+            </div>
+
             <div className="relative z-10 max-w-[1400px] mx-auto">
 
                 {/* Simplified Header */}
                 <div className="text-center mb-12 px-6">
-                    <h2 className="text-[var(--color-accent-green)] font-heading font-black text-[12px] uppercase tracking-[3px] mb-2">
+                    <h2 className="text-[var(--color-accent-purple)] font-heading font-black text-[12px] uppercase tracking-[3px] mb-2">
                         Success Stories
                     </h2>
                     <h2 className="text-white text-xl md:text-3xl font-heading font-black tracking-tight leading-tight">

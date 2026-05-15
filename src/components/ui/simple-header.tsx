@@ -40,7 +40,7 @@ export function SimpleHeader() {
             ]
         },
         {
-            label: 'Residential',
+            label: 'Residential Power Washing',
             subLinks: [
                 { label: 'House Wash', href: '/services/house-wash' },
                 { label: 'Concrete Wash and Seal', href: '/services/concrete-wash-seal' },
@@ -63,7 +63,7 @@ export function SimpleHeader() {
             ]
         },
         {
-            label: 'Commercial',
+            label: 'Commercial Power Washing',
             subLinks: [
                 { label: 'Fleet Washing', href: '/services/fleet-washing' },
                 { label: 'Offices', href: '/services/offices' },

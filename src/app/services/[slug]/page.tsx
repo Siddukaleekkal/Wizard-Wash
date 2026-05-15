@@ -50,13 +50,13 @@ const SERVICES_DATA = {
     "gutter-cleaning": {
         title: "Gutter Cleaning Services",
         category: "Residential",
-        description: "Clogged gutters are the primary cause of foundation damage, basement leaks, and expensive roof rot. Our service goes beyond just 'scooping leaves.' We provide a full drainage analysis, ensuring every downspout is cleared and flowing properly. We also specialize in 'Gutter Brightening'—a chemical process that removes the dark oxidation streaks (tiger stripes) from the exterior of your gutters, making them look brand new and restoring the sharp architectural lines of your home's roofline and fascia.",
+        description: "Clogged gutters are the primary cause of foundation damage, basement leaks, and expensive roof rot. Our service goes beyond just 'scooping leaves.' We provide a full drainage analysis, ensuring every downspout is cleared and flowing properly. We also specialize in 'Gutter Brightening' - a chemical process that removes the dark oxidation streaks (tiger stripes) from the exterior of your gutters, making them look brand new and restoring the sharp architectural lines of your home's roofline and fascia.",
         features: ["Internal debris removal", "Downspout flush", "External whitening", "Clog prevention"]
     },
     "sidewalk-deck-patio": {
         title: "Sidewalk + Deck & Patio Wash",
         category: "Residential",
-        description: "Your outdoor living spaces are the heart of your home during the warmer months. We provide a deep, restorative clean for all walkable surfaces, including wood decks, composite decking, stone patios, and concrete sidewalks. Our process removes deeply embedded dirt, seasonal moss, and slippery algae that can make surfaces dangerous. We use surface specific techniques—gentle softwashing for wood and high performance surface cleaners for concrete—to ensure a uniform, streak free finish that revitalizes your entire outdoor entertaining area.",
+        description: "Your outdoor living spaces are the heart of your home during the warmer months. We provide a deep, restorative clean for all walkable surfaces, including wood decks, composite decking, stone patios, and concrete sidewalks. Our process removes deeply embedded dirt, seasonal moss, and slippery algae that can make surfaces dangerous. We use surface specific techniques: gentle softwashing for wood and high performance surface cleaners for concrete, to ensure a uniform, streak free finish that revitalizes your entire outdoor entertaining area.",
         features: ["Surface specific cleaning", "Algae & slips prevention", "Uniform streak free finish", "Restored outdoor beauty"]
     },
     "asphalt-sealcoating": {
@@ -170,18 +170,18 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
             <SimpleHeader />
 
             {/* Original Hero Style Section - Resized to match About Pages */}
-            <section className="relative w-full min-h-[60vh] flex items-center overflow-hidden bg-[#1e1e3f]">
+            <section className="relative w-full min-h-[25vh] lg:min-h-[40vh] flex items-center overflow-hidden bg-[#1e1e3f]">
                 {/* Background Image Overlay */}
                 <div className="absolute inset-0 z-0">
                     <img
-                        src="/images/Screenshot 2026-05-12 at 11.48.13 AM.png"
+                        src={service.category === "Commercial" ? "/Gallery/DSC06545.jpeg" : "/Gallery/DSC07622.JPG"}
                         alt={service.title}
-                        className="w-full h-full object-cover opacity-40 lg:opacity-50"
+                        className="w-full h-full object-cover object-[75%_center] opacity-40 lg:opacity-50"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-[#1e1e3f]/90 via-transparent to-[#1e1e3f]/90" />
                 </div>
 
-                <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 py-16 flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div className="relative z-20 w-full max-w-7xl mx-auto px-6 md:px-12 py-8 lg:py-16 flex flex-col lg:flex-row items-center gap-8 lg:gap-20">
                     {/* Left: Copy */}
                     <div className="flex-1 text-center lg:text-left space-y-6">
                         <motion.div
@@ -200,15 +200,11 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                                 {service.description}
                             </p>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
-                                {service.features.map((feature, idx) => (
-                                    <div key={idx} className="flex items-center gap-3 group justify-center lg:justify-start">
-                                        <div className="shrink-0 w-6 h-6 bg-white/10 rounded-full flex items-center justify-center text-[var(--color-accent-purple)] border border-white/10">
-                                            <CheckCircle2 size={12} />
-                                        </div>
-                                        <span className="text-white font-heading font-black uppercase tracking-tight text-[11px]">{feature}</span>
-                                    </div>
-                                ))}
+                            {/* Mobile CTA */}
+                            <div className="lg:hidden pt-8">
+                                <a href="/quote" className="inline-flex w-full sm:w-auto items-center justify-center px-10 py-4 bg-[var(--color-accent-purple)] text-white font-heading font-black uppercase tracking-widest text-sm rounded-xl shadow-lg hover:bg-[var(--color-accent-purple-dark)] transition-colors">
+                                    Get A Quote
+                                </a>
                             </div>
                         </motion.div>
                     </div>
@@ -218,7 +214,7 @@ export default function ServicePage({ params }: { params: Promise<{ slug: string
                         initial={{ opacity: 0, scale: 0.95 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="w-full lg:w-[480px] shrink-0"
+                        className="hidden lg:block lg:w-[480px] shrink-0"
                     >
                         <div className="bg-white rounded-[2rem] shadow-[0_40px_80px_-20px_rgba(0,0,0,0.6)] overflow-hidden p-6 sm:p-8">
                             <div className="text-center mb-6">
