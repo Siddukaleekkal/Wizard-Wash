@@ -33,8 +33,8 @@ export default function DreamTeamPage() {
                         {[
                             { name: "Omar Elshami", role: "CEO", img: "/images/Omar%20Elshami%20CEO.JPEG", desc: "Leading Wizard Wash's vision of blending ultimate convenience with elite-tier property care.", imgClass: "scale-110 object-top", email: "omar@wizardwashva.com" },
                             { name: "Christian Hancock", role: "COO", img: "/images/Christian%20Hancock.jpeg", desc: "Ensures flawless execution and operational excellence across our service areas.", imgClass: "scale-110 object-top", email: "christian@wizardwashva.com" },
-                            { name: "Siddu Kaleekkal", role: "CTO", img: "/images/Siddu%20Kaleekkal%20CTO.jpg", desc: "Drives technological innovation and digital strategy at Wizard Wash.", imgClass: "scale-100 object-top", email: "siddu@wizardwashva.com" },
                             { name: "Dominic Kulay", role: "Sales Member", img: "/images/Dominic%20Kulay.png", desc: "Passionate about delivering tailored exterior care solutions and building lasting client relationships." },
+                            { name: "Savannah Calloway", role: "Sales Manager", img: "/images/Ellie%20Von%20Herbulis%20Sales%20Manager.PNG", desc: "Drives business growth and builds lasting relationships with our residential and commercial clients." },
                             { name: "Jose Rivas", role: "Crew Member", img: "/images/Jose%20Rivas%20Crew%20Member.PNG", desc: "A meticulous technician who consistently delivers spotless, transformative results." },
                             { name: "Alex Hancock", role: "Crew Member", img: "/images/Alex%20Hancock%20Crew%20Member%20Virginia%20Branch.PNG", desc: "Dedicated specialist ensuring top-quality washing standards for residential and commercial clients." }
                         ].map((member: any, idx) => (
