@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Receipt</title>
+    <style>
+        /* Base styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 0;
+        }
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        /* Header */
+        .header {
+            background-color: #1a56db;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 28px;
+            font-weight: 600;
+        }
+        /* Content */
+        .content {
+            padding: 40px 30px;
+            color: #333333;
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 22px;
+            color: #1a56db;
+        }
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+        /* Receipt Details */
+        .receipt-box {
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+        .receipt-row {
+            padding: 10px 0;
+            border-bottom: 1px solid #e5e7eb;
+            display: block;
+            clear: both;
+            overflow: hidden;
+        }
+        .receipt-row:last-child {
+            border-bottom: none;
+        }
+        .label {
+            font-weight: bold;
+            color: #6b7280;
+            font-size: 14px;
+            float: left;
+        }
+        .value {
+            float: right;
+            font-weight: 600;
+            color: #111827;
+            font-size: 15px;
+        }
+        /* Total */
+        .total-row {
+            padding-top: 15px;
+            margin-top: 5px;
+            border-top: 2px solid #e5e7eb;
+            font-size: 18px;
+        }
+        .total-row .value {
+            color: #1a56db;
+            font-size: 20px;
+        }
+        /* Button */
+        .button-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #1a56db;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 14px 28px;
+            border-radius: 6px;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #f4f7f6;
+            padding: 30px;
+            text-align: center;
+            color: #6b7280;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #1a56db;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%" bgcolor="#f4f7f6" cellpadding="0" cellspacing="0" border="0" style="padding: 40px 10px;">
+        <tr>
+            <td align="center">
+                <table class="container" cellpadding="0" cellspacing="0" border="0">
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <h1 style="color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Payment Successful!</h1>
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td class="content">
+                            <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Hi {{Customer_Name}},</h2>
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Thank you for choosing Wizard Wash! We have successfully received your payment. Below are the details of your transaction.</p>
+                            
+                            <!-- Receipt Details -->
+                            <div class="receipt-box" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                <div class="receipt-row">
+                                    <span class="label">Invoice No:</span>
+                                    <span class="value">{{Invoice_Number}}</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="label">Date Paid:</span>
+                                    <span class="value">{{Payment_Date}}</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="label">Payment Method:</span>
+                                    <span class="value">{{Payment_Method}}</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="label">Service:</span>
+                                    <span class="value">{{Service_Name}}</span>
+                                </div>
+                                <div class="receipt-row total-row">
+                                    <span class="label" style="color: #111827;">Amount Paid:</span>
+                                    <span class="value">{{Total_Amount}}</span>
+                                </div>
+                            </div>
+                            
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">If you have any questions about this receipt or our services, simply reply to this email or contact our support team.</p>
+                            
+                            <!-- Action Button -->
+                            <div class="button-container">
+                                <a href="{{Invoice_Link}}" class="button" style="color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Download Invoice</a>
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                            <p>&copy; 2026 Wizard Wash. All rights reserved.</p>
+                            <p>123 Clean Street, Sparkle City, WA 98101</p>
+                            <p><a href="{{Website_URL}}">Visit our website</a> | <a href="mailto:support@wizardwash.com">support@wizardwash.com</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
