@@ -58,9 +58,9 @@ export default function Hero() {
                             <a href="/quote" className="lg:hidden inline-flex items-center justify-center bg-[var(--color-accent-purple)] text-white font-heading font-black text-[12px] sm:text-lg px-3 sm:px-10 py-3 sm:py-4 rounded-lg hover:bg-[var(--color-accent-purple-dark)] transition-all shadow-[0_10px_20px_-10px_rgba(55,120,179,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(55,120,179,0.6)] hover:-translate-y-0.5 uppercase tracking-widest flex-1 sm:flex-none text-center whitespace-nowrap">
                                 Free Quote
                             </a>
-                            <a href="tel:8046902465" className="inline-flex items-center justify-center bg-white text-[#1e1e3f] font-heading font-black text-[12px] sm:text-lg px-3 sm:px-10 py-3 sm:py-4 rounded-lg hover:bg-slate-100 transition-all border border-white/10 uppercase tracking-widest gap-1.5 sm:gap-3 flex-1 sm:flex-none whitespace-nowrap">
-                                <PhoneCall size={16} className="sm:w-5 sm:h-5" />
-                                804-690-2465
+                            <a href="tel:8046905789" className="inline-flex items-center justify-center bg-white text-[#1e1e3f] font-heading font-black text-[12px] sm:text-lg px-3 sm:px-10 py-3 sm:py-4 rounded-lg hover:bg-slate-100 transition-all border border-white/10 uppercase tracking-widest gap-1.5 sm:gap-3 flex-1 sm:flex-none whitespace-nowrap">
+                                <Phone size={20} className="sm:hidden" />
+                                804-690-5789
                             </a>
                         </div>
 

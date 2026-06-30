@@ -29,8 +29,8 @@ export default function Footer() {
                     {/* Contact + CTA */}
                     <div className="flex flex-col items-center md:items-end gap-4 shrink-0 w-full md:w-auto">
                         <div className="flex flex-col items-center md:items-end">
-                            <a href="tel:8046902465" className="text-xl font-heading font-black tracking-tight text-white hover:text-[var(--color-accent-purple)] transition-colors">
-                                804-690-2465
+                            <a href="tel:8046905789" className="text-xl font-heading font-black tracking-tight text-white hover:text-[var(--color-accent-purple)] transition-colors">
+                                804-690-5789
                             </a>
                             <a href="mailto:info@wizardwashva.com" className="flex items-center gap-2 text-[10px] font-heading font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">
                                 <Mail size={12} className="text-[var(--color-accent-purple)]" />

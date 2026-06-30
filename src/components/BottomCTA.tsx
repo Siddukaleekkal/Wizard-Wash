@@ -19,8 +19,8 @@ export default function BottomCTA() {
                     <a href="/quote" className="inline-flex items-center justify-center h-12 sm:h-14 bg-[var(--color-accent-purple)] text-white font-heading font-black text-sm sm:text-base px-8 rounded-lg hover:bg-[var(--color-accent-purple-dark)] transition-all hover:-translate-y-0.5 uppercase tracking-widest">
                         Get A Quote <ArrowRight className="ml-2" size={16} />
                     </a>
-                    <a href="tel:8046902465" className="inline-flex items-center justify-center h-12 sm:h-14 bg-white text-[#1e1e3f] border border-slate-200 font-heading font-black text-sm sm:text-base px-8 rounded-lg hover:border-[var(--color-accent-purple)] hover:text-[var(--color-accent-purple)] transition-all uppercase tracking-widest">
-                        Call 804-690-2465
+                    <a href="tel:8046905789" className="inline-flex items-center justify-center h-12 sm:h-14 bg-white text-[#1e1e3f] border border-slate-200 font-heading font-black text-sm sm:text-base px-8 rounded-lg hover:border-[var(--color-accent-purple)] hover:text-[var(--color-accent-purple)] transition-all uppercase tracking-widest">
+                        Call 804-690-5789
                     </a>
                 </div>
             </div>

@@ -125,7 +125,7 @@ export default function PrivacyPolicyPage() {
                                 <p className="font-heading font-bold text-[#1e1e3f]">Wizard Wash Power Washing</p>
                                 <p>Richmond, Virginia</p>
                                 <p className="text-[#9138df]">wizardwashrva@gmail.com</p>
-                                <p>804-690-2465</p>
+                                <p>804-690-5789</p>
                             </div>
                         </div>
 

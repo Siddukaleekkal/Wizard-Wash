@@ -169,8 +169,8 @@ export function SimpleHeader() {
                 <div className="flex items-center gap-1 xl:gap-8">
                     <div className="hidden xl:flex flex-col items-end gap-0.5 font-heading">
                         <span className="text-[9px] xl:text-[10px] text-slate-400 uppercase tracking-[2px] font-bold">Connect with us</span>
-                        <a href="tel:8046902465" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[var(--color-accent-purple)] transition-colors cursor-pointer">
-                            <span className="text-lg xl:text-2xl font-black tabular-nums">804-690-2465</span>
+                        <a href="tel:8046905789" className="flex items-center gap-2 text-[#1e1e3f] hover:text-[var(--color-accent-purple)] transition-colors cursor-pointer">
+                            <span className="text-lg xl:text-2xl font-black tabular-nums">804-690-5789</span>
                         </a>
                     </div>
 
@@ -282,8 +282,8 @@ export function SimpleHeader() {
                             <SheetFooter className="mt-8 border-t border-slate-100 bg-white p-8 flex-col gap-6">
                                 <div className="flex flex-col items-center gap-1 font-heading">
                                     <span className="text-xs text-slate-400 uppercase tracking-widest">Available Now</span>
-                                    <a href="tel:8046902465" className="flex items-center gap-3 text-[#1e1e3f] hover:text-[var(--color-accent-purple)] transition-colors text-2xl font-black cursor-pointer group">
-                                        <span>804-690-2465</span>
+                                    <a href="tel:8046905789" className="flex items-center gap-3 text-[#1e1e3f] hover:text-[var(--color-accent-purple)] transition-colors text-2xl font-black cursor-pointer group">
+                                        <span>804-690-5789</span>
                                     </a>
                                 </div>
                                 <div className="w-full space-y-3">
