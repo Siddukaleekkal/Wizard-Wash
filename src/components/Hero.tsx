@@ -59,7 +59,7 @@ export default function Hero() {
                                 Free Quote
                             </a>
                             <a href="tel:8046905789" className="inline-flex items-center justify-center bg-white text-[#1e1e3f] font-heading font-black text-[12px] sm:text-lg px-3 sm:px-10 py-3 sm:py-4 rounded-lg hover:bg-slate-100 transition-all border border-white/10 uppercase tracking-widest gap-1.5 sm:gap-3 flex-1 sm:flex-none whitespace-nowrap">
-                                <Phone size={20} className="sm:hidden" />
+                                <PhoneCall size={16} className="sm:w-5 sm:h-5" />
                                 804-690-5789
                             </a>
                         </div>
