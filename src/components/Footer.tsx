@@ -1,57 +1,58 @@
-import { Mail, Phone } from 'lucide-react';
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
-    return (
-        <footer className="bg-slate-900 border-t-4 border-[var(--color-accent-purple)] text-white">
-            <div className="max-w-7xl mx-auto px-6 lg:px-12 py-6">
-                {/* Main Row */}
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                    {/* Logo */}
-                    <a href="/" className="shrink-0">
-                        <img
-                            src="/images/Updated Logo .png"
-                            alt="Wizard Wash"
-                            className="h-20 w-auto object-contain brightness-110"
-                        />
-                    </a>
+  return (
+    <div className="mt-auto">
+      {/* Global CTA Banner */}
+      <div className="w-full bg-[#33155B] text-white py-10 flex flex-col items-center justify-center text-center px-6 border-t-4 border-[#00B55D]">
+        <h3 className="text-xl md:text-2xl font-heading font-light mb-2 tracking-wide">
+          How Can We Help You?
+        </h3>
+        <p className="text-gray-200 font-light max-w-2xl mx-auto mb-5 text-[13px] leading-relaxed">
+          Find out how we can restore your property's exterior with our wizard-touch cleaning systems focused on delivering pristine results across Virginia.
+        </p>
+        <Link 
+          href="/quote"
+          className="inline-block bg-[#00B55D] hover:bg-[#009E50] text-white px-7 py-3 rounded-none font-bold uppercase tracking-[0.15em] text-[12px] transition-colors shadow-lg"
+        >
+          LET'S GET IN TOUCH
+        </Link>
+      </div>
 
-                    {/* Links */}
-                    <nav className="flex flex-wrap justify-center gap-x-5 gap-y-2 text-[10px] font-heading font-bold uppercase tracking-widest text-slate-400">
-                        <a href="/about" className="hover:text-white transition-colors">About</a>
-                        <a href="/residential" className="hover:text-white transition-colors">Residential</a>
-                        <a href="/commercial" className="hover:text-white transition-colors">Commercial</a>
-                        <a href="/service-areas" className="hover:text-white transition-colors">Service Areas</a>
-                        <a href="/refer-a-friend" className="hover:text-[var(--color-accent-purple)] transition-colors font-black">Refer a Friend</a>
-                        <a href="/privacy" className="hover:text-white transition-colors">Privacy</a>
-                        <a href="/terms" className="hover:text-white transition-colors">Terms</a>
-                    </nav>
+      <footer className="w-full bg-white border-t border-gray-200 py-3">
+        <div className="container mx-auto px-6 max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-3 lg:gap-0">
+        
+        <div className="flex items-center">
+          <Link href="/">
+            <Image 
+              src="/logo-final.png" 
+              alt="Wizard Wash Logo" 
+              width={70} 
+              height={62} 
+              className="object-contain h-12 w-auto" 
+              style={{ width: "auto", height: "auto" }}
+            />
+          </Link>
+        </div>
 
-                    {/* Contact + CTA */}
-                    <div className="flex flex-col items-center md:items-end gap-4 shrink-0 w-full md:w-auto">
-                        <div className="flex flex-col items-center md:items-end">
-                            <a href="tel:8046905789" className="text-xl font-heading font-black tracking-tight text-white hover:text-[var(--color-accent-purple)] transition-colors">
-                                804-690-5789
-                            </a>
-                            <a href="mailto:info@wizardwashva.com" className="flex items-center gap-2 text-[10px] font-heading font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors">
-                                <Mail size={12} className="text-[var(--color-accent-purple)]" />
-                                info@wizardwashva.com
-                            </a>
-                        </div>
-                        
+        {/* Middle: Links */}
+        <div className="flex flex-wrap items-center justify-center gap-4 text-[12px] font-medium text-gray-500">
+          <Link href="/privacy-policy" className="hover:text-[#7B2CBF] transition-colors">Privacy Policy</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/terms-of-service" className="hover:text-[#7B2CBF] transition-colors">Terms of Service</Link>
+          <span className="text-gray-300">|</span>
+          <Link href="/faq" className="hover:text-[#7B2CBF] transition-colors">FAQ</Link>
+          <span className="text-gray-300">|</span>
+          <span>© {new Date().getFullYear()} Wizard Wash LLC</span>
+        </div>
 
-                    </div>
-                </div>
-
-                {/* Bottom Bar */}
-                <div className="mt-8 pt-4 border-t border-white/5 flex flex-col sm:flex-row justify-between items-center gap-2">
-                    <p className="text-slate-500 font-heading font-bold uppercase tracking-widest text-[9px]">
-                        &copy; {new Date().getFullYear()} Wizard Wash LLC. All rights reserved.
-                    </p>
-                    <p className="text-slate-500 font-heading font-semibold uppercase tracking-[2px] text-[9px]">
-                        Designed by <a href="https://viracis.com" target="_blank" rel="noopener noreferrer" className="text-[var(--color-accent-purple)] font-black hover:underline transition-all">Viracis</a>
-                    </p>
-                </div>
-            </div>
-        </footer>
-    );
+        {/* Right: Credit */}
+        <div className="text-[12px] font-medium text-gray-500 text-center lg:text-right">
+          Designed and Maintained by <a href="https://viracis.com" target="_blank" rel="noopener noreferrer" className="text-[#00B55D] font-bold hover:text-[#009E50] transition-colors">Viracis</a>
+        </div>
+      </div>
+    </footer>
+    </div>
+  );
 }

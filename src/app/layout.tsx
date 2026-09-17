@@ -1,91 +1,88 @@
-import type { Metadata, Viewport } from 'next';
-import { Barlow, Playfair_Display } from 'next/font/google';
-import './globals.css';
-import { VideoAutoplayLogic } from '@/components/VideoAutoplayLogic';
-import { Analytics } from "@vercel/analytics/next";
-const barlow = Barlow({ subsets: ['latin'], weight: ['400', '500', '600', '700', '800'], variable: '--font-barlow', display: 'swap' });
-const playfair = Playfair_Display({ subsets: ['latin'], variable: '--font-playfair', display: 'swap' });
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
 
-export const viewport: Viewport = {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-    userScalable: false,
-};
+const interSans = Inter({
+  variable: "--font-sans",
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500", "600", "700", "800", "900"],
+});
+
+const interHeading = Inter({
+  variable: "--font-heading",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://wizardwashva.com'),
-    title: {
-        default: 'Wizard Wash | Professional Exterior Cleaning in Richmond, VA',
-        template: '%s | Wizard Wash',
+  metadataBase: new URL("https://wizardwashva.com"),
+  title: {
+    default: "Wizard Wash | Professional Exterior Cleaning - Richmond, VA",
+    template: "%s | Wizard Wash",
+  },
+  description: "Professional exterior cleaning and strategic property maintenance in the Richmond, VA area. Expert pressure washing, soft wash roof cleaning, and commercial maintenance.",
+  keywords: [
+    "Wizard Wash",
+    "Power washing Richmond VA",
+    "Pressure washing Richmond",
+    "Soft washing Richmond",
+    "Roof cleaning Richmond VA",
+    "Commercial power washing Virginia",
+    "Driveway cleaning Central VA",
+  ],
+  icons: {
+    icon: "/logo-final.png",
+    apple: "/logo-final.png",
+  },
+  openGraph: {
+    title: "Wizard Wash | Professional Exterior Cleaning - Richmond, VA",
+    description: "Professional exterior cleaning and strategic property maintenance in the Richmond, VA area.",
+    url: "https://wizardwashva.com",
+    siteName: "Wizard Wash",
+    locale: "en_US",
+    type: "website",
+    images: [
+      {
+        url: "/logo-final.png",
+        width: 1200,
+        height: 1074,
+        alt: "Wizard Wash Logo",
+      },
+    ],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
     },
-    description: 'Professional exterior cleaning and strategic property maintenance in the Richmond, VA area, including residential and commercial power washing, soft washing, and roof cleaning.',
-    keywords: ['power washing', 'exterior cleaning', 'pressure washing', 'roof cleaning', 'soft washing', 'Richmond VA power washing', 'commercial power washing', 'residential exterior cleaning'],
-    authors: [{ name: 'Wizard Wash' }],
-    creator: 'Wizard Wash',
-    publisher: 'Wizard Wash',
-    openGraph: {
-        type: 'website',
-        locale: 'en_US',
-        url: 'https://wizardwashva.com',
-        siteName: 'Wizard Wash',
-        title: 'Wizard Wash | Professional Exterior Cleaning',
-        description: 'Professional exterior cleaning and strategic property maintenance in the Richmond, VA area.',
-        images: [
-            {
-                url: '/images/Updated Logo .png',
-                width: 800,
-                height: 600,
-                alt: 'Wizard Wash Logo',
-            },
-        ],
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Wizard Wash | Professional Exterior Cleaning',
-        description: 'Professional exterior cleaning and strategic property maintenance in the Richmond, VA area.',
-        images: ['/images/Updated Logo .png'],
-    },
-    robots: {
-        index: true,
-        follow: true,
-        googleBot: {
-            index: true,
-            follow: true,
-            'max-video-preview': -1,
-            'max-image-preview': 'large',
-            'max-snippet': -1,
-        },
-    },
-    icons: {
-        icon: '/images/Updated Logo .png',
-        apple: '/images/Updated Logo .png',
-    },
-    alternates: {
-        canonical: '/',
-    },
+  },
 };
 
-import PageTransition from '@/components/PageTransition';
-import CookieConsent from '@/components/CookieConsent';
-import MobileCallBanner from '@/components/MobileCallBanner';
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import CookieConsent from "@/components/CookieConsent";
 
 export default function RootLayout({
-    children,
-}: {
-    children: React.ReactNode;
-}) {
-    return (
-        <html lang="en" className={`${barlow.variable} ${playfair.variable} scroll-smooth overflow-x-hidden w-full`}>
-            <body className="bg-[var(--color-base-main)] text-[var(--color-text-main)] font-body antialiased selection:bg-[var(--color-accent-purple)] selection:text-white overflow-x-hidden w-full relative pb-14 md:pb-0">
-                <VideoAutoplayLogic />
-                <CookieConsent />
-                <PageTransition>
-                    {children}
-                </PageTransition>
-                <MobileCallBanner />
-                <Analytics />
-            </body>
-        </html>
-    );
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html
+      lang="en"
+      className={`${interHeading.variable} ${interSans.variable} font-sans h-full antialiased`}
+    >
+      <body className="min-h-full flex flex-col">
+        <Header />
+        {children}
+        <Footer />
+        <CookieConsent />
+      </body>
+    </html>
+  );
 }

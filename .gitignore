@@ -23,7 +23,21 @@ yarn-debug.log*
 yarn-error.log*
 
 # local env files
+.env
 .env*.local
+
+# local archives & editor configs
+_archive*/
+.claude/
+.windsurf/
+.agents/
+skills-lock.json
+
+# scratch scripts & one-off assets
+*.py
+get_unsplash.js
+remove_images.mjs
+newheropage.avif
 
 # vercel
 .vercel

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Reminder</title>
+    <style>
+        /* Base styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 0;
+        }
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #9138df;
+        }
+        /* Header */
+        .header {
+            background-color: #ffffff;
+            padding: 40px 30px 20px;
+            text-align: center;
+        }
+        /* Content */
+        .content {
+            padding: 20px 30px 40px;
+            color: #2b2b2b;
+        }
+        .content h1 {
+            color: #1e1e3f;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #9138df;
+        }
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #3d3d3d;
+        }
+        /* List */
+        .content ul {
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #3d3d3d;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #f4f6f8;
+            padding: 30px;
+            text-align: center;
+            color: #555555;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #9138df;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%" bgcolor="#f4f6f8" cellpadding="0" cellspacing="0" border="0" style="padding: 40px 10px;">
+        <tr>
+            <td align="center">
+                <table class="container" cellpadding="0" cellspacing="0" border="0" style="border-top: 4px solid #9138df;">
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <img src="https://raw.githubusercontent.com/Siddukaleekkal/Wizard-Wash/main/public/images/Updated%20Logo%20.png" alt="Wizard Wash Logo" width="200" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td class="content">
+                            <h1 style="color: #1e1e3f; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Appointment Reminder</h1>
+                            <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #9138df;">Hi ${Contact Name},</h2>
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Just a quick reminder that your exterior wash with Wizard Wash is scheduled for <strong>${Service Date}</strong>.</p>
+                            
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;"><strong>Here's what to expect:</strong></p>
+                            
+                            <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                                <li>Please make sure your driveway, walkways, and any areas we'll be cleaning are clear of vehicles, toys, or furniture.</li>
+                                <li>If you have any exterior faucets we'll need access to, please make sure they're unlocked.</li>
+                                <li>Our team typically arrives within a 2 hour window of the scheduled time.</li>
+                            </ul>
+                            
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">If you need to reschedule or have any questions before then, just reply to this email or give us a call at <strong>804-690-5789</strong> and we'll get it sorted.</p>
+                            
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Thanks for choosing Wizard Wash. We're looking forward to getting your place looking sharp.</p>
+
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 0;">
+                                Best,<br>
+                                <strong>The Wizard Wash Team</strong>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                            <p>&copy; 2026 Wizard Wash. All rights reserved.</p>
+                            <p><a href="https://wizardwash.com">Visit our website</a> | <a href="mailto:support@wizardwash.com">support@wizardwash.com</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

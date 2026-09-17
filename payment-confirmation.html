@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation</title>
+    <style>
+        /* Base styling */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            -webkit-font-smoothing: antialiased;
+        }
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 0;
+        }
+        /* Container */
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            border-top: 4px solid #9138df;
+        }
+        /* Header */
+        .header {
+            background-color: #ffffff;
+            padding: 40px 30px 20px;
+            text-align: center;
+        }
+        /* Content */
+        .content {
+            padding: 20px 30px 40px;
+            color: #2b2b2b;
+        }
+        .content h1 {
+            color: #1e1e3f;
+            margin: 0 0 20px 0;
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .content h2 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #9138df;
+        }
+        .content p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 16px;
+            color: #3d3d3d;
+        }
+        /* List */
+        .content ul {
+            margin: 0 0 20px 0;
+            padding-left: 20px;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #3d3d3d;
+        }
+        .content li {
+            margin-bottom: 10px;
+        }
+        /* Footer */
+        .footer {
+            background-color: #f4f6f8;
+            padding: 30px;
+            text-align: center;
+            color: #555555;
+            font-size: 14px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+        .footer a {
+            color: #9138df;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <table width="100%" bgcolor="#f4f6f8" cellpadding="0" cellspacing="0" border="0" style="padding: 40px 10px;">
+        <tr>
+            <td align="center">
+                <table class="container" cellpadding="0" cellspacing="0" border="0" style="border-top: 4px solid #9138df;">
+                    <!-- Header -->
+                    <tr>
+                        <td class="header">
+                            <img src="https://raw.githubusercontent.com/Siddukaleekkal/Wizard-Wash/main/public/images/Updated%20Logo%20.png" alt="Wizard Wash Logo" width="200" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
+                        </td>
+                    </tr>
+                    
+                    <!-- Content -->
+                    <tr>
+                        <td class="content">
+                            <h1 style="color: #1e1e3f; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Payment Confirmation</h1>
+                            <h2 style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #9138df;">Hi ${trigger.Deal_Name},</h2>
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Thank you for your payment! We're pleased to confirm that we have received your payment in full.</p>
+                            
+                            <div style="background-color: #f8f9fb; border: 1px solid #e8eaed; border-radius: 6px; padding: 20px; margin-bottom: 20px; text-align: left;">
+                                <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 15px; margin-top: 0; color: #1e1e3f; font-size: 18px;"><strong>Payment Details:</strong></p>
+                                <ul style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; list-style-type: none; padding-left: 0; margin-bottom: 0; margin-top: 0;">
+                                    <li style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e8eaed;"><strong>Service:</strong> </li>
+                                    <li style="margin-bottom: 10px; padding-bottom: 10px; border-bottom: 1px solid #e8eaed;"><strong>Amount Paid:</strong> ${trigger.Amount}</li>
+                                    <li style="margin-bottom: 0;"><strong>Date:</strong> ${system.zf_current_date}</li>
+                                </ul>
+                            </div>
+                            
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">If you have any questions, please don't hesitate to reach out to us at <strong>804-690-5789</strong> or reply to this email.</p>
+                            
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">Thank you for choosing Wizard Wash!</p>
+
+                            <p style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin-bottom: 0;">
+                                Best regards,<br>
+                                <strong>The Wizard Wash Team</strong>
+                            </p>
+                        </td>
+                    </tr>
+                    
+                    <!-- Footer -->
+                    <tr>
+                        <td class="footer" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;">
+                            <p>&copy; 2026 Wizard Wash. All rights reserved.</p>
+                            <p><a href="https://wizardwash.com">Visit our website</a> | <a href="mailto:support@wizardwash.com">support@wizardwash.com</a></p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
