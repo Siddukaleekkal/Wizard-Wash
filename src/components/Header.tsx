@@ -314,7 +314,7 @@ export default function Header() {
                 Frequently Asked Questions
               </Link>
               <Link href="mailto:omar@wizardwashva.com" onClick={() => setIsMobileMenuOpen(false)} className="flex items-center justify-center gap-2 text-gray-700 font-bold text-sm py-2 hover:text-[#00B55D] transition-colors">
-                <Mail className="w-4 h-4 text-[#00B55D]" /> Contact Us (omar@wizardwashva.com)
+                <Mail className="w-4 h-4 text-[#00B55D]" /> Contact Us
               </Link>
               <a href="tel:804-690-5789" className="flex items-center justify-center gap-2 text-[#424242] font-bold text-sm py-2 hover:text-[#00B55D]">
                 <Phone className="w-4 h-4 text-[#00B55D]" /> 804-690-5789
